@@ -1,0 +1,26 @@
+# /etc/conf.d/bitcoingenxd: config file for /etc/init.d/bitcoingenxd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/bitcoingenx/bitcoingenx.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/bitcoingenxd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/bitcoingenxd.pid"
+
+# Where to write bitcoingenxd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/bitcoingenxd"
+
+# User and group to own bitcoingenxd process
+#BITCOIND_USER="bitcoingenx"
+#BITCOIND_GROUP="bitcoingenx"
+
+# Path to bitcoingenxd executable
+#BITCOIND_BIN="/usr/bin/bitcoingenxd"
+
+# Nice value to run bitcoingenxd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=BitcoinGenX
+Comment=BitcoinGenX P2P Cryptocurrency
+Comment[fr]=BitcoinGenX, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=BitcoinGenX, eşten eşe kriptografik sanal para birimi
+Exec=bitcoingenx-qt %u
+Terminal=false
+Type=Application
+Icon=bitcoingenx128
+MimeType=x-scheme-handler/bitcoingenx;
+Categories=Office;Finance;
