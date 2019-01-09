@@ -3,18 +3,19 @@
 
 # BitcoinGenX Core integration/staging repository
 
+BitcoinGenX is a sister coin of GenesisX and isn't connected to any of the GenesisX projects however both projects will work together and benefit eachother is various ways such as financially funding developments on either project and giving eachother a bit of guidance.
 
-There are many cryptocurrencies out there expanding and improving on privacy within the crypto industry to make trades, withdrawals, transfers and deposits transparent... anonymous. BitcoinGenX focuses on both improving privacy (Zerocoin protocol) and increasing security substantially so hacking, key logging and scamming are the past. We look to adapt and integrate a 2FA (Two Factor Authenticaton) feature so each withdrawal and transfer requires your wallet to be unlocked and a timed generated code is sent either to your email or mobile device. These both will improve security - further to this we are going to announce more features throughout 2018 and the unforeseen future.
-- For those who do not know of Zerocoin or the possibilities of this extension. Through zero-knowledge proofs, coin holders financial transactions are kept completely private and anonymous. In other words, Zero-knowledge proofs allow for financial transactions to occur with the only public information being that money was indeed sent or received.
-- Fast transactions featuring guaranteed zero confirmation transactions, PIVX named it _SwiftX_.
-- In simple terms, a masternode is a cryptocurrency full node or computer wallet that keeps a full copy of the blockchain in real-time this is always kept up and running (unless you close the server your masternode is running on). There are many positive aspects to masternodes as they can increase the privacy of transactions and can contribute to perform instant transactions. BitcoinGenX masternodes has also introduced a governing system which enables and gives masternode holders rights to vote for possible upcoming changes and gives them power in this project so the community is supported. Masternodes also help the circulation of BGX (BitcoinGenX) and gives others opportunity to invest if reward holders choose to sell their gains. We look to enforce a budgeting system in the future which will involve the use of masternodes. Having a masternode enables you to mine without the stress of having to keep your mining rig running (because you won't need a mining rig) and it will not produce high electricity bills. Of course you won't need the hardware such as GPU's (Graphic cards) which tend to cost a lot to use your masternode.
+BitcoinGenX forked Bitcoin Green so inherits the Green Protocol which is a highly efficient Masternode/Proof-of-Stake algorithm developed to improve Bitcoin’s scalability and stability. However by the end of January 2019 we will also have Zerocoin implemented to promote private transactions and increase anonymity on our blockchain. 
 
+-The Green Protocol which BitcoinGenX inherited is Bitcoin Greens smart solution, and operates via three clear and democratic processes. First of all, proof-of-stake and masternode only mining, this means that mining is both energy efficient and profitable. Next, combination with fixed block reward. This means that the inflation of BGX, directly flows back into the value of BGX coin holders, in proportion with their current stake. This means coin holders actually make the most from the currency, not third party miners as we see with Bitcoin. Finally, a fair distribution. This is a democratised and eco friendly process, that ensures all members of the community have incentives within improving the network via clean technology. 
+
+-When sending BitcoinGenX Zerocoins, the process works exactly like Bitcoin, with transactions recorded in a public ledger. However, the Zerocoin protocol involves destroying your BitcoinGenX to mint a BitcoinGenX Zerocoin. Zerocoins are new coins with no transaction history. “You can think of the Zerocoin layer as a form of coin laundry where you will put in your existing ‘dirty‘ coins (that have a long transaction history) and then redeem new ‘clean‘ coins that appear to be brand new and have no prior transaction history.” You are then able to use the Zerocoins in a spend transaction, which converts the BitcoinGenX Zerocoins back into the normal BitcoinGenX. With many people minting Zerocoins, it will not be obvious who the spent Zerocoins came from, thus preserving your anonymity.
 
 
 
 ### Coin Specs
 <table>
-<tr><td>Algo</td><td>Xevan</td></tr>
+<tr><td>Consensus Algorithm</td><td>PoS + zPoS Hybrid</td></tr>
 <tr><td>Block Time</td><td>60 Seconds</td></tr>
 <tr><td>Mature Time</td><td>6 hours</td></tr>
 <tr><td>Difficulty Retargeting</td><td>Every Block</td></tr>
