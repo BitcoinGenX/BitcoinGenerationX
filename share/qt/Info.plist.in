@@ -32,7 +32,7 @@
   <string>bitcoingenx-Qt</string>
 
   <key>CFBundleIdentifier</key>
-  <string>io.bitcoingenx.BitcoinGenX-Qt</string>
+  <string>io.bitcoingenx.bitcoingenx-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -40,7 +40,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>io.bitcoingenx.BitcoinGenXPayment</string>
+      <string>io.bitcoingenx.bitcoingenxPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>bitcoingenx</string>
@@ -54,7 +54,7 @@
       <key>UTTypeIdentifier</key>
       <string>io.bitcoingenx.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>BitcoinGenX payment request</string>
+      <string>bitcoingenx payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>

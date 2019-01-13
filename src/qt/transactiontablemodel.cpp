@@ -85,7 +85,6 @@ public:
 
     /* Update our model of the wallet incrementally, to synchronize our model of the wallet
        with that of the core.
-
        Call with transaction that was added, removed or changed.
      */
     void updateWallet(const uint256& hash, int status, bool showTransaction)
@@ -334,8 +333,8 @@ QString TransactionTableModel::formatTxType(const TransactionRecord* wtx) const
         return tr("Masternode Reward");
     case TransactionRecord::RecvFromOther:
         return tr("Received from");
-    case TransactionRecord::RecvWithCoinMixing:
-        return tr("Received via CoinMixing");
+    case TransactionRecord::RecvWithObfuscation:
+        return tr("Received via Obfuscation");
     case TransactionRecord::SendToAddress:
     case TransactionRecord::SendToOther:
         return tr("Sent to");
@@ -345,16 +344,26 @@ QString TransactionTableModel::formatTxType(const TransactionRecord* wtx) const
         return tr("Minted");
     case TransactionRecord::Generated:
         return tr("Mined");
-    case TransactionRecord::CoinMixingDenominate:
-        return tr("CoinMixing Denominate");
-    case TransactionRecord::CoinMixingCollateralPayment:
-        return tr("CoinMixing Collateral Payment");
-    case TransactionRecord::CoinMixingMakeCollaterals:
-        return tr("CoinMixing Make Collateral Inputs");
-    case TransactionRecord::CoinMixingCreateDenominations:
-        return tr("CoinMixing Create Denominations");
+    case TransactionRecord::ObfuscationDenominate:
+        return tr("Obfuscation Denominate");
+    case TransactionRecord::ObfuscationCollateralPayment:
+        return tr("Obfuscation Collateral Payment");
+    case TransactionRecord::ObfuscationMakeCollaterals:
+        return tr("Obfuscation Make Collateral Inputs");
+    case TransactionRecord::ObfuscationCreateDenominations:
+        return tr("Obfuscation Create Denominations");
     case TransactionRecord::Obfuscated:
         return tr("Obfuscated");
+    case TransactionRecord::ZerocoinMint:
+        return tr("Converted bitcoingenx to zbitcoingenx");
+    case TransactionRecord::ZerocoinSpend:
+        return tr("Spent zbitcoingenx");
+    case TransactionRecord::RecvFromZerocoinSpend:
+        return tr("Received bitcoingenx from zbitcoingenx");
+    case TransactionRecord::ZerocoinSpend_Change_zbitcoingenx:
+        return tr("Minted Change as zbitcoingenx from zbitcoingenx Spend");
+    case TransactionRecord::ZerocoinSpend_FromMe:
+        return tr("Converted zbitcoingenx to bitcoingenx");
 
     default:
         return QString();
@@ -368,12 +377,14 @@ QVariant TransactionTableModel::txAddressDecoration(const TransactionRecord* wtx
     case TransactionRecord::StakeMint:
     case TransactionRecord::MNReward:
         return QIcon(":/icons/tx_mined");
-    case TransactionRecord::RecvWithCoinMixing:
+    case TransactionRecord::RecvWithObfuscation:
     case TransactionRecord::RecvWithAddress:
     case TransactionRecord::RecvFromOther:
+    case TransactionRecord::RecvFromZerocoinSpend:
         return QIcon(":/icons/tx_input");
     case TransactionRecord::SendToAddress:
     case TransactionRecord::SendToOther:
+    case TransactionRecord::ZerocoinSpend:
         return QIcon(":/icons/tx_output");
     default:
         return QIcon(":/icons/tx_inout");
@@ -393,15 +404,21 @@ QString TransactionTableModel::formatTxToAddress(const TransactionRecord* wtx, b
         return QString::fromStdString(wtx->address) + watchAddress;
     case TransactionRecord::RecvWithAddress:
     case TransactionRecord::MNReward:
-    case TransactionRecord::RecvWithCoinMixing:
+    case TransactionRecord::RecvWithObfuscation:
     case TransactionRecord::SendToAddress:
     case TransactionRecord::Generated:
     case TransactionRecord::StakeMint:
+    case TransactionRecord::ZerocoinSpend:
+    case TransactionRecord::ZerocoinSpend_FromMe:
+    case TransactionRecord::RecvFromZerocoinSpend:
         return lookupAddress(wtx->address, tooltip);
     case TransactionRecord::Obfuscated:
         return lookupAddress(wtx->address, tooltip) + watchAddress;
     case TransactionRecord::SendToOther:
         return QString::fromStdString(wtx->address) + watchAddress;
+    case TransactionRecord::ZerocoinMint:
+    case TransactionRecord::ZerocoinSpend_Change_zbitcoingenx:
+        return tr("zbitcoingenx Accumulator");
     case TransactionRecord::SendToSelf:
     default:
         return tr("(n/a)") + watchAddress;

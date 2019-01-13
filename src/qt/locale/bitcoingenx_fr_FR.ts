@@ -211,8 +211,8 @@
         <translation>BIP 38 crypter</translation>
     </message>
     <message>
-        <source>Enter a BitcoinGenX Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Entrez une adresse BitcoinGenX que vous voulez crypter en utilisant BIP 38. Entrez une phrase secrète dans le champ du milieu. Cliquez sur crypter pour calculer la clé de cryptage privée.</translation>
+        <source>Enter a bitcoingenx Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Entrez une adresse bitcoingenx que vous voulez crypter en utilisant BIP 38. Entrez une phrase secrète dans le champ du milieu. Cliquez sur crypter pour calculer la clé de cryptage privée.</translation>
     </message>
     <message>
         <source>Address:</source>
@@ -454,8 +454,8 @@
         <translation>&amp;Information</translation>
     </message>
     <message>
-        <source>Show diagnostic information</source>
-        <translation>Afficher les informations de dignostique</translation>
+        <source>Show diagbitcoingenxtic information</source>
+        <translation>Afficher les informations de digbitcoingenxtique</translation>
     </message>
     <message>
         <source>&amp;Debug console</source>
@@ -1020,7 +1020,7 @@ Veuillez vérifier l'adresse et réessayer.</translation>
     </message>
 </context>
 <context>
-    <name>CoinMixingConfig</name>
+    <name>ObfuscationConfig</name>
     <message>
         <source>Basic Privacy</source>
         <translation>Confidentialité de base</translation>
@@ -1103,6 +1103,73 @@ Veuillez vérifier l'adresse et réessayer.</translation>
     <message>
         <source>Version</source>
         <translation>Version</translation>
+    </message>
+    </context>
+<context>
+    <name>PrivacyDialog</name>
+    <message>
+        <source>0</source>
+        <translation>0</translation>
+    </message>
+    <message>
+        <source>Quantity:</source>
+        <translation>Quantité :</translation>
+    </message>
+    <message>
+        <source>Amount:</source>
+        <translation>Montant :</translation>
+    </message>
+    <message>
+        <source>Pay &amp;To:</source>
+        <translation>Payer à :</translation>
+    </message>
+    <message>
+        <source>Choose previously used address</source>
+        <translation>Choisir l'adresse précédemment utilisée</translation>
+    </message>
+    <message>
+        <source>Alt+A</source>
+        <translation>Alt+A</translation>
+    </message>
+    <message>
+        <source>Paste address from clipboard</source>
+        <translation>Copier l'adresse depuis le presse-papier</translation>
+    </message>
+    <message>
+        <source>Alt+P</source>
+        <translation>Alt+P</translation>
+    </message>
+    <message>
+        <source>Priority:</source>
+        <translation>Priorité :</translation>
+    </message>
+    <message>
+        <source>Fee:</source>
+        <translation>Commission :</translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation>non</translation>
+    </message>
+    <message>
+        <source>Insufficient funds!</source>
+        <translation>Fonds insuffisants!</translation>
+    </message>
+    <message>
+        <source>medium</source>
+        <translation>moyen</translation>
+    </message>
+    <message>
+        <source>Copy quantity</source>
+        <translation>Copier la quantité</translation>
+    </message>
+    <message>
+        <source>Copy amount</source>
+        <translation>Copier le montant</translation>
+    </message>
+    <message>
+        <source>Confirm send coins</source>
+        <translation>Confirmer l'envoi des pièces</translation>
     </message>
     </context>
 <context>
@@ -1332,10 +1399,6 @@ Veuillez vérifier l'adresse et réessayer.</translation>
     <message>
         <source>Send Coins</source>
         <translation>Envoyer des pièces</translation>
-    </message>
-    <message>
-        <source>Inputs...</source>
-        <translation>Entrés...</translation>
     </message>
     <message>
         <source>Insufficient funds!</source>
@@ -1629,9 +1692,49 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <source>Address</source>
         <translation>Adresse</translation>
     </message>
-    </context>
+    <message>
+        <source>Date and time that the transaction was received.</source>
+        <translation>Date et heure a laquelle la transaction fut reçue</translation>
+    </message>
+    <message>
+        <source>Type of transaction.</source>
+        <translation>Type de transaction.</translation>
+    </message>
+    <message>
+        <source>Destination address of transaction.</source>
+        <translation>Adresse destinataire de la transaction.</translation>
+    </message>
+    <message>
+        <source>Amount removed from or added to balance.</source>
+        <translation>Montant retiré ou ajouté a la balance.</translation>
+    </message>
+</context>
 <context>
     <name>TransactionView</name>
+    <message>
+        <source>All</source>
+        <translation>Tous</translation>
+    </message>
+    <message>
+        <source>Today</source>
+        <translation>Aujourd'hui</translation>
+    </message>
+    <message>
+        <source>This week</source>
+        <translation>Cette semaine</translation>
+    </message>
+    <message>
+        <source>This month</source>
+        <translation>Ce mois</translation>
+    </message>
+    <message>
+        <source>Last month</source>
+        <translation>Le mois dernier</translation>
+    </message>
+    <message>
+        <source>This year</source>
+        <translation>Cette année</translation>
+    </message>
     <message>
         <source>Copy address</source>
         <translation>Copier l'adresse</translation>
@@ -1695,6 +1798,13 @@ Veuillez vérifier l'adresse et réessayer.</translation>
     <message>
         <source>Export the data in the current tab to a file</source>
         <translation>Exporter l</translation>
+    </message>
+    </context>
+<context>
+    <name>ZPhrControlDialog</name>
+    <message>
+        <source>0</source>
+        <translation>0</translation>
     </message>
     </context>
 <context>

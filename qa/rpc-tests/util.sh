@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Copyright (c) 2014 The Bitcoin Core developers
 # Copyright (c) 2014-2015 The Dash developers
-# Copyright (c) 2015-2017 The bitcoingenx developers
+# Copyright (c) 2015-2017 The PIVX developers
+# Copyright (c) 2017 The bitcoingenx developers
 # Distributed under the MIT/X11 software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -89,8 +90,8 @@ function CreateTxn1 {
   TXID=$(Unspent $1 $2 txid)
   AMOUNT=$(Unspent $1 $2 amount)
   VOUT=$(Unspent $1 $2 vout)
-  RAWTBGX=$( $CLI $1 createrawtransaction "[{\"txid\":\"$TXID\",\"vout\":$VOUT}]" "{\"$3\":$AMOUNT}")
-  ExtractKey hex "$( $CLI $1 signrawtransaction $RAWTBGX )"
+  RAWTXN=$( $CLI $1 createrawtransaction "[{\"txid\":\"$TXID\",\"vout\":$VOUT}]" "{\"$3\":$AMOUNT}")
+  ExtractKey hex "$( $CLI $1 signrawtransaction $RAWTXN )"
 }
 
 # Use: SendRawTxn <datadir> <hex_txn_data>

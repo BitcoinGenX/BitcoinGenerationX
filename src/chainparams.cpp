@@ -1,15 +1,13 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2018 The bitcoingenx developers
+// Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2017 The bitcoingenx developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
+#include "libzerocoin/Params.h"
 #include "chainparams.h"
-
-#include "bignum.h"
-
-
 #include "random.h"
 #include "util.h"
 #include "utilstrencodings.h"
@@ -55,7 +53,16 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 //    timestamp before)
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
-    boost::assign::map_list_of(0, uint256("0x000006d96a82acb8130eee4baca0fb6fe04bdc772fd71cb30a3b393f4bd12c6a"));
+    boost::assign::map_list_of
+	(0, uint256("0000006d96a82acb8130eee4baca0fb6fe04bdc772fd71cb30a3b393f4bd12c6a"))
+	(300, uint256("000001b206cc96651f026dcdf5d8e2abe98049dada2d621a14d23df3ecd151c6"))
+	(500, uint256("9d9b17be7e1506ae236fec3a8325b7c7b75fcf3c4250c59b3914f2ca898095a5"))
+	(700, uint256("fe01f58f2b7faf38d986b81d731880a89a2d383acf0899ab5bea413ab72087ba"))
+	(1000, uint256("5859222b4df378e33d81641ebf455c4701a9101931afe0a1fc10a244cbd3b599"))
+	(3000, uint256("b4d7e37625a63a7ca652802b8ba4e602907962359305f01f5bd73cf3e424788a"))
+	(5000, uint256("ffe8a7f9553c9643f13c8a9a9aed0247c0d184935a79bf95e3c0b9fbbe401df8"))
+	(10000, uint256("e4561ad36e8a1619f9ad421c5b2098be65bc33adbed5c2f31987096250da2a1a"))
+	(13000, uint256("4a54b06ce4ab082c43017317a61a1063522573c63a6e4bf38729134e4ce1312b"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1514407942, // * UNIX timestamp of last checkpoint block
@@ -80,6 +87,15 @@ static const Checkpoints::CCheckpointData dataRegtest = {
     0,
     100};
 
+libzerocoin::ZerocoinParams* CChainParams::Zerocoin_Params() const
+{
+    assert(this);
+    static CBigNum bnTrustedModulus(zerocoinModulus);
+    static libzerocoin::ZerocoinParams ZCParams = libzerocoin::ZerocoinParams(bnTrustedModulus);
+
+    return &ZCParams;
+}
+
 class CMainParams : public CChainParams
 {
 public:
@@ -88,6 +104,10 @@ public:
         networkID = CBaseChainParams::MAIN;
         strNetworkID = "main";
         
+
+
+
+
 		pchMessageStart[0] = 0x23;
         pchMessageStart[1] = 0x1a;
         pchMessageStart[2] = 0xa5;
@@ -95,7 +115,7 @@ public:
         vAlertPubKey = ParseHex("0498df519f57e2eaa4a7d7ff3347a360520c2f4b8f07d0241b5b6ba5ce8e3d6ecba5443696473a387adff27aa6bb72b952ff23026e088cff9f47cbb387ed52c326");
         nDefaultPort = 4488;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // bitcoingenx starting difficulty is 1 / 2^12
-        nSubsidyHalvingInterval = 9999999;
+        nSubsidyHalvingInterval = 999999;
         nMaxReorganizationDepth = 100;
         nEnforceBlockUpgradeMajority = 750;
         nRejectBlockOutdatedMajority = 950;
@@ -103,13 +123,22 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // bitcoingenx: 
         nTargetSpacing = 1 * 60;  // bitcoingenx: 1 minute
-        nLastPOWBlock = 400;
         nMaturity = 9;
         nMasternodeCountDrift = 20;
-        nModifierUpdateBlock = 1;
         nMaxMoneyOut = 5000000 * COIN;
 
-        /**
+		/** Height or Time Based Activations **/
+        nLastPOWBlock = 400;
+        nModifierUpdateBlock = 9999999;
+        nZerocoinStartHeight = 20000;
+        nAccumulatorStartHeight = 1;
+        nZerocoinStartTime = 1547334727; //  Saturday, 12 January 2019 23:12:07 (Still requires block 15000)
+        nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
+        nBlockRecalculateAccumulators = ~1; //Trigger a recalculation of accumulators
+        nBlockFirstFraudulent = ~1; //First block that bad serials emerged
+        nBlockLastGoodCheckpoint = ~1; //Last valid accumulator checkpoint
+		
+		/**
          * Build the genesis block. Note that the output of the genesis coinbase cannot
          * be spent as it did not originally exist in the database.
          *
@@ -184,8 +213,17 @@ public:
 
         nPoolMaxTransactions = 3;
         strSporkKey = "04d45416e4a64b1b051e2a2ebd80ced5efe148cf5fbcb70e56860957675a2da1a21fd522c42c1ed18a1ec42641589a09cf3f58678d213825dc21798183a005a984";
-        strCoinMixingPoolDummyAddress = "BpBXVv2LMB6pRUboFqCYwUACCa8oKHQyqn";
-        nStartMasternodePayments = 1403728576; //
+        strObfuscationPoolDummyAddress = "BpBXVv2LMB6pRUboFqCYwUACCa8oKHQyqn";
+        nStartMasternodePayments = 1403728576; //Wed, 25 Jun 2014 20:36:16 GMT
+
+        /** Zerocoin */
+        zerocoinModulus = "0xc95577b6dce0049b0a20c779af38079355abadde1a1d80c353f6cb697a7ae5a087bad39caa5798478551d0f9d91e6267716506f32412de1d19d17588765eb9502b85c6a18abdb05791cfd8b734e960281193705eeece210920cc922b3af3ceb178bf12c22eb565d5767fbf19545639be8953c2c38ffad41f3371e4aac750ac2d7bd614b3faabb453081d5d88fdbb803657a980bc93707e4b14233a2358c97763bf28f7c933206071477e8b371f229bc9ce7d6ef0ed7163aa5dfe13bc15f7816348b328fa2c1e69d5c88f7b94cee7829d56d1842d77d7bb8692e9fc7b7db059836500de8d57eb43c345feb58671503b932829112941367996b03871300f25efb5";
+        nMaxZerocoinSpendsPerTransaction = 7; // Assume about 20kb each
+        nMinZerocoinMintFee = 1 * ZCENT; //high fee required for zerocoin mints
+        nMintRequiredConfirmations = 20; //the maximum amount of confirmations until accumulated in 19
+        nRequiredAccumulation = 1;
+        nDefaultSecurityLevel = 100; //full security level for accumulators
+        nZerocoinHeaderVersion = 4; //Block headers must be this version once zerocoin is active
         nBudget_Fee_Confirmations = 6; // Number of confirmations for the finalization fee
     }
 
@@ -221,29 +259,40 @@ public:
         nLastPOWBlock = 200;
         nMaturity = 15;
         nMasternodeCountDrift = 4;
-        nModifierUpdateBlock = 1;
-        nMaxMoneyOut = 21000000 * COIN;
-
+        nModifierUpdateBlock = 51197; //approx Mon, 17 Apr 2017 04:00:00 GMT
+        nMaxMoneyOut = 43199500 * COIN;
+        nZerocoinStartHeight = 201576;
+        nZerocoinStartTime = 1524711188;
+        nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
+        nBlockRecalculateAccumulators = 9908000; //Trigger a recalculation of accumulators
+        nBlockFirstFraudulent = 9891737; //First block that bad serials emerged
+        nBlockLastGoodCheckpoint = 9891730; //Last valid accumulator checkpoint
+        
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1534570200;
-        genesis.nNonce = 21148656;
+        genesis.nTime = 1454124731;
+        genesis.nNonce = 2402015;
 
-        //hashGenesisBlock = genesis.GetHash();
-        //assert(hashGenesisBlock == uint256("0x000000938f4f20c6ccb3fea36539ade5af73d0bb45c55af64c7f7f1bfa5f3381"));
+        hashGenesisBlock = genesis.GetHash();
+        //assert(hashGenesisBlock == uint256("0x0000041e482b9b9691d98eefb48473405c0b8ec31b76df3797c74a78680ef818"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
+        vSeeds.push_back(CDNSSeedData("seeds.bitcoingenx.org", "seeds.bitcoingenx.org")); // Seeder
+        vSeeds.push_back(CDNSSeedData("209.250.241.176", "209.250.241.176"));   // Single node address
+        vSeeds.push_back(CDNSSeedData("209.250.243.131", "209.250.243.131"));   // Single node address
+        vSeeds.push_back(CDNSSeedData("45.77.239.108", "45.77.239.108"));       // Single node address
+		vSeeds.push_back(CDNSSeedData("45.32.235.211", "45.32.235.211"));       // Single node address
+		vSeeds.push_back(CDNSSeedData("107.191.44.102", "107.191.44.102"));     // Single node address
+		vSeeds.push_back(CDNSSeedData("108.61.188.67", "108.61.188.67"));       // Single node address
+		vSeeds.push_back(CDNSSeedData("140.82.34.3 ", "140.82.34.3 "));         // Block Explorer
 
-        // Testnet BitcoinGenX addresses start with 'g'
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 98);
-        // Testnet BitcoinGenX script addresses start with '5' or '6'
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 12);
-        // Testnet private keys start with 'k'
-        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 108);
-        // Testnet BitcoinGenX BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
-        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
-        // Testnet BitcoinGenX BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
-        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 139); // Testnet bitcoingenx addresses start with 'x' or 'y'
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 19);  // Testnet bitcoingenx script addresses start with '8' or '9'
+        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 239);     // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
+        // Testnet bitcoingenx BIP32 pubkeys start with 'DRKV'
+        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x3a)(0x80)(0x61)(0xa0).convert_to_container<std::vector<unsigned char> >();
+        // Testnet bitcoingenx BIP32 prvkeys start with 'DRKP'
+        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x3a)(0x80)(0x58)(0x37).convert_to_container<std::vector<unsigned char> >();
         // Testnet bitcoingenx BIP44 coin type is '1' (All coin's testnet default)
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0x01).convert_to_container<std::vector<unsigned char> >();
 
@@ -259,8 +308,10 @@ public:
 
         nPoolMaxTransactions = 2;
         strSporkKey = "04348C2F50F90267E64FACC65BFDC9D0EB147D090872FB97ABAE92E9A36E6CA60983E28E741F8E7277B11A7479B626AC115BA31463AC48178A5075C5A9319D4A38";
-        strCoinMixingPoolDummyAddress = "y57cqfGRkekRyDRNeJiLtYVEbvhXrNbmox";
-        nStartMasternodePayments = 1420837558; //
+        strObfuscationPoolDummyAddress = "y57cqfGRkekRyDRNeJiLtYVEbvhXrNbmox";
+        nStartMasternodePayments = 1420837558; //Fri, 09 Jan 2015 21:05:58 GMT
+        nBudget_Fee_Confirmations = 3; // Number of confirmations for the finalization fee. We have to make this very short
+                                       // here because we only have a 8 block finalization window on testnet
     }
     const Checkpoints::CCheckpointData& Checkpoints() const
     {
@@ -280,7 +331,7 @@ public:
         networkID = CBaseChainParams::REGTEST;
         strNetworkID = "regtest";
         strNetworkID = "regtest";
-        pchMessageStart[0] = 0xa1;
+        pchMessageStart[0] = 0x69;
         pchMessageStart[1] = 0xcf;
         pchMessageStart[2] = 0x7e;
         pchMessageStart[3] = 0xac;
@@ -289,16 +340,16 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 1;
-        nTargetTimespan = 24 * 60 * 60; // Pivx: 1 day
-        nTargetSpacing = 1 * 60;        // Pivx: 1 minutes
+        nTargetTimespan = 24 * 60 * 60; // bitcoingenx: 1 day
+        nTargetSpacing = 1 * 60;        // bitcoingenx: 1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
-        genesis.nTime = 1454124731;
-        genesis.nBits = 0x207fffff;
-        genesis.nNonce = 12345;
+        genesis.nTime = 1515524400;
+        genesis.nBits = 0x1e0ffff0;
+        genesis.nNonce = 732084;
 
         hashGenesisBlock = genesis.GetHash();
-        nDefaultPort = 51476;
-        //assert(hashGenesisBlock == uint256("0x4f023a2120d9127b21bbad01724fdb79b519f593f2a85b60d3d79160ec5f29df"));
+        nDefaultPort = 51436;
+        //assert(hashGenesisBlock == uint256("0x000008415bdca132b70cf161ecc548e5d0150fd6634a381ee2e99bb8bb77dbb3"));
 
         vFixedSeeds.clear(); //! Testnet mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Testnet mode doesn't have any DNS seeds.
@@ -354,17 +405,8 @@ public:
     virtual void setAllowMinDifficultyBlocks(bool afAllowMinDifficultyBlocks) { fAllowMinDifficultyBlocks = afAllowMinDifficultyBlocks; }
     virtual void setSkipProofOfWorkCheck(bool afSkipProofOfWorkCheck) { fSkipProofOfWorkCheck = afSkipProofOfWorkCheck; }
 };
-static CUnitTestParams unitTestParams;
-
 
 static CChainParams* pCurrentParams = 0;
-
-CModifiableParams* ModifiableParams()
-{
-    assert(pCurrentParams);
-    assert(pCurrentParams == &unitTestParams);
-    return (CModifiableParams*)&unitTestParams;
-}
 
 const CChainParams& Params()
 {
@@ -381,8 +423,6 @@ CChainParams& Params(CBaseChainParams::Network network)
         return testNetParams;
     case CBaseChainParams::REGTEST:
         return regTestParams;
-    case CBaseChainParams::UNITTEST:
-        return unitTestParams;
     default:
         assert(false && "Unimplemented network");
         return mainParams;

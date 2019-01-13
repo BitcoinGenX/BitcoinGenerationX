@@ -235,7 +235,7 @@
         <translation>&amp;Encriptação BIP 38</translation>
     </message>
     <message>
-        <source>Enter a BitcoinGenX Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <source>Enter a bitcoingenx Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
         <translation>Insira um endereço que você deseja criptografar usando a BIP 38. Insira a palavra-chave na caixa do meio. Pressione criptografar para computar a chave privada criptografada.</translation>
     </message>
     <message>
@@ -490,7 +490,7 @@
         <translation>&amp;Informação</translation>
     </message>
     <message>
-        <source>Show diagnostic information</source>
+        <source>Show diagbitcoingenxtic information</source>
         <translation>Mostrar informação de diagnóstico</translation>
     </message>
     <message>
@@ -813,10 +813,6 @@ MultiSend: %1</translation>
 <context>
     <name>ClientModel</name>
     <message>
-        <source>Total: %1 (OBF compatible: %2 / Enabled: %3)</source>
-        <translation>Total: %1 (OBF compatível: %2 / Ativado: %3)</translation>
-    </message>
-    <message>
         <source>Network Alert</source>
         <translation>Alerta de rede</translation>
     </message>
@@ -956,10 +952,6 @@ MultiSend: %1</translation>
         <translation>Favor alterar para o "Modo de lista" para usar esta função.</translation>
     </message>
     <message>
-        <source>Non-anonymized input selected. &lt;b&gt;CoinMixing will be disabled.&lt;/b&gt;&lt;br&gt;&lt;br&gt;If you still want to use CoinMixing, please deselect all non-nonymized inputs first and then check CoinMixing checkbox again.</source>
-        <translation>Input não-anonimizado selecionado. &lt;b&gt;Ofuscação será desabilitada.&lt;/b&gt;&lt;br&gt;&lt;br&gt; Se você ainda quiser usar a Ofuscação, favor desmarcar todos os inputs não anônimos primeiro e então marque a opção de Ofuscação novamente.</translation>
-    </message>
-    <message>
         <source>highest</source>
         <translation>mais alto</translation>
     </message>
@@ -978,10 +970,6 @@ MultiSend: %1</translation>
     <message>
         <source>Can vary +/- %1 duff(s) per input.</source>
         <translation>pode variar entre +/-%1 duff(s) por input</translation>
-    </message>
-    <message>
-        <source>n/a</source>
-        <translation>n/a</translation>
     </message>
     <message>
         <source>medium</source>
@@ -1025,7 +1013,7 @@ MultiSend: %1</translation>
     </message>
     <message>
         <source>This means a fee of at least %1 per kB is required.</source>
-        <translation>Isto significa que uma taxa de pelo menos %1 por kB é obrigatória.</translation>
+        <translation>Isto significa que uma taxa de pelo mebitcoingenx %1 por kB é obrigatória.</translation>
     </message>
     <message>
         <source>Can vary +/- 1 byte per input.</source>
@@ -1100,7 +1088,7 @@ MultiSend: %1</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
-        <translation>O endereço informado "%1" já está nos seus contatos.</translation>
+        <translation>O endereço informado "%1" já está bitcoingenx seus contatos.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -1193,7 +1181,7 @@ MultiSend: %1</translation>
     </message>
     <message>
         <source>BitcoinGenX Core will download and store a copy of the bitcoingenx block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>BitcoinGenX Core vai baixar e armazenar uma cópia da blockchain bitcoingenx. Pelo menos %1GB de informação será armazenado neste diretório e irá aumentar com o tempo. A carteira também será armazenada neste diretório.</translation>
+        <translation>BitcoinGenX Core vai baixar e armazenar uma cópia da blockchain bitcoingenx. Pelo mebitcoingenx %1GB de informação será armazenado neste diretório e irá aumentar com o tempo. A carteira também será armazenada neste diretório.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1438,9 +1426,9 @@ Favor verificar o endereço e tente novamente.</translation>
     </message>
 </context>
 <context>
-    <name>CoinMixingConfig</name>
+    <name>ObfuscationConfig</name>
     <message>
-        <source>Configure CoinMixing</source>
+        <source>Configure Obfuscation</source>
         <translation>Configurar Ofuscação</translation>
     </message>
     <message>
@@ -1488,19 +1476,19 @@ Favor verificar o endereço e tente novamente.</translation>
         <translation>0.1 BGX por 10000 BGX que deixar anônima.</translation>
     </message>
     <message>
-        <source>CoinMixing Configuration</source>
+        <source>Obfuscation Configuration</source>
         <translation>Configuração de ofuscação</translation>
     </message>
     <message>
-        <source>CoinMixing was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening bitcoingenx's configuration screen.</source>
+        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening bitcoingenx's configuration screen.</source>
         <translation>Ofuscação foi definida com sucesso para o básico (%1 e 2 rodadas) Você pode mudar isto a qualquer tempo ao abrir a configuração de tela bitcoingenx's.</translation>
     </message>
     <message>
-        <source>CoinMixing was successfully set to high (%1 and 8 rounds). You can change this at any time by opening bitcoingenx's configuration screen.</source>
+        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening bitcoingenx's configuration screen.</source>
         <translation>Ofuscação foi definida com sucesso para alto (%1 e 8 rodadas). Você pode mudar isto a qualquer tempo ao abrir a configuração de tela bitcoingenx's.</translation>
     </message>
     <message>
-        <source>CoinMixing was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening bitcoingenx's configuration screen.</source>
+        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening bitcoingenx's configuration screen.</source>
         <translation>Ofuscação foi definida com sucesso para máxima (%1 e 16 rodadas). Você pode mudar isto a qualquer tempo ao abrir a configuração de tela bitcoingenx's.</translation>
     </message>
 </context>
@@ -1580,18 +1568,6 @@ Favor verificar o endereço e tente novamente.</translation>
     <message>
         <source>&amp;Start bitcoingenx on system login</source>
         <translation>&amp;Iniciar bitcoingenx ao logar no sistema</translation>
-    </message>
-    <message>
-        <source>This setting determines the amount of individual masternodes that an input will be anonymized through.&lt;br/&gt;More rounds of anonymization gives a higher degree of privacy, but also costs more in fees.</source>
-        <translation>Esta configuração determina a quantidade de masternodes individuais em que um input será feito anônimo. &lt;br/&gt;Mais rodadas de anonimidade darão um grau maior de privacidade, mas também custarão mais em taxas. </translation>
-    </message>
-    <message>
-        <source>CoinMixing rounds to use</source>
-        <translation>Rodadas de ofuscação para usar</translation>
-    </message>
-    <message>
-        <source>Amount of bitcoingenx to keep anonymized</source>
-        <translation>Quantidade de bitcoingenx a manter anônima</translation>
     </message>
     <message>
         <source>Enable coin &amp;control features</source>
@@ -1751,10 +1727,6 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>Imaturo:</translation>
     </message>
     <message>
-        <source>Balances</source>
-        <translation>Fundos</translation>
-    </message>
-    <message>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the bitcoingenx network after a connection is established, but this process has not completed yet.</source>
         <translation>A informação mostrada pode estar desatualizada. A sua carteira se sincroniza automaticamente com a rede bitcoingenx após estabelecer uma conexão, mas esse processo ainda não foi concluído.</translation>
     </message>
@@ -1783,130 +1755,12 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>Disponível:</translation>
     </message>
     <message>
-        <source>Status:</source>
-        <translation>Situação:</translation>
-    </message>
-    <message>
-        <source>CoinMixing Balance:</source>
-        <translation>Saldo ofuscado:</translation>
-    </message>
-    <message>
-        <source>0 BGX / 0 Rounds</source>
-        <translation>0 BGX / 0 Rodadas</translation>
-    </message>
-    <message>
-        <source>Enabled/Disabled</source>
-        <translation>Ativado/Desativado</translation>
-    </message>
-    <message>
-        <source>Try to manually submit a CoinMixing request.</source>
-        <translation>Tente encaminhar uma requisição manualmente de Ofuscação.</translation>
-    </message>
-    <message>
-        <source>Reset the current status of CoinMixing (can interrupt CoinMixing if it's in the process of Mixing, which can cost you money!)</source>
-        <translation>Reinicia o presente estado de ofuscação (pode interromper a Ofuscação se estiver em processo de Embaralhamento, o que pode lhe custar dinheiro!)</translation>
-    </message>
-    <message>
-        <source>CoinMixing</source>
-        <translation>Ofuscação</translation>
-    </message>
-    <message>
-        <source>Completion:</source>
-        <translation>Conclusão:</translation>
-    </message>
-    <message>
-        <source>Amount and Rounds:</source>
-        <translation>Quantia e Rodadas:</translation>
-    </message>
-    <message>
-        <source>n/a</source>
-        <translation>n/a</translation>
-    </message>
-    <message>
         <source>Recent transactions</source>
         <translation>Transações recentes</translation>
     </message>
     <message>
-        <source>Start/Stop Mixing</source>
-        <translation>Iniciar/Parar embaralhamento</translation>
-    </message>
-    <message>
-        <source>(Last Message)</source>
-        <translation>(Última mensagem)</translation>
-    </message>
-    <message>
-        <source>Try Mix</source>
-        <translation>Tente embaralhar</translation>
-    </message>
-    <message>
-        <source>Reset</source>
-        <translation>Reinicia</translation>
-    </message>
-    <message>
         <source>out of sync</source>
         <translation>fora de sincronia</translation>
-    </message>
-    <message>
-        <source>Disabled</source>
-        <translation>Desativado</translation>
-    </message>
-    <message>
-        <source>No inputs detected</source>
-        <translation>Nenhum input detectado</translation>
-    </message>
-    <message>
-        <source>Overall progress</source>
-        <translation>Progresso geral</translation>
-    </message>
-    <message>
-        <source>Denominated</source>
-        <translation>Denominado</translation>
-    </message>
-    <message>
-        <source>Anonymized</source>
-        <translation>Anonimizado</translation>
-    </message>
-    <message>
-        <source>Last CoinMixing message:
-</source>
-        <translation>Última mensagem de ofuscação:
-</translation>
-    </message>
-    <message>
-        <source>CoinMixing was successfully reset.</source>
-        <translation>Ofuscação foi reiniciada com sucesso.</translation>
-    </message>
-    <message>
-        <source>CoinMixing requires at least %1 to use.</source>
-        <translation>Ofuscação requer pelo menos %1 para usar.</translation>
-    </message>
-    <message>
-        <source>Wallet is locked and user declined to unlock. Disabling CoinMixing.</source>
-        <translation>A carteira está travada e o usuário recusou o destravamento. Desabilitando a Ofuscação.</translation>
-    </message>
-    <message>
-        <source>Found enough compatible inputs to anonymize %1</source>
-        <translation>Foram encontrados inputos suficientes para anonimizar %1</translation>
-    </message>
-    <message>
-        <source>Start CoinMixing</source>
-        <translation>Iniciar ofuscação</translation>
-    </message>
-    <message>
-        <source>Stop CoinMixing</source>
-        <translation>Parar ofuscação</translation>
-    </message>
-    <message>
-        <source>Mixed</source>
-        <translation>Embaralhado</translation>
-    </message>
-    <message>
-        <source>Enabled</source>
-        <translation>Ativado</translation>
-    </message>
-    <message>
-        <source>N/A</source>
-        <translation>N/A</translation>
     </message>
 </context>
 <context>
@@ -1959,6 +1813,109 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>Tempo de resposta</translation>
     </message>
 </context>
+<context>
+    <name>PrivacyDialog</name>
+    <message>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the bitcoingenx network after a connection is established, but this process has not completed yet.</source>
+        <translation>A informação mostrada pode estar desatualizada. A sua carteira se sincroniza automaticamente com a rede bitcoingenx após estabelecer uma conexão, mas esse processo ainda não foi concluído.</translation>
+    </message>
+    <message>
+        <source>0</source>
+        <translation>0</translation>
+    </message>
+    <message>
+        <source>Reset</source>
+        <translation>Reinicia</translation>
+    </message>
+    <message>
+        <source>Quantity:</source>
+        <translation>Quantidade:</translation>
+    </message>
+    <message>
+        <source>Amount:</source>
+        <translation>Quantia:</translation>
+    </message>
+    <message>
+        <source>Pay &amp;To:</source>
+        <translation>Pagar &amp;Para:</translation>
+    </message>
+    <message>
+        <source>Choose previously used address</source>
+        <translation>Escolha o endereço previamente utilizado</translation>
+    </message>
+    <message>
+        <source>Alt+A</source>
+        <translation>Alt+A</translation>
+    </message>
+    <message>
+        <source>Paste address from clipboard</source>
+        <translation>Cole o endereço da área de transferência</translation>
+    </message>
+    <message>
+        <source>Alt+P</source>
+        <translation>Alt+P</translation>
+    </message>
+    <message>
+        <source>&amp;Label:</source>
+        <translation>&amp;Rótulo:</translation>
+    </message>
+    <message>
+        <source>Enter a label for this address to add it to the list of used addresses</source>
+        <translation>Coloque uma etiqueta neste endereço para adicioná-lo à lista de endereços utilizados</translation>
+    </message>
+    <message>
+        <source>A&amp;mount:</source>
+        <translation>Quantia:</translation>
+    </message>
+    <message>
+        <source>Priority:</source>
+        <translation>Prioridade:</translation>
+    </message>
+    <message>
+        <source>Fee:</source>
+        <translation>Taxa:</translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation>não</translation>
+    </message>
+    <message>
+        <source>Bytes:</source>
+        <translation>Bytes:</translation>
+    </message>
+    <message>
+        <source>Insufficient funds!</source>
+        <translation>Fundos insuficientes!</translation>
+    </message>
+    <message>
+        <source>medium</source>
+        <translation>médio</translation>
+    </message>
+    <message>
+        <source>Coin Control Features</source>
+        <translation>Funções do Controle de Moedas</translation>
+    </message>
+    <message>
+        <source>Change:</source>
+        <translation>Troco:</translation>
+    </message>
+    <message>
+        <source>out of sync</source>
+        <translation>fora de sincronia</translation>
+    </message>
+    <message>
+        <source>Copy quantity</source>
+        <translation>Copiar quantidade</translation>
+    </message>
+    <message>
+        <source>Copy amount</source>
+        <translation>Copiar quantia</translation>
+    </message>
+    <message>
+        <source>Confirm send coins</source>
+        <translation>Confirmar envio de moedas</translation>
+    </message>
+    </context>
 <context>
     <name>QObject</name>
     <message>
@@ -2272,7 +2229,7 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     </message>
     <message>
         <source>&amp;Label:</source>
-        <translation>Rótu&amp;lo:</translation>
+        <translation>&amp;Rótulo:</translation>
     </message>
     <message>
         <source>&amp;Amount:</source>
@@ -2416,10 +2373,6 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>Funções do Controle de Moedas</translation>
     </message>
     <message>
-        <source>automatically selected</source>
-        <translation>selecionado automaticamente</translation>
-    </message>
-    <message>
         <source>Insufficient funds!</source>
         <translation>Fundos insuficientes!</translation>
     </message>
@@ -2492,16 +2445,12 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>Minimizar</translation>
     </message>
     <message>
-        <source>CoinMixing</source>
-        <translation>Ofuscação</translation>
-    </message>
-    <message>
         <source>per kilobyte</source>
         <translation>por kilobyte</translation>
     </message>
     <message>
         <source>total at least</source>
-        <translation>total pelo menos</translation>
+        <translation>total pelo mebitcoingenx</translation>
     </message>
     <message>
         <source>Custom:</source>
@@ -2517,11 +2466,11 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     </message>
     <message>
         <source>If the custom fee is set to 1000 uBGXs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uBGXs in fee,&lt;br /&gt;while "at least" pays 1000 uBGXs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Se a taxa padrão estiver definida para 1000 uBGXs e a transação for somente de 250 bytes, então "por kilobyte" pagará somente 250 uBGXs em taxa,&lt;br /&gt; pagará pelo menos 1000 uBGXs. Para transações maiores que um kilobyte ambas pagam por kilobyte.</translation>
+        <translation>Se a taxa padrão estiver definida para 1000 uBGXs e a transação for somente de 250 bytes, então "por kilobyte" pagará somente 250 uBGXs em taxa,&lt;br /&gt; pagará pelo mebitcoingenx 1000 uBGXs. Para transações maiores que um kilobyte ambas pagam por kilobyte.</translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for bitcoingenx transactions than the network can process.</source>
-        <translation>Pagar a taxa mínima é aceitável desde que existe menos volume de transações que espaço nos blocos. &lt;br/&gt; Mas fique atento que isso pode acabar em uma transação que nunca será confirmada caso haja mais demanda por transações de bitcoingenx do que a rede pode processar.</translation>
+        <translation>Pagar a taxa mínima é aceitável desde que existe mebitcoingenx volume de transações que espaço bitcoingenx blocos. &lt;br/&gt; Mas fique atento que isso pode acabar em uma transação que nunca será confirmada caso haja mais demanda por transações de bitcoingenx do que a rede pode processar.</translation>
     </message>
     <message>
         <source>normal</source>
@@ -3172,7 +3121,7 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>Recebido de</translation>
     </message>
     <message>
-        <source>Received via CoinMixing</source>
+        <source>Received via Obfuscation</source>
         <translation>Recebido com Ofuscação</translation>
     </message>
     <message>
@@ -3452,18 +3401,21 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     </message>
 </context>
 <context>
+    <name>ZPhrControlDialog</name>
+    <message>
+        <source>0</source>
+        <translation>0</translation>
+    </message>
+    </context>
+<context>
     <name>bitcoingenx-core</name>
     <message>
         <source>Delete all wallet transactions and only recover those parts of the blockchain through -rescan on startup</source>
         <translation>Deletar todas as transações da carteira e somente recuperar aquelas partes da blockchain através de -rescan na inicialização</translation>
     </message>
     <message>
-        <source>Disable all bitcoingenx specific functionality (Masternodes, CoinMixing, SwiftTX, Budgeting) (0-1, default: %u)</source>
+        <source>Disable all bitcoingenx specific functionality (Masternodes, Obfuscation, SwiftTX, Budgeting) (0-1, default: %u)</source>
         <translation>Desabilitar todas as funcionalidades específicas bitcoingenx (Masternodes, Ofuscação, SwiftTX, Budgeting) (0-1, padrão: %u)</translation>
-    </message>
-    <message>
-        <source>Enable use of automated coinmixing for funds stored in this wallet (0-1, default: %u)</source>
-        <translation>Permitir o uso de ofuscação automática para fundos armazenados nesta carteira (0-1, padrão: %u)</translation>
     </message>
     <message>
         <source>Error: Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported.</source>
@@ -3503,7 +3455,7 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     </message>
     <message>
         <source>SwiftTX requires inputs with at least 6 confirmations, you might need to wait a few minutes and try again.</source>
-        <translation>SwiftTX requer inputs com pelo menos 6 confirmações, você precisar aguardar alguns minutos e tentar novamente.</translation>
+        <translation>SwiftTX requer inputs com pelo mebitcoingenx 6 confirmações, você precisar aguardar alguns minutos e tentar novamente.</translation>
     </message>
     <message>
         <source>Unable to locate enough funds for this transaction that are not equal 10000 BGX.</source>
@@ -3686,7 +3638,7 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>erro: Carteira travada, não foi possível criar a transação!</translation>
     </message>
     <message>
-        <source>Error: You already have pending entries in the CoinMixing pool</source>
+        <source>Error: You already have pending entries in the Obfuscation pool</source>
         <translation>Erro: Você já possui entradas pendentes na pool de Ofuscação</translation>
     </message>
     <message>
@@ -3750,14 +3702,6 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>Fundos insuficientes.</translation>
     </message>
     <message>
-        <source>Invalid -onion address: '%s'</source>
-        <translation>Inválido -onion endereço: '%s'</translation>
-    </message>
-    <message>
-        <source>Invalid -proxy address: '%s'</source>
-        <translation>Inválido -proxy endereço: '%s'</translation>
-    </message>
-    <message>
         <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s'</source>
         <translation>Quantia inválida para -maxtxfee=&lt;amount&gt;: '%s'</translation>
     </message>
@@ -3771,7 +3715,7 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     </message>
     <message>
         <source>Invalid amount for -paytxfee=&lt;amount&gt;: '%s' (must be at least %s)</source>
-        <translation>Quantia inválida para -paytxfee=&lt;amount&gt;: '%s' (deve ser pelo menos %s)</translation>
+        <translation>Quantia inválida para -paytxfee=&lt;amount&gt;: '%s' (deve ser pelo mebitcoingenx %s)</translation>
     </message>
     <message>
         <source>Invalid amount for -paytxfee=&lt;amount&gt;: '%s'</source>
@@ -3802,15 +3746,11 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>Script inválido detectado.</translation>
     </message>
     <message>
-        <source>Keep N BGX anonymized (default: %u)</source>
-        <translation>Manter N BGX anônimo (padrão: %u)</translation>
-    </message>
-    <message>
-        <source>Last CoinMixing was too recent.</source>
+        <source>Last Obfuscation was too recent.</source>
         <translation>Última ofuscação foi muito recente.</translation>
     </message>
     <message>
-        <source>Last successful CoinMixing action was too recent.</source>
+        <source>Last successful Obfuscation action was too recent.</source>
         <translation>Última ação de ofuscação com sucesso foi muito recente.</translation>
     </message>
     <message>
@@ -3851,7 +3791,7 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     </message>
     <message>
         <source>Maintain at most &lt;n&gt; connections to peers (default: %u)</source>
-        <translation>Manter pelo menos &lt;n&gt; conexões aos pares (padrão: %u)</translation>
+        <translation>Manter pelo mebitcoingenx &lt;n&gt; conexões aos pares (padrão: %u)</translation>
     </message>
     <message>
         <source>Masternode options:</source>
@@ -3902,19 +3842,15 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>Número de backups automáticos da carteira (padrão: 10)</translation>
     </message>
     <message>
-        <source>CoinMixing is idle.</source>
+        <source>Obfuscation is idle.</source>
         <translation>Ofuscação está ociosa.</translation>
     </message>
     <message>
-        <source>CoinMixing options:</source>
-        <translation>Opções de ofuscação:</translation>
-    </message>
-    <message>
-        <source>CoinMixing request complete:</source>
+        <source>Obfuscation request complete:</source>
         <translation>Requisição de ofuscação completa:</translation>
     </message>
     <message>
-        <source>CoinMixing request incomplete:</source>
+        <source>Obfuscation request incomplete:</source>
         <translation>Requisição de ofuscação incompleta:</translation>
     </message>
     <message>
@@ -4126,7 +4062,7 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>Nome de usuário para conexões JSON-RPC</translation>
     </message>
     <message>
-        <source>Value more than CoinMixing pool maximum allows.</source>
+        <source>Value more than Obfuscation pool maximum allows.</source>
         <translation>Valor maior que o máximo permitido pela pool de Ofuscação </translation>
     </message>
     <message>

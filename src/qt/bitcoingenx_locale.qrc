@@ -10,6 +10,7 @@
         <file alias="es">locale/bitcoingenx_es.qm</file>
         <file alias="fi">locale/bitcoingenx_fi.qm</file>
         <file alias="fr_FR">locale/bitcoingenx_fr_FR.qm</file>
+        <file alias="hr">locale/bitcoingenx_hr.qm</file>
         <file alias="it">locale/bitcoingenx_it.qm</file>
         <file alias="ja">locale/bitcoingenx_ja.qm</file>
         <file alias="ko_KR">locale/bitcoingenx_ko_KR.qm</file>
@@ -21,6 +22,7 @@
         <file alias="ru">locale/bitcoingenx_ru.qm</file>
         <file alias="sk">locale/bitcoingenx_sk.qm</file>
         <file alias="sv">locale/bitcoingenx_sv.qm</file>
+        <file alias="tr">locale/bitcoingenx_tr.qm</file>
         <file alias="uk">locale/bitcoingenx_uk.qm</file>
         <file alias="zh_CN">locale/bitcoingenx_zh_CN.qm</file>
         <file alias="zh_TW">locale/bitcoingenx_zh_TW.qm</file>

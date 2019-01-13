@@ -1,6 +1,6 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The bitcoingenx developers
+// Copyright (c) 2015-2017 The PIVX developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -28,9 +28,9 @@ AskPassphraseDialog::AskPassphraseDialog(Mode mode, QWidget* parent, WalletModel
     ui->passEdit2->setMinimumSize(ui->passEdit2->sizeHint());
     ui->passEdit3->setMinimumSize(ui->passEdit3->sizeHint());
 
-    ui->passEdit1->setMaxLength(MAX_PASSPHRASE_SIZE);
-    ui->passEdit2->setMaxLength(MAX_PASSPHRASE_SIZE);
-    ui->passEdit3->setMaxLength(MAX_PASSPHRASE_SIZE);
+    ui->passEdit1->setMaxLength(MAX_PASSBGXASE_SIZE);
+    ui->passEdit2->setMaxLength(MAX_PASSBGXASE_SIZE);
+    ui->passEdit3->setMaxLength(MAX_PASSBGXASE_SIZE);
 
     // Setup Caps Lock detection.
     ui->passEdit1->installEventFilter(this);
@@ -93,9 +93,9 @@ void AskPassphraseDialog::accept()
     SecureString oldpass, newpass1, newpass2;
     if (!model)
         return;
-    oldpass.reserve(MAX_PASSPHRASE_SIZE);
-    newpass1.reserve(MAX_PASSPHRASE_SIZE);
-    newpass2.reserve(MAX_PASSPHRASE_SIZE);
+    oldpass.reserve(MAX_PASSBGXASE_SIZE);
+    newpass1.reserve(MAX_PASSBGXASE_SIZE);
+    newpass2.reserve(MAX_PASSBGXASE_SIZE);
     // TODO: get rid of this .c_str() by implementing SecureString::operator=(std::string)
     // Alternately, find a way to make this input mlock()'d to begin with.
     oldpass.assign(ui->passEdit1->text().toStdString().c_str());

@@ -10,7 +10,7 @@
 
 /**
  * CBaseChainParams defines the base parameters (shared between bitcoingenx-cli and bitcoingenxd)
- * of a given instance of the BitcoinGenX system.
+ * of a given instance of the bitcoingenx system.
  */
 class CBaseChainParams
 {

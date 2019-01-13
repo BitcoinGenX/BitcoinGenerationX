@@ -3,7 +3,7 @@ BitcoinGenX Core
 
 Setup
 ---------------------
-[BitcoinGenX Core](http://bitcoingenx.org/wallet) is the original bitcoingenx client and it builds the backbone of the network. However, it downloads and stores the entire history of bitcoingenx transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[BitcoinGenX Core](http://bitcoingenxcoin.com) is the original bitcoingenx client and it builds the backbone of the network. However, it downloads and stores the entire history of bitcoingenx transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
@@ -28,8 +28,8 @@ Drag bitcoingenx-Qt to your applications folder, and then run bitcoingenx-Qt.
 
 * See the documentation at the [bitcoingenx Wiki](https://en.bitcoin.it/wiki/Main_Page) ***TODO***
 for help and more information.
-* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [bitcoingenx Forum](http://forum.bitcoingenx.org/).
-* Join one of our Slack groups [bitcoingenx Slack Groups](https://bitcoingenx.org/slack-logins/).
+* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php) or on the [bitcoingenx Forum](http://bitcoingenxcoin.com/).
+* Join one of our Discord groups [bitcoingenx Discord Groups](https://discord.gg/YcnvMqt).
 
 Building
 ---------------------
@@ -41,7 +41,7 @@ The following are developer notes on how to build bitcoingenx on your native pla
 
 Development
 ---------------------
-The BitcoinGenX repo's [root README](https://github.com/bitcoingenx-Project/bitcoingenx/blob/master/README.md) contains relevant information on the development process and automated testing.
+The bitcoingenx repo's [root README](https://github.com/eastcoastcrypto/bitcoingenx/blob/master/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)
@@ -55,8 +55,8 @@ The BitcoinGenX repo's [root README](https://github.com/bitcoingenx-Project/bitc
 
 ### Resources
 
-* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [bitcoingenx](http://forum.bitcoingenx.org/) forum.
-* Join the [bitcoingenx-Dev](https://bitcoingenx-dev.slack.com/) Slack group ([Sign-Up](https://bitcoingenx-dev.herokuapp.com/)).
+* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) .
+* Join the [bitcoingenx-Dev] Discord groups [bitcoingenx Discord Groups](https://discord.gg/YcnvMqt).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

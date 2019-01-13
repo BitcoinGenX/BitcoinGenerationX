@@ -17,7 +17,7 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        "bitcoingenx"
-            VALUE "FileDescription",    "bitcoingenxd (OSS daemon/client for BitcoinGenX)"
+            VALUE "FileDescription",    "bitcoingenxd (OSS daemon/client for bitcoingenx)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "bitcoingenxd"
             VALUE "LegalCopyright",     COPYRIGHT_STR

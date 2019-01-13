@@ -227,8 +227,8 @@
         <translation>&amp;BIP 38 加密</translation>
     </message>
     <message>
-        <source>Enter a BitcoinGenX Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>輸入你想 BIP 38 加密的 BitcoinGenX 位址, 輸入密碼在中間欄, 按下加密按鈕來產生加密私鑰.</translation>
+        <source>Enter a bitcoingenx Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>輸入你想 BIP 38 加密的 bitcoingenx 位址, 輸入密碼在中間欄, 按下加密按鈕來產生加密私鑰.</translation>
     </message>
     <message>
         <source>Address:</source>
@@ -486,7 +486,7 @@
         <translation>&amp;資訊</translation>
     </message>
     <message>
-        <source>Show diagnostic information</source>
+        <source>Show diagbitcoingenxtic information</source>
         <translation>顯示診斷訊息</translation>
     </message>
     <message>
@@ -726,7 +726,7 @@
     </message>
     </context>
 <context>
-    <name>CoinMixingConfig</name>
+    <name>ObfuscationConfig</name>
     </context>
 <context>
     <name>OpenURIDialog</name>
@@ -742,6 +742,25 @@
     </context>
 <context>
     <name>PeerTableModel</name>
+    </context>
+<context>
+    <name>PrivacyDialog</name>
+    <message>
+        <source>Choose previously used address</source>
+        <translation>選擇之前用過的位址</translation>
+    </message>
+    <message>
+        <source>Alt+A</source>
+        <translation>Alt+A</translation>
+    </message>
+    <message>
+        <source>Paste address from clipboard</source>
+        <translation>從剪貼簿貼上</translation>
+    </message>
+    <message>
+        <source>Alt+P</source>
+        <translation>Alt+P</translation>
+    </message>
     </context>
 <context>
     <name>QObject</name>
@@ -950,6 +969,9 @@
         <source>Export the data in the current tab to a file</source>
         <translation>匯出目前面板中的資料</translation>
     </message>
+    </context>
+<context>
+    <name>ZPhrControlDialog</name>
     </context>
 <context>
     <name>bitcoingenx-core</name>

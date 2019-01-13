@@ -162,7 +162,7 @@
     </message>
     </context>
 <context>
-    <name>CoinMixingConfig</name>
+    <name>ObfuscationConfig</name>
     </context>
 <context>
     <name>OpenURIDialog</name>
@@ -178,6 +178,9 @@
     </context>
 <context>
     <name>PeerTableModel</name>
+    </context>
+<context>
+    <name>PrivacyDialog</name>
     </context>
 <context>
     <name>QObject</name>
@@ -258,6 +261,9 @@
         <source>&amp;Export</source>
         <translation>＆エクスポート</translation>
     </message>
+    </context>
+<context>
+    <name>ZPhrControlDialog</name>
     </context>
 <context>
     <name>bitcoingenx-core</name>

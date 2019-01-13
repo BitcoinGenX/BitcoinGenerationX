@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2015 The Dash Developers
-// Copyright (c) 2015-2017 The bitcoingenx developers
+// Copyright (c) 2015-2017 The PIVX developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -156,11 +156,11 @@ Value preparebudget(const Array& params, bool fHelp)
     if (pwalletMain->IsLocked())
         throw JSONRPCError(RPC_WALLET_UNLOCK_NEEDED, "Error: Please enter the wallet passphrase with walletpassphrase first.");
 
-    std::string strProposalName = params[0].get_str();
+    std::string strProposalName = SanitizeString(params[0].get_str());
     if (strProposalName.size() > 20)
         throw runtime_error("Invalid proposal name, limit of 20 characters.");
 
-    std::string strURL = params[1].get_str();
+    std::string strURL = SanitizeString(params[1].get_str());
     if (strURL.size() > 64)
         throw runtime_error("Invalid url, limit of 64 characters.");
 
@@ -168,8 +168,8 @@ Value preparebudget(const Array& params, bool fHelp)
     if (nPaymentCount < 1)
         throw runtime_error("Invalid payment count, must be more than zero.");
 
-    //set block min
-    if (pindexPrev != NULL) nBlockMin = pindexPrev->nHeight - GetBudgetPaymentCycleBlocks() * (nPaymentCount + 1);
+    // Start must be in the next budget cycle
+    if (pindexPrev != NULL) nBlockMin = pindexPrev->nHeight - pindexPrev->nHeight % GetBudgetPaymentCycleBlocks() + GetBudgetPaymentCycleBlocks();
 
     int nBlockStart = params[3].get_int();
     if (nBlockStart % GetBudgetPaymentCycleBlocks() != 0) {
@@ -177,7 +177,7 @@ Value preparebudget(const Array& params, bool fHelp)
         throw runtime_error(strprintf("Invalid block start - must be a budget cycle block. Next valid block: %d", nNext));
     }
 
-    int nBlockEnd = nBlockStart + GetBudgetPaymentCycleBlocks() * nPaymentCount;
+    int nBlockEnd = nBlockStart + GetBudgetPaymentCycleBlocks() * nPaymentCount; // End must be AFTER current cycle
 
     if (nBlockStart < nBlockMin)
         throw runtime_error("Invalid block start, must be more than current height.");
@@ -250,11 +250,11 @@ Value submitbudget(const Array& params, bool fHelp)
     // Check these inputs the same way we check the vote commands:
     // **********************************************************
 
-    std::string strProposalName = params[0].get_str();
+    std::string strProposalName = SanitizeString(params[0].get_str());
     if (strProposalName.size() > 20)
         throw runtime_error("Invalid proposal name, limit of 20 characters.");
 
-    std::string strURL = params[1].get_str();
+    std::string strURL = SanitizeString(params[1].get_str());
     if (strURL.size() > 64)
         throw runtime_error("Invalid url, limit of 64 characters.");
 
@@ -262,8 +262,8 @@ Value submitbudget(const Array& params, bool fHelp)
     if (nPaymentCount < 1)
         throw runtime_error("Invalid payment count, must be more than zero.");
 
-    //set block min
-    if (pindexPrev != NULL) nBlockMin = pindexPrev->nHeight - GetBudgetPaymentCycleBlocks() * (nPaymentCount + 1);
+    // Start must be in the next budget cycle
+    if (pindexPrev != NULL) nBlockMin = pindexPrev->nHeight - pindexPrev->nHeight % GetBudgetPaymentCycleBlocks() + GetBudgetPaymentCycleBlocks();
 
     int nBlockStart = params[3].get_int();
     if (nBlockStart % GetBudgetPaymentCycleBlocks() != 0) {
@@ -271,7 +271,7 @@ Value submitbudget(const Array& params, bool fHelp)
         throw runtime_error(strprintf("Invalid block start - must be a budget cycle block. Next valid block: %d", nNext));
     }
 
-    int nBlockEnd = nBlockStart + (GetBudgetPaymentCycleBlocks() * nPaymentCount);
+    int nBlockEnd = nBlockStart + (GetBudgetPaymentCycleBlocks() * nPaymentCount); // End must be AFTER current cycle
 
     if (nBlockStart < nBlockMin)
         throw runtime_error("Invalid block start, must be more than current height.");
@@ -598,7 +598,7 @@ Value getbudgetvotes(const Array& params, bool fHelp)
             "\nExamples:\n" +
             HelpExampleCli("getbudgetvotes", "\"test-proposal\"") + HelpExampleRpc("getbudgetvotes", "\"test-proposal\""));
 
-    std::string strProposalName = params[0].get_str();
+    std::string strProposalName = SanitizeString(params[0].get_str());
 
     Array ret;
 
@@ -744,7 +744,7 @@ Value getbudgetinfo(const Array& params, bool fHelp)
 
     std::string strShow = "valid";
     if (params.size() == 1) {
-        std::string strProposalName = params[0].get_str();
+        std::string strProposalName = SanitizeString(params[0].get_str());
         CBudgetProposal* pbudgetProposal = budget.FindProposal(strProposalName);
         if (pbudgetProposal == NULL) throw runtime_error("Unknown proposal name");
         Object bObj;

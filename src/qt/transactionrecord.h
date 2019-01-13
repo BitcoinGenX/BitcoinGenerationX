@@ -81,11 +81,16 @@ public:
         MNReward,
         RecvFromOther,
         SendToSelf,
-        RecvWithCoinMixing,
-        CoinMixingDenominate,
-        CoinMixingCollateralPayment,
-        CoinMixingMakeCollaterals,
-        CoinMixingCreateDenominations,
+        ZerocoinMint,
+        ZerocoinSpend,
+        RecvFromZerocoinSpend,
+        ZerocoinSpend_Change_zbitcoingenx,
+        ZerocoinSpend_FromMe,
+        RecvWithObfuscation,
+        ObfuscationDenominate,
+        ObfuscationCollateralPayment,
+        ObfuscationMakeCollaterals,
+        ObfuscationCreateDenominations,
         Obfuscated
     };
 

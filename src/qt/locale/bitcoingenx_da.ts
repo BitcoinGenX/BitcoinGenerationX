@@ -7,7 +7,7 @@
     </message>
     <message>
         <source>Create a new address</source>
-        <translation>Ny adresse</translation>
+        <translation>opret ny adresse</translation>
     </message>
     <message>
         <source>&amp;New</source>
@@ -239,7 +239,7 @@
         <translation>BIP 38 kryptografering</translation>
     </message>
     <message>
-        <source>Enter a BitcoinGenX Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <source>Enter a bitcoingenx Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
         <translation>Indtast den bitcoingenx adresse De ønsker at kryptografere ved hjælp af BIP 38. Indtast et kodeord i den midterste boks. Klik på krypter for at generere den kryptograferede private nøgle.</translation>
     </message>
     <message>
@@ -502,8 +502,8 @@
         <translation>&amp;information</translation>
     </message>
     <message>
-        <source>Show diagnostic information</source>
-        <translation>Vis diagnosticeringsinformation</translation>
+        <source>Show diagbitcoingenxtic information</source>
+        <translation>Vis diagbitcoingenxticeringsinformation</translation>
     </message>
     <message>
         <source>&amp;Debug console</source>
@@ -820,10 +820,6 @@ Adresse: %4
 <context>
     <name>ClientModel</name>
     <message>
-        <source>Total: %1 (OBF compatible: %2 / Enabled: %3)</source>
-        <translation>I alt: %1 (OBF kompatible: %2 / Aktiverede: %3)</translation>
-    </message>
-    <message>
         <source>Network Alert</source>
         <translation>Netværksalarm!</translation>
     </message>
@@ -899,10 +895,6 @@ Adresse: %4
         <translation>Modtaget med adresse</translation>
     </message>
     <message>
-        <source>DS Rounds</source>
-        <translation>DS gennemløb</translation>
-    </message>
-    <message>
         <source>Date</source>
         <translation>Dato</translation>
     </message>
@@ -975,10 +967,6 @@ Adresse: %4
         <translation>Skift til "listeformat" for at benytte denne funktion</translation>
     </message>
     <message>
-        <source>Non-anonymized input selected. &lt;b&gt;CoinMixing will be disabled.&lt;/b&gt;&lt;br&gt;&lt;br&gt;If you still want to use CoinMixing, please deselect all non-nonymized inputs first and then check CoinMixing checkbox again.</source>
-        <translation>Ikke anonymiseret indhold valgt.&lt;b&gt;tilsløring vil være slået fra.&lt;/b&gt;&lt;br&gt;&lt;br&gt;Hvis De ønsker at anvende tilsløring skal De fravælge alt ikke anonymiseret indhold først, derefter afmærke boksen for tilsløring igen.</translation>
-    </message>
-    <message>
         <source>highest</source>
         <translation>højeste</translation>
     </message>
@@ -997,10 +985,6 @@ Adresse: %4
     <message>
         <source>Can vary +/- %1 duff(s) per input.</source>
         <translation>kan variere +/- %1 duff(s) pr. input</translation>
-    </message>
-    <message>
-        <source>n/a</source>
-        <translation>Ikke tilgængelig</translation>
     </message>
     <message>
         <source>medium</source>
@@ -1498,9 +1482,9 @@ Kontroller adressen og prøv igen.</translation>
     </message>
 </context>
 <context>
-    <name>CoinMixingConfig</name>
+    <name>ObfuscationConfig</name>
     <message>
-        <source>Configure CoinMixing</source>
+        <source>Configure Obfuscation</source>
         <translation>Konfigurer tilslørin</translation>
     </message>
     <message>
@@ -1548,19 +1532,19 @@ Kontroller adressen og prøv igen.</translation>
         <translation>0.1 pr 10000 BGX for at tilsløre.</translation>
     </message>
     <message>
-        <source>CoinMixing Configuration</source>
+        <source>Obfuscation Configuration</source>
         <translation>Tilsløringskonfiguration</translation>
     </message>
     <message>
-        <source>CoinMixing was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening bitcoingenx's configuration screen.</source>
+        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening bitcoingenx's configuration screen.</source>
         <translation>Tilsløring blev sat til grundlæggende (%1 og 2 gennemløb) De kan ændre dette hvornår De vil ved at åbne bitcoingenx konfigurationsbillede.</translation>
     </message>
     <message>
-        <source>CoinMixing was successfully set to high (%1 and 8 rounds). You can change this at any time by opening bitcoingenx's configuration screen.</source>
+        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening bitcoingenx's configuration screen.</source>
         <translation>Tilsløring blev sat til høj (%1 og 8 gennemløb) De kan ændre dette hvornår De vil ved at åbne bitcoingenx konfigurationsbillede.</translation>
     </message>
     <message>
-        <source>CoinMixing was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening bitcoingenx's configuration screen.</source>
+        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening bitcoingenx's configuration screen.</source>
         <translation>Tilsløring blev sat til maksimum (%1 og 16 gennemløb) De kan ændre dette hvornår De vil ved at åbne bitcoingenx konfigurationsbillede.</translation>
     </message>
 </context>
@@ -1648,22 +1632,6 @@ Kontroller adressen og prøv igen.</translation>
     <message>
         <source>&amp;Start bitcoingenx on system login</source>
         <translation>&amp;start bitcoingenx når der logges på systemet</translation>
-    </message>
-    <message>
-        <source>This setting determines the amount of individual masternodes that an input will be anonymized through.&lt;br/&gt;More rounds of anonymization gives a higher degree of privacy, but also costs more in fees.</source>
-        <translation>Denne indstilling bestemmer antallet af individuelle masternoder hvorgennem der tilsløres et input. &lt;br/&gt;Jo flere gennemløb der udføres, jo højere grad af tilsløring, og jo højere gebyrer.</translation>
-    </message>
-    <message>
-        <source>CoinMixing rounds to use</source>
-        <translation>Antal gennemløb der skal benyttes </translation>
-    </message>
-    <message>
-        <source>This amount acts as a threshold to turn off CoinMixing once it's reached.</source>
-        <translation>når dette antal er nået slås tilsløringsfunktonen fra. </translation>
-    </message>
-    <message>
-        <source>Amount of bitcoingenx to keep anonymized</source>
-        <translation>Antallet af bitcoingenx som skal holdes tilslørede</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1855,10 +1823,6 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>Indskyder- eller masternodebelønning er stadig under behandling</translation>
     </message>
     <message>
-        <source>Balances</source>
-        <translation>Saldi</translation>
-    </message>
-    <message>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the bitcoingenx network after a connection is established, but this process has not completed yet.</source>
         <translation>De viste informationer kan være uddaterede. Deres tegnebog synkronisere automatism med bitcoingenx netværket så snart en forbindelse er etalbleret, men denne proces er ikke færdiggjort endnu. </translation>
     </message>
@@ -1895,145 +1859,12 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>Brugbare:</translation>
     </message>
     <message>
-        <source>Status:</source>
-        <translation>Status</translation>
-    </message>
-    <message>
-        <source>CoinMixing Balance:</source>
-        <translation>Sløret beløb</translation>
-    </message>
-    <message>
-        <source>0 BGX / 0 Rounds</source>
-        <translation>0 BGX / 0 gennemløb</translation>
-    </message>
-    <message>
-        <source>Enabled/Disabled</source>
-        <translation>Startet/Stoppet</translation>
-    </message>
-    <message>
-        <source>Try to manually submit a CoinMixing request.</source>
-        <translation>Prøv at send en manuel tilsløringsanmodning.</translation>
-    </message>
-    <message>
-        <source>Reset the current status of CoinMixing (can interrupt CoinMixing if it's in the process of Mixing, which can cost you money!)</source>
-        <translation>Nulstil den aktuelle status for tilsløringsfunktionen. (Kan forstyrre processen, hvilket kan koste mønter).</translation>
-    </message>
-    <message>
-        <source>CoinMixing</source>
-        <translation>Tilsløring</translation>
-    </message>
-    <message>
-        <source>Completion:</source>
-        <translation>Færdiggørelse:</translation>
-    </message>
-    <message>
-        <source>Amount and Rounds:</source>
-        <translation>Beløb og gennemløb</translation>
-    </message>
-    <message>
-        <source>Submitted Denom:</source>
-        <translation>Afsendte midler</translation>
-    </message>
-    <message>
-        <source>n/a</source>
-        <translation>Ikke tilgængelig</translation>
-    </message>
-    <message>
         <source>Recent transactions</source>
         <translation>Nylige transaktioner</translation>
     </message>
     <message>
-        <source>Start/Stop Mixing</source>
-        <translation>Start/Stop tilsløring</translation>
-    </message>
-    <message>
-        <source>The denominations you submitted to the Masternode.&lt;br&gt;To mix, other users must submit the exact same denominations.</source>
-        <translation>Designerede midler afsendt til masternoden. &lt;br&gt;For at gennemføre tilsløringen må andre brugere afsende tilsvarende designerede midler.</translation>
-    </message>
-    <message>
-        <source>(Last Message)</source>
-        <translation>(seneste besked)</translation>
-    </message>
-    <message>
-        <source>Try Mix</source>
-        <translation>Prøv at usynliggøre</translation>
-    </message>
-    <message>
-        <source>Reset</source>
-        <translation>Nulstil</translation>
-    </message>
-    <message>
         <source>out of sync</source>
         <translation>Ude af synk</translation>
-    </message>
-    <message>
-        <source>Disabled</source>
-        <translation>slået fra</translation>
-    </message>
-    <message>
-        <source>No inputs detected</source>
-        <translation>Ingen inputs valgt</translation>
-    </message>
-    <message>
-        <source>Not enough compatible inputs to anonymize &lt;span style='color:red;'&gt;%1&lt;/span&gt;,&lt;br&gt;will anonymize &lt;span style='color:red;'&gt;%2&lt;/span&gt; instead</source>
-        <translation>Der er ikke tilstrækkelige kompatible inputs tilgængelige for tilsløring &lt;span style='color:red;'&gt;%1&lt;/span&gt;,&lt;br&gt;vil tilsløre &lt;span style='color:red;'&gt;%2&lt;/span&gt; i stedet</translation>
-    </message>
-    <message>
-        <source>Overall progress</source>
-        <translation>Samlet status</translation>
-    </message>
-    <message>
-        <source>Denominated</source>
-        <translation>Designerede</translation>
-    </message>
-    <message>
-        <source>Anonymized</source>
-        <translation>Tilsløret</translation>
-    </message>
-    <message>
-        <source>Last CoinMixing message:
-</source>
-        <translation>Seneste besked fra tilsløringsprocessen</translation>
-    </message>
-    <message>
-        <source>CoinMixing was successfully reset.</source>
-        <translation>Tilsløringsfunktionen blev nulstillet </translation>
-    </message>
-    <message>
-        <source>If you don't want to see internal CoinMixing fees/transactions select "Most Common" as Type on the "Transactions" tab.</source>
-        <translation>Hvis de ikke ønsker at se de interne tilsløringsgebyrer og transaktioner, skal De vælge "Mest fremherskende" som type i transaktionsmenuen.</translation>
-    </message>
-    <message>
-        <source>CoinMixing requires at least %1 to use.</source>
-        <translation>Tilsløring kræver mindst %1 for at kunne anvendes </translation>
-    </message>
-    <message>
-        <source>Wallet is locked and user declined to unlock. Disabling CoinMixing.</source>
-        <translation>Tegnebogen er låst, brugeren har afvist at låse den op. Tilsløring slås fra.</translation>
-    </message>
-    <message>
-        <source>Found enough compatible inputs to anonymize %1</source>
-        <translation>Der er fundet nok kompatible inputs for tilsløring af %1</translation>
-    </message>
-    <message>
-        <source>Start CoinMixing</source>
-        <translation>Start tilsløring</translation>
-    </message>
-    <message>
-        <source>Stop CoinMixing</source>
-        <translation>stop tilsløring</translation>
-    </message>
-    <message>
-        <source>Mixed</source>
-        <translation>Tilsløret</translation>
-    </message>
-    <message>
-        <source>Enabled</source>
-        <translation>Slået til</translation>
-    </message>
-    <message>
-        <source>N/A</source>
-        <translation>Ikke tilgængelig</translation>
     </message>
 </context>
 <context>
@@ -2142,6 +1973,121 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>PingtidPingtid</translation>
     </message>
 </context>
+<context>
+    <name>PrivacyDialog</name>
+    <message>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the bitcoingenx network after a connection is established, but this process has not completed yet.</source>
+        <translation>De viste informationer kan være uddaterede. Deres tegnebog synkronisere automatism med bitcoingenx netværket så snart en forbindelse er etalbleret, men denne proces er ikke færdiggjort endnu. </translation>
+    </message>
+    <message>
+        <source>0</source>
+        <translation>0</translation>
+    </message>
+    <message>
+        <source>Reset</source>
+        <translation>Nulstil</translation>
+    </message>
+    <message>
+        <source>Quantity:</source>
+        <translation>Antal:</translation>
+    </message>
+    <message>
+        <source>Amount:</source>
+        <translation>Beløb</translation>
+    </message>
+    <message>
+        <source>Pay &amp;To:</source>
+        <translation>Betal &amp;Til</translation>
+    </message>
+    <message>
+        <source>Choose previously used address</source>
+        <translation>Benyt en tidligere anvendt adresse.</translation>
+    </message>
+    <message>
+        <source>Alt+A</source>
+        <translation>Alt+A</translation>
+    </message>
+    <message>
+        <source>Paste address from clipboard</source>
+        <translation>Indsæt adresse fra udklipsholderen.</translation>
+    </message>
+    <message>
+        <source>Alt+P</source>
+        <translation>Alt+P</translation>
+    </message>
+    <message>
+        <source>&amp;Label:</source>
+        <translation>&amp;Mærkning</translation>
+    </message>
+    <message>
+        <source>Enter a label for this address to add it to the list of used addresses</source>
+        <translation>Indtast et mærke til denne adresse for at tilføje den til listen over brugte adresser</translation>
+    </message>
+    <message>
+        <source>A&amp;mount:</source>
+        <translation>A&amp;mount</translation>
+    </message>
+    <message>
+        <source>Priority:</source>
+        <translation>Prioritet:</translation>
+    </message>
+    <message>
+        <source>Fee:</source>
+        <translation>Gebyr:</translation>
+    </message>
+    <message>
+        <source>Dust:</source>
+        <translation>Affald:</translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation>nej</translation>
+    </message>
+    <message>
+        <source>Bytes:</source>
+        <translation>Bytes:</translation>
+    </message>
+    <message>
+        <source>Insufficient funds!</source>
+        <translation>Saldo for lille!</translation>
+    </message>
+    <message>
+        <source>medium</source>
+        <translation>Middel</translation>
+    </message>
+    <message>
+        <source>Coin Control Features</source>
+        <translation>Møntkontrol, features</translation>
+    </message>
+    <message>
+        <source>If this is activated, but the change address is empty or invalid, change will be sent to a newly generated address.</source>
+        <translation>Hvis denne er aktiveret, men tilbagebetalingsadressen er tom, eller ugyldig, overskydende beløb vil blive fremsendt til en nyoprettet adresse</translation>
+    </message>
+    <message>
+        <source>Custom change address</source>
+        <translation>Brugerdefineret tilbagebetalingsadresse</translation>
+    </message>
+    <message>
+        <source>Change:</source>
+        <translation>Penge tilbage:</translation>
+    </message>
+    <message>
+        <source>out of sync</source>
+        <translation>Ude af synk</translation>
+    </message>
+    <message>
+        <source>Copy quantity</source>
+        <translation>Kopiér antal</translation>
+    </message>
+    <message>
+        <source>Copy amount</source>
+        <translation>Kopiér beløb</translation>
+    </message>
+    <message>
+        <source>Confirm send coins</source>
+        <translation>Bekræft at De vil sende mønter</translation>
+    </message>
+    </context>
 <context>
     <name>QObject</name>
     <message>
@@ -2687,14 +2633,6 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>Møntkontrol, features</translation>
     </message>
     <message>
-        <source>Inputs...</source>
-        <translation>Inputs...</translation>
-    </message>
-    <message>
-        <source>automatically selected</source>
-        <translation>Automatisk valgte</translation>
-    </message>
-    <message>
         <source>Insufficient funds!</source>
         <translation>Saldo for lille!</translation>
     </message>
@@ -2777,10 +2715,6 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     <message>
         <source>Minimize</source>
         <translation>Minimer</translation>
-    </message>
-    <message>
-        <source>CoinMixing</source>
-        <translation>Tilsløring</translation>
     </message>
     <message>
         <source>per kilobyte</source>
@@ -2954,17 +2888,9 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <source>A fee %1 times higher than %2 per kB is considered an insanely high fee.</source>
         <translation>Et gebyr %1 gange højere end %2 pr. kilobyte er vanvittigt højt.</translation>
     </message>
-    <message numerus="yes">
-        <source>Estimated to begin confirmation within %n block(s).</source>
-        <translation><numerusform>Forventer bekræftelse indenfor %n blokke</numerusform><numerusform>Forventer bekræftelse indenfor %n blokke</numerusform></translation>
-    </message>
     <message>
         <source>The recipient address is not valid, please recheck.</source>
         <translation>Modtageradressen er ikke gyldig. Kontroller igen</translation>
-    </message>
-    <message>
-        <source>(coinmixing requires this amount to be rounded up to the nearest %1).</source>
-        <translation>(Tilsløring kræver at dette beløb rundes op til nærmeste %1)</translation>
     </message>
     <message>
         <source> split into %1 outputs using the UTXO splitter.</source>
@@ -3519,23 +3445,23 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>Modtaget fra</translation>
     </message>
     <message>
-        <source>Received via CoinMixing</source>
+        <source>Received via Obfuscation</source>
         <translation>Modtaget via tilsløring</translation>
     </message>
     <message>
-        <source>CoinMixing Denominate</source>
+        <source>Obfuscation Denominate</source>
         <translation>Tilslør designerede</translation>
     </message>
     <message>
-        <source>CoinMixing Collateral Payment</source>
+        <source>Obfuscation Collateral Payment</source>
         <translation>Samlet tilsløret betaling</translation>
     </message>
     <message>
-        <source>CoinMixing Make Collateral Inputs</source>
+        <source>Obfuscation Make Collateral Inputs</source>
         <translation>Tilslørede samlede tilføjelser</translation>
     </message>
     <message>
-        <source>CoinMixing Create Denominations</source>
+        <source>Obfuscation Create Denominations</source>
         <translation>Opret tilsløret designering</translation>
     </message>
     <message>
@@ -3642,19 +3568,19 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>skjult</translation>
     </message>
     <message>
-        <source>CoinMixing Make Collateral Inputs</source>
+        <source>Obfuscation Make Collateral Inputs</source>
         <translation>Tilslørede samlede tilføjelser</translation>
     </message>
     <message>
-        <source>CoinMixing Create Denominations</source>
+        <source>Obfuscation Create Denominations</source>
         <translation>Opret tilsløret designering</translation>
     </message>
     <message>
-        <source>CoinMixing Denominate</source>
+        <source>Obfuscation Denominate</source>
         <translation>Tilslør designerede</translation>
     </message>
     <message>
-        <source>CoinMixing Collateral Payment</source>
+        <source>Obfuscation Collateral Payment</source>
         <translation>Samlet tilsløret betaling</translation>
     </message>
     <message>
@@ -3835,6 +3761,13 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     </message>
 </context>
 <context>
+    <name>ZPhrControlDialog</name>
+    <message>
+        <source>0</source>
+        <translation>0</translation>
+    </message>
+    </context>
+<context>
     <name>bitcoingenx-core</name>
     <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
@@ -3862,7 +3795,7 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     </message>
     <message>
         <source>Cannot obtain a lock on data directory %s. BitcoinGenX Core is probably already running.</source>
-        <translation>Kan ikke låse datamappen %s. BitcoinGenX Core kører sandsynligvis allerede.</translation>
+        <translation>Kan ikke låse datamappen %s. bitcoingenx core kører sandsynligvis allerede.</translation>
     </message>
     <message>
         <source>Change automatic finalized budget voting behavior. mode=auto: Vote for only exact finalized budget match to my generated budget. (string, default: auto)</source>
@@ -3881,7 +3814,7 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>Slet alle tegnebogens transaktioner og genskab kun fra blokkæden ved at tilføje -rescan i forbindes med opstart.</translation>
     </message>
     <message>
-        <source>Disable all bitcoingenx specific functionality (Masternodes, CoinMixing, SwiftTX, Budgeting) (0-1, default: %u)</source>
+        <source>Disable all bitcoingenx specific functionality (Masternodes, Obfuscation, SwiftTX, Budgeting) (0-1, default: %u)</source>
         <translation>Slå alle bitcoingenx funktioner fra (Masternoder, Tilsløring, SwiftTX, Budgetting)(0-1,default:%u)</translation>
     </message>
     <message>
@@ -3896,10 +3829,6 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     <message>
         <source>Enable swifttx, show confirmations for locked transactions (bool, default: %s)</source>
         <translation>Aktiver swifttx, vis bekræftelser for låste transaktioner (bool, default: %s)</translation>
-    </message>
-    <message>
-        <source>Enable use of automated coinmixing for funds stored in this wallet (0-1, default: %u)</source>
-        <translation>Slå automatisk tilsløring til for alle midler i denne tegebog (0-1, default: %u)</translation>
     </message>
     <message>
         <source>Enter regression test mode, which uses a special chain in which blocks can be solved instantly.</source>
@@ -3942,10 +3871,6 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>Der er fundet ubekræftede designerede outputs. Vent indtil de bekræftes for at fortsætte.</translation>
     </message>
     <message>
-        <source>How thorough the block verification of -checkblocks is (0-4, default: %u)</source>
-        <translation>Hvor grundig er blokkens verificeringer af -checkblocks er (0-4, default %u)</translation>
-    </message>
-    <message>
         <source>If paytxfee is not set, include enough fee so transactions begin confirmation on average within n blocks (default: %u)</source>
         <translation>Hvis der ikke fastsættes et betalingsTxgebyr, skal der inkluderes tilstrækkelige midler til gebyret så transaktionens bekræftelsesproces vil begynde indenfor n blokke (default: %u)</translation>
     </message>
@@ -3982,16 +3907,12 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>Det antal sekunder, som peers, der ikke handler korrekt skal afholdes fra at genforbinde (default: %u)</translation>
     </message>
     <message>
-        <source>CoinMixing uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
+        <source>Obfuscation uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
         <translation>Tilsløring bruger hele det tilslørede designerede beløb til at sende betalinger. De kan blot tilsløre yderligere bitcoingenx</translation>
     </message>
     <message>
         <source>Output debugging information (default: %u, supplying &lt;category&gt; is optional)</source>
         <translation>Output debug information (default: %u, supplying &lt;category&gt; er valgfri)</translation>
-    </message>
-    <message>
-        <source>Provide liquidity to CoinMixing by infrequently mixing coins on a continual basis (0-100, default: %u, 1=very frequent, high fees, 100=very infrequent, low fees)</source>
-        <translation>Tilfør tilsløring likviditet  ved at tilføje flere bitcoingenx løbende (0-100, default:%u, 1=meget hyppigt, høje gebyrer, 100=sjældent, lave gebyrer)</translation>
     </message>
     <message>
         <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect)</source>
@@ -4062,11 +3983,11 @@ For eksempel: alertnotify=Echo %% | mail - s "bitcoingenx ALARM!" e-mail@adminis
         <translation>Det var ikke muligt at forbinde %s på denne computer. bitcoingenx kører sandsynligvis allerede.</translation>
     </message>
     <message>
-        <source>Unable to locate enough CoinMixing denominated funds for this transaction.</source>
+        <source>Unable to locate enough Obfuscation denominated funds for this transaction.</source>
         <translation>Det er ikke muligt at allokere tilstrækkeligt med tilsløret designeret indestående for at gennemføre denne transaktion.</translation>
     </message>
     <message>
-        <source>Unable to locate enough CoinMixing non-denominated funds for this transaction that are not equal 10000 BGX.</source>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 BGX.</source>
         <translation>Det er ikke muligt at allokere tilstrækkeligt med tilsløret  ikke-designeret indestående for at gennemføre denne transaktion, der ikke ækvivalerer 10000 BGX.</translation>
     </message>
     <message>
@@ -4087,7 +4008,7 @@ For eksempel: alertnotify=Echo %% | mail - s "bitcoingenx ALARM!" e-mail@adminis
     </message>
     <message>
         <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong BitcoinGenX Core will not work properly.</source>
-        <translation>Advarsel! Kontroller at computerens dato og tid er korrekt indstillet. Hvis tiden ikke er rigtig, vil BitcoinGenX Core ikke fungere ordentligt.</translation>
+        <translation>Advarsel! Kontroller at computerens dato og tid er korrekt indstillet. Hvis tiden ikke er rigtig, vil bitcoingenx core ikke fungere ordentligt.</translation>
     </message>
     <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
@@ -4307,7 +4228,7 @@ For eksempel: alertnotify=Echo %% | mail - s "bitcoingenx ALARM!" e-mail@adminis
     </message>
     <message>
         <source>Error loading wallet.dat: Wallet requires newer version of BitcoinGenX Core</source>
-        <translation>Fejl ved indlæsning af wallet.dat: Tegnebogen kræver en nyere version af BitcoinGenX Core</translation>
+        <translation>Fejl ved indlæsning af wallet.dat: Tegnebogen kræver en nyere version af bitcoingenx core</translation>
     </message>
     <message>
         <source>Error opening block database</source>
@@ -4346,7 +4267,7 @@ For eksempel: alertnotify=Echo %% | mail - s "bitcoingenx ALARM!" e-mail@adminis
         <translation>Fejl! Tegnebogen er låst. Det er ikke muligt at oprette transaktionen.</translation>
     </message>
     <message>
-        <source>Error: You already have pending entries in the CoinMixing pool</source>
+        <source>Error: You already have pending entries in the Obfuscation pool</source>
         <translation>Fejl! De har allerede ventende transaktioner i tilsløringsgruppen</translation>
     </message>
     <message>
@@ -4419,7 +4340,7 @@ For eksempel: alertnotify=Echo %% | mail - s "bitcoingenx ALARM!" e-mail@adminis
     </message>
     <message>
         <source>Initialization sanity check failed. BitcoinGenX Core is shutting down.</source>
-        <translation>Initiering af sanitetskontrollen fejlede. BitcoinGenX Core lukker ned. </translation>
+        <translation>Initiering af sanitetskontrollen fejlede. bitcoingenx core lukker ned. </translation>
     </message>
     <message>
         <source>Input is not valid.</source>
@@ -4428,14 +4349,6 @@ For eksempel: alertnotify=Echo %% | mail - s "bitcoingenx ALARM!" e-mail@adminis
     <message>
         <source>Insufficient funds.</source>
         <translation>Utilstrækkelige midler</translation>
-    </message>
-    <message>
-        <source>Invalid -onion address: '%s'</source>
-        <translation>Ugyldig -onion adresse: '%s'</translation>
-    </message>
-    <message>
-        <source>Invalid -proxy address: '%s'</source>
-        <translation>Ugyldig -proxy adresse: '%s'</translation>
     </message>
     <message>
         <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s'</source>
@@ -4494,19 +4407,15 @@ For eksempel: alertnotify=Echo %% | mail - s "bitcoingenx ALARM!" e-mail@adminis
         <translation>Forsøg at gennemtvinge reparation af korrumperet blokkæde</translation>
     </message>
     <message>
-        <source>Keep N BGX anonymized (default: %u)</source>
-        <translation>Behold N BGX anonymiserede (default: %u)</translation>
-    </message>
-    <message>
         <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>
         <translation>Behold højest &lt;n&gt; transaktioner i hukommelsen, der ikke kan forbindes (default: %u)</translation>
     </message>
     <message>
-        <source>Last CoinMixing was too recent.</source>
+        <source>Last Obfuscation was too recent.</source>
         <translation>Seneste tilsløring var for ny</translation>
     </message>
     <message>
-        <source>Last successful CoinMixing action was too recent.</source>
+        <source>Last successful Obfuscation action was too recent.</source>
         <translation>Seneste succesfulde tilsløring var for ny</translation>
     </message>
     <message>
@@ -4638,19 +4547,15 @@ For eksempel: alertnotify=Echo %% | mail - s "bitcoingenx ALARM!" e-mail@adminis
         <translation>Antal automatiske sikkerhedskopier af tegnebogen (default: 10)</translation>
     </message>
     <message>
-        <source>CoinMixing is idle.</source>
+        <source>Obfuscation is idle.</source>
         <translation>Tilsløringssystem ledigt</translation>
     </message>
     <message>
-        <source>CoinMixing options:</source>
-        <translation>Tilsløringsmuligheder</translation>
-    </message>
-    <message>
-        <source>CoinMixing request complete:</source>
+        <source>Obfuscation request complete:</source>
         <translation>Tilsløring færdig.</translation>
     </message>
     <message>
-        <source>CoinMixing request incomplete:</source>
+        <source>Obfuscation request incomplete:</source>
         <translation>Tilsløringsanmodning ikke færdiggjort</translation>
     </message>
     <message>
@@ -4950,10 +4855,6 @@ For eksempel: alertnotify=Echo %% | mail - s "bitcoingenx ALARM!" e-mail@adminis
         <translation>Opdater tegnebogen til det nyeste format</translation>
     </message>
     <message>
-        <source>Use N separate masternodes to anonymize funds  (2-8, default: %u)</source>
-        <translation>Brug N forskellige masternoder for at anonymisere saldi (2-8, default: %u)</translation>
-    </message>
-    <message>
         <source>Use OpenSSL (https) for JSON-RPC connections</source>
         <translation>Brug OpenSSL (https) til JSON-RPC forbindelser</translation>
     </message>
@@ -4974,7 +4875,7 @@ For eksempel: alertnotify=Echo %% | mail - s "bitcoingenx ALARM!" e-mail@adminis
         <translation>Brugernavn til JSON-RPC forbindelser</translation>
     </message>
     <message>
-        <source>Value more than CoinMixing pool maximum allows.</source>
+        <source>Value more than Obfuscation pool maximum allows.</source>
         <translation>Værdien er højere end tilsløringsgruppen tillader</translation>
     </message>
     <message>
@@ -4995,7 +4896,7 @@ For eksempel: alertnotify=Echo %% | mail - s "bitcoingenx ALARM!" e-mail@adminis
     </message>
     <message>
         <source>Wallet needed to be rewritten: restart BitcoinGenX Core to complete</source>
-        <translation>Tegnebogen måtte genskrives. Genstart BitcoinGenX Core for at gøre færdig</translation>
+        <translation>Tegnebogen måtte genskrives. Genstart bitcoingenx core for at gøre færdig</translation>
     </message>
     <message>
         <source>Wallet options:</source>

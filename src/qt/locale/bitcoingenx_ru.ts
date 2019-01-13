@@ -235,7 +235,7 @@
         <translation>&amp;BIP 38 Шифрование</translation>
     </message>
     <message>
-        <source>Enter a BitcoinGenX Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <source>Enter a bitcoingenx Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
         <translation>Введите bitcoingenx адрес, которым вы хотите зашифровать, используя BIP 38. Введите пароль в среднем поле. Нажмите "Зашифровать", чтобы создать зашиврованный секретный ключ.</translation>
     </message>
     <message>
@@ -498,7 +498,7 @@
         <translation>&amp;Информация</translation>
     </message>
     <message>
-        <source>Show diagnostic information</source>
+        <source>Show diagbitcoingenxtic information</source>
         <translation>Показать диагностическую информацию</translation>
     </message>
     <message>
@@ -606,6 +606,14 @@
         <translation>Запросить платежи (генерирует QR-код и bitcoingenx: URI)</translation>
     </message>
     <message>
+        <source>&amp;Privacy</source>
+        <translation>&amp;Конфиденциальность</translation>
+    </message>
+    <message>
+        <source>Privacy Action for zBGX and Obfuscation</source>
+        <translation>Конфиденциальное действие и обфускация</translation>
+    </message>
+    <message>
         <source>&amp;Masternodes</source>
         <translation>&amp;Мастерноды</translation>
     </message>
@@ -681,10 +689,6 @@
         <source>BitcoinGenX Core client</source>
         <translation>Клиент BitcoinGenX Core</translation>
     </message>
-    <message numerus="yes">
-        <source>%n active connection(s) to bitcoingenx network</source>
-        <translation><numerusform>%n активное подключение к сети bitcoingenx</numerusform><numerusform>%n активных подключений к сети bitcoingenx</numerusform><numerusform>%n активных подключений к сети bitcoingenx</numerusform><numerusform>%n активных подключений к сети bitcoingenx</numerusform></translation>
-    </message>
     <message>
         <source>Synchronizing with network...</source>
         <translation>Синхронизация с сетью...</translation>
@@ -705,25 +709,9 @@
         <source>Up to date</source>
         <translation>Обновление не требуется</translation>
     </message>
-    <message numerus="yes">
-        <source>%n hour(s)</source>
-        <translation><numerusform>%n час</numerusform><numerusform>%n часов</numerusform><numerusform>%n часов</numerusform><numerusform>%n часов</numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <source>%n day(s)</source>
-        <translation><numerusform>%n день</numerusform><numerusform>%n дней</numerusform><numerusform>%n дней</numerusform><numerusform>%n дней</numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <source>%n week(s)</source>
-        <translation><numerusform>%n неделя</numerusform><numerusform>%n недель</numerusform><numerusform>%n недель</numerusform><numerusform>%n недель</numerusform></translation>
-    </message>
     <message>
         <source>%1 and %2</source>
         <translation>%1 и %2</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n year(s)</source>
-        <translation><numerusform>%n год</numerusform><numerusform>%n лет</numerusform><numerusform>%n лет</numerusform><numerusform>%n лет</numerusform></translation>
     </message>
     <message>
         <source>%1 behind</source>
@@ -817,6 +805,14 @@ MultiSend: %1</translation>
         <translation>Обзор блокчейна</translation>
     </message>
     <message>
+        <source>Back</source>
+        <translation>Назад</translation>
+    </message>
+    <message>
+        <source>Forward</source>
+        <translation>вперед</translation>
+    </message>
+    <message>
         <source>Address / Block / Transaction</source>
         <translation>Адрес / Блок / Транзакция</translation>
     </message>
@@ -835,10 +831,6 @@ MultiSend: %1</translation>
 </context>
 <context>
     <name>ClientModel</name>
-    <message>
-        <source>Total: %1 (OBF compatible: %2 / Enabled: %3)</source>
-        <translation>Всего: %1 (OBF совместимые: %2 / Включеные: %3)</translation>
-    </message>
     <message>
         <source>Network Alert</source>
         <translation>Сетевое предупреждение</translation>
@@ -915,10 +907,6 @@ MultiSend: %1</translation>
         <translation>Полученно на адрес</translation>
     </message>
     <message>
-        <source>DS Rounds</source>
-        <translation>DS циклов</translation>
-    </message>
-    <message>
         <source>Date</source>
         <translation>Дата</translation>
     </message>
@@ -991,10 +979,6 @@ MultiSend: %1</translation>
         <translation>Для использования этой функции перейдите в "Режим списка"</translation>
     </message>
     <message>
-        <source>Non-anonymized input selected. &lt;b&gt;CoinMixing will be disabled.&lt;/b&gt;&lt;br&gt;&lt;br&gt;If you still want to use CoinMixing, please deselect all non-nonymized inputs first and then check CoinMixing checkbox again.</source>
-        <translation>Выбран неанонимизированный ввод. &lt;b&gt;Запутывание будет отключено. &lt;/b&gt; &lt;br&gt;&lt;br&gt;. Если вы всё же хотите использовать запутывание, пожалуйста отмените сначала выбор всех неанонимизированных вводов, затем снова поставте флажок "Запутывание".</translation>
-    </message>
-    <message>
         <source>highest</source>
         <translation>самый высокий</translation>
     </message>
@@ -1013,10 +997,6 @@ MultiSend: %1</translation>
     <message>
         <source>Can vary +/- %1 duff(s) per input.</source>
         <translation>Может вариировать +/- %1 duff(s) к вводу</translation>
-    </message>
-    <message>
-        <source>n/a</source>
-        <translation>недоступен</translation>
     </message>
     <message>
         <source>medium</source>
@@ -1514,9 +1494,9 @@ Please check the address and try again.</source>
     </message>
 </context>
 <context>
-    <name>CoinMixingConfig</name>
+    <name>ObfuscationConfig</name>
     <message>
-        <source>Configure CoinMixing</source>
+        <source>Configure Obfuscation</source>
         <translation>Параметры Перемешивания</translation>
     </message>
     <message>
@@ -1564,19 +1544,19 @@ Please check the address and try again.</source>
         <translation>0.1 BGX за 10000 BGX которые вы собираетесь анонимизировать.</translation>
     </message>
     <message>
-        <source>CoinMixing Configuration</source>
+        <source>Obfuscation Configuration</source>
         <translation>Настройка Перемешивания</translation>
     </message>
     <message>
-        <source>CoinMixing was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening bitcoingenx's configuration screen.</source>
+        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening bitcoingenx's configuration screen.</source>
         <translation>Перемешивание было успешно выставлено на стандартные значения (%1 и 2 цикла). Вы в любой момент можете это изменить, открыв окно настройки bitcoingenx.</translation>
     </message>
     <message>
-        <source>CoinMixing was successfully set to high (%1 and 8 rounds). You can change this at any time by opening bitcoingenx's configuration screen.</source>
+        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening bitcoingenx's configuration screen.</source>
         <translation>Перемешивание было успешно выбрано как высокое (%1 и 8 циклов). Вы в любой момент можете это изменить, открыв окно настройки bitcoingenx.</translation>
     </message>
     <message>
-        <source>CoinMixing was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening bitcoingenx's configuration screen.</source>
+        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening bitcoingenx's configuration screen.</source>
         <translation>Перемешивание было успешно выставлено на максимальное (%1 и 16 циклов). Вы в любой момент можете это изменить, открыв окно настройки bitcoingenx.</translation>
     </message>
 </context>
@@ -1666,22 +1646,6 @@ Please check the address and try again.</source>
         <translation>&amp;Запускать bitcoingenx при входе в систему</translation>
     </message>
     <message>
-        <source>This setting determines the amount of individual masternodes that an input will be anonymized through.&lt;br/&gt;More rounds of anonymization gives a higher degree of privacy, but also costs more in fees.</source>
-        <translation>Эта настройка определяет количество мастернод, используемых для анонимизации. Чем больше циклов, тем выше уровень конфиденциальности, но не стоит забывать также об увеличивающейся комиссии.</translation>
-    </message>
-    <message>
-        <source>CoinMixing rounds to use</source>
-        <translation>Количество циклов Перемешивания</translation>
-    </message>
-    <message>
-        <source>This amount acts as a threshold to turn off CoinMixing once it's reached.</source>
-        <translation>При достижении этого значения Перемешивание будет отключено.</translation>
-    </message>
-    <message>
-        <source>Amount of bitcoingenx to keep anonymized</source>
-        <translation>Количество bitcoingenx, держащихся анонимизированными</translation>
-    </message>
-    <message>
         <source>Whether to show coin control features or not.</source>
         <translation>Показывает или скрывает особенности управления монетами.</translation>
     </message>
@@ -1718,6 +1682,18 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Карта порта, использующего &amp;UPnP</translation>
+    </message>
+    <message>
+        <source>Percentage of incoming BGX which get automatically converted to zBGX via Zerocoin Protocol (min: 10%)</source>
+        <translation>Процент приходящих BGX, которые автоматически конвертируются в zBGX благодаря Zerocoin протоколу (min: 10%)</translation>
+    </message>
+    <message>
+        <source>Percentage of autominted zBGX</source>
+        <translation>Процент  авточеканненых zBGX</translation>
+    </message>
+    <message>
+        <source>Preferred Automint zBGX Denomination</source>
+        <translation>Предпочитаемый номинал авточеканной  монеты  zBGX</translation>
     </message>
     <message>
         <source>Connect to the bitcoingenx network through a SOCKS5 proxy.</source>
@@ -1812,6 +1788,10 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>&amp;Отмена</translation>
     </message>
     <message>
+        <source>I don't care</source>
+        <translation>Мне не важно</translation>
+    </message>
+    <message>
         <source>default</source>
         <translation>по-умолчанию</translation>
     </message>
@@ -1847,6 +1827,10 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>Вид</translation>
     </message>
     <message>
+        <source>BGX Balances</source>
+        <translation>Баланс BGX</translation>
+    </message>
+    <message>
         <source>Available:</source>
         <translation>Доступно:</translation>
     </message>
@@ -1869,10 +1853,6 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     <message>
         <source>Staked or masternode rewards that has not yet matured</source>
         <translation>Награды за хранение и мастерноды, которые еще не *созрели*</translation>
-    </message>
-    <message>
-        <source>Balances</source>
-        <translation>Балансы</translation>
     </message>
     <message>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the bitcoingenx network after a connection is established, but this process has not completed yet.</source>
@@ -1911,146 +1891,28 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>Расходуемый:</translation>
     </message>
     <message>
-        <source>Status:</source>
-        <translation>Статус:</translation>
+        <source>BGX:</source>
+        <translation>BGX:</translation>
     </message>
     <message>
-        <source>CoinMixing Balance:</source>
-        <translation>Баланс Обфускации</translation>
+        <source>zBGX:</source>
+        <translation>zBGX:</translation>
     </message>
     <message>
-        <source>0 BGX / 0 Rounds</source>
-        <translation>0 BGX / 0 Циклов</translation>
+        <source>0 %</source>
+        <translation>0 %</translation>
     </message>
     <message>
-        <source>Enabled/Disabled</source>
-        <translation>Включено/Выключено</translation>
-    </message>
-    <message>
-        <source>Try to manually submit a CoinMixing request.</source>
-        <translation>Попробуюте вручную создать запрос на Обфускацию.</translation>
-    </message>
-    <message>
-        <source>Reset the current status of CoinMixing (can interrupt CoinMixing if it's in the process of Mixing, which can cost you money!)</source>
-        <translation>Сбросить текущий статус Обфускации (может прервать обфускацию, если она уже началась, что может стоить ваших денег!)</translation>
-    </message>
-    <message>
-        <source>CoinMixing</source>
-        <translation>Обфускация</translation>
-    </message>
-    <message>
-        <source>Completion:</source>
-        <translation>Завершение:</translation>
-    </message>
-    <message>
-        <source>Amount and Rounds:</source>
-        <translation>Количесво повторений:</translation>
-    </message>
-    <message>
-        <source>Submitted Denom:</source>
-        <translation>Выбранная единица:</translation>
-    </message>
-    <message>
-        <source>n/a</source>
-        <translation>недоступен</translation>
+        <source>Zerocoin Balance</source>
+        <translation>Баланс Zerocoin </translation>
     </message>
     <message>
         <source>Recent transactions</source>
         <translation>Последние транзакции</translation>
     </message>
     <message>
-        <source>Start/Stop Mixing</source>
-        <translation>Запустить/Остановить смешивание </translation>
-    </message>
-    <message>
-        <source>The denominations you submitted to the Masternode.&lt;br&gt;To mix, other users must submit the exact same denominations.</source>
-        <translation>Деноминации, которые вы отправили на мастерноду. &lt;br&gt;Для смешиваыния, другие пользователи должны отправить точно такие же деноминации.</translation>
-    </message>
-    <message>
-        <source>(Last Message)</source>
-        <translation>(Последнее сообщение)</translation>
-    </message>
-    <message>
-        <source>Try Mix</source>
-        <translation>Попытка смешать</translation>
-    </message>
-    <message>
-        <source>Reset</source>
-        <translation>Сброс</translation>
-    </message>
-    <message>
         <source>out of sync</source>
         <translation>несинронизировано</translation>
-    </message>
-    <message>
-        <source>Disabled</source>
-        <translation>Выключено</translation>
-    </message>
-    <message>
-        <source>No inputs detected</source>
-        <translation>Нет ввода</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n Rounds</source>
-        <translation><numerusform>%n Цикл</numerusform><numerusform>%n Циклов</numerusform><numerusform>%n Циклов</numerusform><numerusform>%n Циклов</numerusform></translation>
-    </message>
-    <message>
-        <source>Not enough compatible inputs to anonymize &lt;span style='color:red;'&gt;%1&lt;/span&gt;,&lt;br&gt;will anonymize &lt;span style='color:red;'&gt;%2&lt;/span&gt; instead</source>
-        <translation>Недостаточно совместимых вводов для анонимизации &lt;span style='color:red;'&gt;%1&lt;/span&gt;,&lt;br&gt; вместо этого будет анонимизировано &lt;span style='color:red;'&gt;%2&lt;/span&gt;</translation>
-    </message>
-    <message>
-        <source>Overall progress</source>
-        <translation>Общий ход выполнения</translation>
-    </message>
-    <message>
-        <source>Anonymized</source>
-        <translation>Анонимизировано</translation>
-    </message>
-    <message>
-        <source>Last CoinMixing message:
-</source>
-        <translation>Последнее сообщение Обфускации:
-</translation>
-    </message>
-    <message>
-        <source>CoinMixing was successfully reset.</source>
-        <translation>Обфускация была успешно сброшена.</translation>
-    </message>
-    <message>
-        <source>If you don't want to see internal CoinMixing fees/transactions select "Most Common" as Type on the "Transactions" tab.</source>
-        <translation>Если вы не хотите видеть внутреннию плату / трансакции Обфускацци выберите "Наиболее распространненные" как Тип в закладке "Транзакции".</translation>
-    </message>
-    <message>
-        <source>CoinMixing requires at least %1 to use.</source>
-        <translation>Для использования обфускации необходимо как минимум %1</translation>
-    </message>
-    <message>
-        <source>Wallet is locked and user declined to unlock. Disabling CoinMixing.</source>
-        <translation>Кошелёк заблокирован и пользователь отклонен для разблокировки. Отключение Обфускации.</translation>
-    </message>
-    <message>
-        <source>Found enough compatible inputs to anonymize %1</source>
-        <translation>Найдено достаточно совместимых вводов для анонимизации %1</translation>
-    </message>
-    <message>
-        <source>Start CoinMixing</source>
-        <translation>Начать Обфускацию</translation>
-    </message>
-    <message>
-        <source>Stop CoinMixing</source>
-        <translation>Остановить Обфускацию</translation>
-    </message>
-    <message>
-        <source>Mixed</source>
-        <translation>Смешано</translation>
-    </message>
-    <message>
-        <source>Enabled</source>
-        <translation>Включено</translation>
-    </message>
-    <message>
-        <source>N/A</source>
-        <translation>Недоступно</translation>
     </message>
 </context>
 <context>
@@ -2155,6 +2017,173 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>Время отклика</translation>
     </message>
 </context>
+<context>
+    <name>PrivacyDialog</name>
+    <message>
+        <source>BGX which were anonymized via Zerocin Protocol</source>
+        <translation>BGX, который был анонимно использован через Zerocoin протокол</translation>
+    </message>
+    <message>
+        <source>Zerocoin Actions:</source>
+        <translation>Действия Zerocoin </translation>
+    </message>
+    <message>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the bitcoingenx network after a connection is established, but this process has not completed yet.</source>
+        <translation>Возможно отображаемая информация устарела. Ваш кошелек автоматически синхронизируется с сетью bitcoingenx после установки соединения, но этот процесс еще не завершен. </translation>
+    </message>
+    <message>
+        <source>Enter an amount of Phr to convert to zPhr</source>
+        <translation>Введите сумму в Phr для  конвертации в zPhr</translation>
+    </message>
+    <message>
+        <source>Mint Zerocoin</source>
+        <translation>Создать Zerocoin</translation>
+    </message>
+    <message>
+        <source>0</source>
+        <translation>0</translation>
+    </message>
+    <message>
+        <source>Available for Minting:</source>
+        <translation>Доступный для чеканки</translation>
+    </message>
+    <message>
+        <source>Reset</source>
+        <translation>Сброс</translation>
+    </message>
+    <message>
+        <source>Quantity:</source>
+        <translation>Количество:</translation>
+    </message>
+    <message>
+        <source>Amount:</source>
+        <translation>Сумма:</translation>
+    </message>
+    <message>
+        <source>Choose previously used address</source>
+        <translation>Выбрать ранее использованный адрес</translation>
+    </message>
+    <message>
+        <source>Alt+A</source>
+        <translation>Alt+A</translation>
+    </message>
+    <message>
+        <source>Paste address from clipboard</source>
+        <translation>Вставить адрес из буфера обмена</translation>
+    </message>
+    <message>
+        <source>Alt+P</source>
+        <translation>Alt+P</translation>
+    </message>
+    <message>
+        <source>Available Zerocoin  Balance:</source>
+        <translation>Доступный Баланс в Zerocoin </translation>
+    </message>
+    <message>
+        <source>Denominations with value 1:</source>
+        <translation>Номинал со значением 1:</translation>
+    </message>
+    <message>
+        <source>Denom. with value 1:</source>
+        <translation>Номинал со значением 1:</translation>
+    </message>
+    <message>
+        <source>Denominations with value 5:</source>
+        <translation>Номинал со значением 5:</translation>
+    </message>
+    <message>
+        <source>Denom. with value 5:</source>
+        <translation>Номинал со значением 5:</translation>
+    </message>
+    <message>
+        <source>Denominations with value 10:</source>
+        <translation>Номинал со значением 10:</translation>
+    </message>
+    <message>
+        <source>Denom. with value 10:</source>
+        <translation>Номинал со значением 10:</translation>
+    </message>
+    <message>
+        <source>Denominations with value 50:</source>
+        <translation>Номинал со значением 50:</translation>
+    </message>
+    <message>
+        <source>Denom. with value 50:</source>
+        <translation>Номинал со значением 50:</translation>
+    </message>
+    <message>
+        <source>Denominations with value 100:</source>
+        <translation>Номинал со значением 100:</translation>
+    </message>
+    <message>
+        <source>Denom. with value 100:</source>
+        <translation>Номинал со значением 100:</translation>
+    </message>
+    <message>
+        <source>Denominations with value 500:</source>
+        <translation>Номинал со значением 500:</translation>
+    </message>
+    <message>
+        <source>Denom. with value 500:</source>
+        <translation>Номинал со значением 500:</translation>
+    </message>
+    <message>
+        <source>Denominations with value 1000:</source>
+        <translation>Номинал со значением 1000:</translation>
+    </message>
+    <message>
+        <source>Denom. with value 1000:</source>
+        <translation>Номинал со значением 1000:</translation>
+    </message>
+    <message>
+        <source>Denominations with value 5000:</source>
+        <translation>Номинал со значением 5000:</translation>
+    </message>
+    <message>
+        <source>Denom. with value 5000:</source>
+        <translation>Номинал со значением 5000:</translation>
+    </message>
+    <message>
+        <source>Priority:</source>
+        <translation>Приоритет:</translation>
+    </message>
+    <message>
+        <source>Fee:</source>
+        <translation>Комиссия:</translation>
+    </message>
+    <message>
+        <source>Dust:</source>
+        <translation>Пыль:</translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation>нет</translation>
+    </message>
+    <message>
+        <source>Bytes:</source>
+        <translation>Байты:</translation>
+    </message>
+    <message>
+        <source>medium</source>
+        <translation>промежуточный</translation>
+    </message>
+    <message>
+        <source>Change:</source>
+        <translation>Изменить:</translation>
+    </message>
+    <message>
+        <source>out of sync</source>
+        <translation>несинронизировано</translation>
+    </message>
+    <message>
+        <source>Copy quantity</source>
+        <translation>Копировать количество</translation>
+    </message>
+    <message>
+        <source>Copy amount</source>
+        <translation>Копировать сумму</translation>
+    </message>
+    </context>
 <context>
     <name>QObject</name>
     <message>
@@ -2693,10 +2722,6 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>Свернуть</translation>
     </message>
     <message>
-        <source>CoinMixing</source>
-        <translation>Обфускация</translation>
-    </message>
-    <message>
         <source>per kilobyte</source>
         <translation>за килобайт</translation>
     </message>
@@ -3173,6 +3198,13 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     </message>
     </context>
 <context>
+    <name>ZPhrControlDialog</name>
+    <message>
+        <source>0</source>
+        <translation>0</translation>
+    </message>
+    </context>
+<context>
     <name>bitcoingenx-core</name>
     <message>
         <source>SwiftTX requires inputs with at least 6 confirmations, you might need to wait a few minutes and try again.</source>
@@ -3327,7 +3359,7 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>Обнаружен неверный сценарий.</translation>
     </message>
     <message>
-        <source>Last successful CoinMixing action was too recent.</source>
+        <source>Last successful Obfuscation action was too recent.</source>
         <translation>Последняя успешная операция обфускации была совсем недавно.</translation>
     </message>
     <message>
@@ -3391,15 +3423,11 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>Недостаточно доступных дескрипторов файлов.</translation>
     </message>
     <message>
-        <source>CoinMixing options:</source>
-        <translation>Варианты обфускации:</translation>
-    </message>
-    <message>
-        <source>CoinMixing request complete:</source>
+        <source>Obfuscation request complete:</source>
         <translation>Запрос об обфускации завершен:</translation>
     </message>
     <message>
-        <source>CoinMixing request incomplete:</source>
+        <source>Obfuscation request incomplete:</source>
         <translation>Запрос об обфускации неполный:</translation>
     </message>
     <message>

@@ -1,7 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The bitcoingenx developers
+// Copyright (c) 2015-2017 The PIVX developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -105,21 +105,27 @@ std::string to_internal(const std::string&);
 
 using namespace std;
 
-//bitcoingenx only features
+// bitcoingenx only features
+// Masternode
 bool fMasterNode = false;
 string strMasterNodePrivKey = "";
 string strMasterNodeAddr = "";
 bool fLiteMode = false;
-bool fEnableRhenFAST = true;
-int nRhenFASTDepth = 5;
-int nCoinMixingRounds = 2;
-int nAnonymizeBitcoinGenXAmount = 1000;
+// SwiftX
+bool fEnableSwiftTX = true;
+int nSwiftTXDepth = 5;
+// Automatic Zerocoin minting
+bool fEnableZeromint = true;
+int nZeromintPercentage = 10;
+int nPreferredDenom = 0;
+const int64_t AUTOMINT_DELAY = (60 * 5); // Wait at least 5 minutes until Automint starts
+
+int nAnonymizebitcoingenxAmount = 1000;
 int nLiquidityProvider = 0;
 /** Spork enforcement enabled time */
 int64_t enforceMasternodePaymentsTime = 4085657524;
 bool fSucessfullyLoaded = false;
-bool fEnableCoinMixing = false;
-/** All denominations used by coinmixing */
+/** All denominations used by obfuscation */
 std::vector<int64_t> obfuScationDenominations;
 string strBudgetMode = "";
 
@@ -233,10 +239,11 @@ bool LogAcceptCategory(const char* category)
             // thread_specific_ptr automatically deletes the set when the thread ends.
             // "bitcoingenx" is a composite category enabling all bitcoingenx-related debug output
             if (ptrCategory->count(string("bitcoingenx"))) {
-                ptrCategory->insert(string("coinmixing"));
-                ptrCategory->insert(string("swifttx"));
+                ptrCategory->insert(string("obfuscation"));
+                ptrCategory->insert(string("swiftx"));
                 ptrCategory->insert(string("masternode"));
                 ptrCategory->insert(string("mnpayments"));
+                ptrCategory->insert(string("zero"));
                 ptrCategory->insert(string("mnbudget"));
             }
         }

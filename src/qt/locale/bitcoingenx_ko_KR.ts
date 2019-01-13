@@ -157,7 +157,7 @@
     </message>
     <message>
         <source>This operation needs your wallet passphrase to decrypt the wallet.</source>
-        <translation>이 작업은 지갑 암호화 해제를 위해 지갑 암호가 필요합니다.</translation>
+        <translation>이 작업은 지갑 암호화 해제를 하셔야 가능합니다.</translation>
     </message>
     <message>
         <source>Decrypt wallet</source>
@@ -213,7 +213,7 @@
     </message>
     <message>
         <source>The passphrase entered for the wallet decryption was incorrect.</source>
-        <translation>지갑 암호화 해제를 위해 입력한 지갑 암호가 올바르지 않습니다.</translation>
+        <translation>입력한 지갑 암호가 올바르지 않습니다.</translation>
     </message>
     <message>
         <source>Wallet decryption failed</source>
@@ -232,15 +232,15 @@
     <name>Bip38ToolDialog</name>
     <message>
         <source>BIP 38 Tool</source>
-        <translation>BIP 38 Tool</translation>
+        <translation>BIP 38 도구</translation>
     </message>
     <message>
         <source>&amp;BIP 38 Encrypt</source>
         <translation>&amp;BIP 38 암호화</translation>
     </message>
     <message>
-        <source>Enter a BitcoinGenX Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>BIP 38을 사용하여 암호화 할 BitcoinGenX 주소를 입력하십시오. 중간 입력창에 암호를 입력하십시오. 암호화를 누르면 암호화된 개인 키가 계산됩니다.</translation>
+        <source>Enter a bitcoingenx Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>BIP 38을 사용하여 암호화 할 bitcoingenx 주소를 입력하십시오. 중간 입력창에 암호를 입력하십시오. 암호화를 누르면 암호화된 개인 키가 계산됩니다.</translation>
     </message>
     <message>
         <source>Address:</source>
@@ -502,7 +502,7 @@
         <translation>&amp;정보</translation>
     </message>
     <message>
-        <source>Show diagnostic information</source>
+        <source>Show diagbitcoingenxtic information</source>
         <translation>진단 정보 표시</translation>
     </message>
     <message>
@@ -543,7 +543,7 @@
     </message>
     <message>
         <source>Show Automatic &amp;Backups</source>
-        <translation>자동 &amp;백업 표시</translation>
+        <translation>자동 &amp;백업 폴더 열기</translation>
     </message>
     <message>
         <source>Show automatically created wallet backups</source>
@@ -575,7 +575,7 @@
     </message>
     <message numerus="yes">
         <source>Processed %n blocks of transaction history.</source>
-        <translation><numerusform>%n 블록의 거래내역을 처리함</numerusform></translation>
+        <translation><numerusform>트랜잭션 기록의 %n 블록을 처리함</numerusform></translation>
     </message>
     <message>
         <source>Synchronizing additional data: %p%</source>
@@ -614,6 +614,14 @@
         <translation>결제 요청 (QR 코드 및 bitcoingenx: URI 생성)</translation>
     </message>
     <message>
+        <source>&amp;Privacy</source>
+        <translation>&amp;프라이버시</translation>
+    </message>
+    <message>
+        <source>Privacy Action for zBGX and Obfuscation</source>
+        <translation>zBGX와 난독화를 위한 프라이버스 작업</translation>
+    </message>
+    <message>
         <source>&amp;Masternodes</source>
         <translation>&amp;마스터노드</translation>
     </message>
@@ -627,7 +635,7 @@
     </message>
     <message>
         <source>Show information about BitcoinGenX Core</source>
-        <translation>BitcoinGenX Core에 대한 정보 표시</translation>
+        <translation>bitcoingenx Core에 대한 정보 표시</translation>
     </message>
     <message>
         <source>Modify configuration options for bitcoingenx</source>
@@ -691,7 +699,7 @@
     </message>
     <message numerus="yes">
         <source>%n active connection(s) to bitcoingenx network</source>
-        <translation><numerusform>bitcoingenx 네트워크에  %n 연결</numerusform></translation>
+        <translation><numerusform>%n 개 bitcoingenx 네트웍에 연결</numerusform></translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -735,11 +743,11 @@
     </message>
     <message>
         <source>%1 behind</source>
-        <translation>%1 뒤</translation>
+        <translation>%1 남음</translation>
     </message>
     <message>
         <source>Catching up...</source>
-        <translation>동기화중...</translation>
+        <translation>동기화 중...</translation>
     </message>
     <message>
         <source>Last received block was generated %1 ago.</source>
@@ -763,7 +771,7 @@
     </message>
     <message>
         <source>Sent transaction</source>
-        <translation>트랜잭션 전송</translation>
+        <translation>보낸 트랜잭션</translation>
     </message>
     <message>
         <source>Incoming transaction</source>
@@ -807,7 +815,7 @@ Address: %4
     </message>
     <message>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
-        <translation>지갑은 &lt;b&gt;암호화&lt;/ b&gt;되어 있으며 현재 &lt;b&gt;잠금해제&lt;/ b&gt;되었습니다.</translation>
+        <translation>현재 지갑은 &lt;b&gt;암호화되어 &lt;b&gt;잠금해제되었습니다.</translation>
     </message>
     <message>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt; for anonimization and staking only</source>
@@ -823,6 +831,14 @@ Address: %4
     <message>
         <source>Blockchain Explorer</source>
         <translation>블록체인 탐색기</translation>
+    </message>
+    <message>
+        <source>Back</source>
+        <translation>뒤로</translation>
+    </message>
+    <message>
+        <source>Forward</source>
+        <translation>앞으로</translation>
     </message>
     <message>
         <source>Address / Block / Transaction</source>
@@ -844,8 +860,8 @@ Address: %4
 <context>
     <name>ClientModel</name>
     <message>
-        <source>Total: %1 (OBF compatible: %2 / Enabled: %3)</source>
-        <translation>총: %1 (OBF 호환: %2 / 사용됨: %3)</translation>
+        <source>Total: %1 (IPv4: %2 / IPv6: %3 / Tor: %4 / Unknown: %5)</source>
+        <translation>Total: %1 (IPv4: %2 / IPv6: %3 / Tor: %4 / Unknown: %5)</translation>
     </message>
     <message>
         <source>Network Alert</source>
@@ -888,7 +904,7 @@ Address: %4
     </message>
     <message>
         <source>Change:</source>
-        <translation>변경:</translation>
+        <translation>잔돈:</translation>
     </message>
     <message>
         <source>(un)select all</source>
@@ -921,10 +937,6 @@ Address: %4
     <message>
         <source>Received with address</source>
         <translation>수신 된 주소</translation>
-    </message>
-    <message>
-        <source>DS Rounds</source>
-        <translation>DS 라운드</translation>
     </message>
     <message>
         <source>Date</source>
@@ -980,7 +992,7 @@ Address: %4
     </message>
     <message>
         <source>Copy bytes</source>
-        <translation>bytes 복사</translation>
+        <translation>Bytes 복사</translation>
     </message>
     <message>
         <source>Copy priority</source>
@@ -997,10 +1009,6 @@ Address: %4
     <message>
         <source>Please switch to "List mode" to use this function.</source>
         <translation>이 기능을 사용하려면 "목록 모드"로 전환하십시오.</translation>
-    </message>
-    <message>
-        <source>Non-anonymized input selected. &lt;b&gt;CoinMixing will be disabled.&lt;/b&gt;&lt;br&gt;&lt;br&gt;If you still want to use CoinMixing, please deselect all non-nonymized inputs first and then check CoinMixing checkbox again.</source>
-        <translation>익명화되지 않은 입력이 선택되었습니다. &lt;b&gt;난독화가 비활성화 되었습니다.&lt;b&gt;&lt;br&gt;&lt;br&gt;난독화를 계속 사용하려면 먼저 익명화 되지 않은 모든 입력을 먼저 선택 취소한 뒤 다시 선택해주세요.</translation>
     </message>
     <message>
         <source>highest</source>
@@ -1021,10 +1029,6 @@ Address: %4
     <message>
         <source>Can vary +/- %1 duff(s) per input.</source>
         <translation>입력당 +/- %1 금액(s)을 변경할 수 있습니다.</translation>
-    </message>
-    <message>
-        <source>n/a</source>
-        <translation>n/a</translation>
     </message>
     <message>
         <source>medium</source>
@@ -1096,7 +1100,7 @@ Address: %4
     </message>
     <message>
         <source>(change)</source>
-        <translation>(변경)</translation>
+        <translation>(잔돈)</translation>
     </message>
 </context>
 <context>
@@ -1119,7 +1123,7 @@ Address: %4
     </message>
     <message>
         <source>The address associated with this address list entry. This can only be modified for sending addresses.</source>
-        <translation>이 주소 목록과 관련된 주소입니다. 주소를 보낼때만 수정할 수 있습니다.</translation>
+        <translation>이 주소 목록과 관련된 주소입니다. 주소를 보낼 때만 수정할 수 있습니다.</translation>
     </message>
     <message>
         <source>New receiving address</source>
@@ -1240,15 +1244,15 @@ Address: %4
     </message>
     <message>
         <source>Welcome to BitcoinGenX Core.</source>
-        <translation>BitcoinGenX Core 환영합니다.</translation>
+        <translation>bitcoingenx Core에 오신 것을 환영합니다.</translation>
     </message>
     <message>
         <source>As this is the first time the program is launched, you can choose where BitcoinGenX Core will store its data.</source>
-        <translation>이 프로그램이 처음 실행되었으므로 BitcoinGenX Core가 데이터를 저장할 위치를 선택할 수 있습니다.</translation>
+        <translation>이 프로그램이 처음 실행되었으므로 bitcoingenx Core가 데이터를 저장할 위치를 선택할 수 있습니다.</translation>
     </message>
     <message>
         <source>BitcoinGenX Core will download and store a copy of the bitcoingenx block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>BitcoinGenX Core는 bitcoingenx 블록체인을 다운로드하여 저장합니다. 최소 %1GB의 데이터가 디렉토리에 저장되며 시간이 지날수록 증가합니다. 또한 지갑도 해당 디렉토리에 저장됩니다.</translation>
+        <translation>bitcoingenx Core는 bitcoingenx 블록체인을 다운로드하여 저장합니다. 최소 %1GB의 데이터가 디렉토리에 저장되며 시간이 지날수록 증가합니다. 또한 지갑도 해당 디렉토리에 저장됩니다.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1522,9 +1526,9 @@ Please check the address and try again.</source>
     </message>
 </context>
 <context>
-    <name>CoinMixingConfig</name>
+    <name>ObfuscationConfig</name>
     <message>
-        <source>Configure CoinMixing</source>
+        <source>Configure Obfuscation</source>
         <translation>난독화 구성</translation>
     </message>
     <message>
@@ -1572,19 +1576,19 @@ Please check the address and try again.</source>
         <translation>10000 BGX 익명화에 0.1 BGX 가 듭니다.</translation>
     </message>
     <message>
-        <source>CoinMixing Configuration</source>
+        <source>Obfuscation Configuration</source>
         <translation>난독화 구성</translation>
     </message>
     <message>
-        <source>CoinMixing was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening bitcoingenx's configuration screen.</source>
+        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening bitcoingenx's configuration screen.</source>
         <translation>난독화가 성공적으로 높게 설정되었습니다.(%1 및 2 rounds) bitcoingenx의 설정 화면을 열어 언제든지 다시 변경할 수 있습니다.</translation>
     </message>
     <message>
-        <source>CoinMixing was successfully set to high (%1 and 8 rounds). You can change this at any time by opening bitcoingenx's configuration screen.</source>
+        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening bitcoingenx's configuration screen.</source>
         <translation>난독화가 성공적으로 높게 설정되었습니다.(%1 및 8 rounds) bitcoingenx의 설정 화면을 열어 언제든지 다시 변경할 수 있습니다.</translation>
     </message>
     <message>
-        <source>CoinMixing was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening bitcoingenx's configuration screen.</source>
+        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening bitcoingenx's configuration screen.</source>
         <translation>난독화가 성공적으로 높게 설정되었습니다.(%1 및 16 rounds) bitcoingenx의 설정 화면을 열어 언제든지 다시 변경할 수 있습니다.</translation>
     </message>
 </context>
@@ -1674,22 +1678,6 @@ Please check the address and try again.</source>
         <translation>&amp;시스템 로그인시 bitcoingenx 시작</translation>
     </message>
     <message>
-        <source>This setting determines the amount of individual masternodes that an input will be anonymized through.&lt;br/&gt;More rounds of anonymization gives a higher degree of privacy, but also costs more in fees.</source>
-        <translation>이 설정은 익명화 할 입력 값의 개별 마스터노드의 수량을 결정합니다.&lt;br/&gt;더 많은 익명화할 액수는 높은 수준의 익명성을 제공하지만 수수료가 많이 듭니다.</translation>
-    </message>
-    <message>
-        <source>CoinMixing rounds to use</source>
-        <translation>난독화를 사용할 영역</translation>
-    </message>
-    <message>
-        <source>This amount acts as a threshold to turn off CoinMixing once it's reached.</source>
-        <translation>이 금액에 도달하면 난독화를 끌 수 있는 임계 값 역할을 합니다.</translation>
-    </message>
-    <message>
-        <source>Amount of bitcoingenx to keep anonymized</source>
-        <translation>익명화할 bitcoingenx 수량</translation>
-    </message>
-    <message>
         <source>Whether to show coin control features or not.</source>
         <translation>동전 제어 기능을 표시할지 여부를 나타냅니다.</translation>
     </message>
@@ -1720,12 +1708,28 @@ Please check the address and try again.</source>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
 https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</source>
-        <translation>지원 언어가 없거나 번역이 불완전한가요? 번역 기여 도움말:
+        <translation>지원 언어가 없거나 번역이 불완전한가요? 번역을 도와주세요 :
 https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>&amp;UPnp를 사용하여 포트 매핑</translation>
+    </message>
+    <message>
+        <source>Percentage of incoming BGX which get automatically converted to zBGX via Zerocoin Protocol (min: 10%)</source>
+        <translation>BGX수신시 자동변환 zBGX 퍼센트 (최소값:10%)</translation>
+    </message>
+    <message>
+        <source>Percentage of autominted zBGX</source>
+        <translation>자동 변환되는 zBGX 퍼센트</translation>
+    </message>
+    <message>
+        <source>Wait with automatic conversion to Zerocoin until enough BGX for this denomination is available</source>
+        <translation>이 디노미네이션의 BGX가 충분해질 때까지 Zerocoin으로 자동전환은 보류됩니다.</translation>
+    </message>
+    <message>
+        <source>Preferred Automint zBGX Denomination</source>
+        <translation>선호하는 자동생성 zBGX 디노미네이션 </translation>
     </message>
     <message>
         <source>Connect to the bitcoingenx network through a SOCKS5 proxy.</source>
@@ -1820,6 +1824,10 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>&amp;취소</translation>
     </message>
     <message>
+        <source>I don't care</source>
+        <translation>없음</translation>
+    </message>
+    <message>
         <source>default</source>
         <translation>기본값</translation>
     </message>
@@ -1855,6 +1863,10 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>Form</translation>
     </message>
     <message>
+        <source>BGX Balances</source>
+        <translation>BGX 잔액</translation>
+    </message>
+    <message>
         <source>Available:</source>
         <translation>사용가능:</translation>
     </message>
@@ -1877,10 +1889,6 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     <message>
         <source>Staked or masternode rewards that has not yet matured</source>
         <translation>아직 완료되지 않은 스테이크 및 마스터노드 보상</translation>
-    </message>
-    <message>
-        <source>Balances</source>
-        <translation>잔액</translation>
     </message>
     <message>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the bitcoingenx network after a connection is established, but this process has not completed yet.</source>
@@ -1919,154 +1927,32 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>출금 가능 액수:</translation>
     </message>
     <message>
-        <source>Status:</source>
-        <translation>상태:</translation>
+        <source>Combined Balances (including immature coins)</source>
+        <translation>전체 잔액 (대기중 코인 포함)</translation>
     </message>
     <message>
-        <source>CoinMixing Balance:</source>
-        <translation>난독화 된 잔액:</translation>
+        <source>BGX:</source>
+        <translation>BGX:</translation>
     </message>
     <message>
-        <source>0 BGX / 0 Rounds</source>
-        <translation>0 BGX / 0 수량</translation>
+        <source>zBGX:</source>
+        <translation>zBGX:</translation>
     </message>
     <message>
-        <source>Enabled/Disabled</source>
-        <translation>활성화/비활성화</translation>
+        <source>0 %</source>
+        <translation>0 %</translation>
     </message>
     <message>
-        <source>Try to manually submit a CoinMixing request.</source>
-        <translation>난독화 요청을 수동으로 제출해주세요.</translation>
-    </message>
-    <message>
-        <source>Reset the current status of CoinMixing (can interrupt CoinMixing if it's in the process of Mixing, which can cost you money!)</source>
-        <translation>현재 난독화 상태를 초기화 합니다. (난독화가 믹스 중일 경우에 간섭으로 비용이 발생할 수 있습니다!)</translation>
-    </message>
-    <message>
-        <source>CoinMixing</source>
-        <translation>난독화</translation>
-    </message>
-    <message>
-        <source>Completion:</source>
-        <translation>완료:</translation>
-    </message>
-    <message>
-        <source>Amount and Rounds:</source>
-        <translation>금액 및 수량:</translation>
-    </message>
-    <message>
-        <source>Submitted Denom:</source>
-        <translation>제출된 단위:</translation>
-    </message>
-    <message>
-        <source>n/a</source>
-        <translation>n/a</translation>
+        <source>Zerocoin Balance</source>
+        <translation>제로코인 잔액</translation>
     </message>
     <message>
         <source>Recent transactions</source>
         <translation>최근 트랜잭션</translation>
     </message>
     <message>
-        <source>Start/Stop Mixing</source>
-        <translation>믹싱 시작/종료</translation>
-    </message>
-    <message>
-        <source>The denominations you submitted to the Masternode.&lt;br&gt;To mix, other users must submit the exact same denominations.</source>
-        <translation>당신이 마스터노드에 제출한 단위.&lt;br&gt;믹스하려면 다른 유저들은 반드시 정확한 단위를 제출해야 합니다.</translation>
-    </message>
-    <message>
-        <source>(Last Message)</source>
-        <translation>(최근 메시지)</translation>
-    </message>
-    <message>
-        <source>Try Mix</source>
-        <translation>믹스 시도</translation>
-    </message>
-    <message>
-        <source>Reset</source>
-        <translation>초기화</translation>
-    </message>
-    <message>
         <source>out of sync</source>
         <translation>동기화되지 않음</translation>
-    </message>
-    <message>
-        <source>Disabled</source>
-        <translation>비활성됨</translation>
-    </message>
-    <message>
-        <source>No inputs detected</source>
-        <translation>값이 입력되지 않음</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n Rounds</source>
-        <translation><numerusform>%n 라운드</numerusform></translation>
-    </message>
-    <message>
-        <source>Not enough compatible inputs to anonymize &lt;span style='color:red;'&gt;%1&lt;/span&gt;,&lt;br&gt;will anonymize &lt;span style='color:red;'&gt;%2&lt;/span&gt; instead</source>
-        <translation>익명화를 위한 값이 충분하지 않아 &lt;span style='color:red;'&gt;%1/span&gt;,&lt;br&gt;대신 &lt;span style='color:red;'&gt;%2&lt;/span&gt;가 익명화 됩니다.</translation>
-    </message>
-    <message>
-        <source>Overall progress</source>
-        <translation>전체 내역</translation>
-    </message>
-    <message>
-        <source>Denominated</source>
-        <translation>표기된</translation>
-    </message>
-    <message>
-        <source>Anonymized</source>
-        <translation>익명화된</translation>
-    </message>
-    <message numerus="yes">
-        <source>Denominated inputs have %5 of %n rounds on average</source>
-        <translation><numerusform>지정된 입력값은  평균 %n 라운드중 %5입니다.</numerusform></translation>
-    </message>
-    <message>
-        <source>Last CoinMixing message:
-</source>
-        <translation>최근 Obfuscate한 메시지:
-</translation>
-    </message>
-    <message>
-        <source>CoinMixing was successfully reset.</source>
-        <translation>난독화가 성공적으로 초기화 되었습니다.</translation>
-    </message>
-    <message>
-        <source>If you don't want to see internal CoinMixing fees/transactions select "Most Common" as Type on the "Transactions" tab.</source>
-        <translation>내부 난독화 수수료/트랜잭션를 보고 싶지 않으면 "트랜잭션" 탭에서 '기본적인'을 선택하십시오.</translation>
-    </message>
-    <message>
-        <source>CoinMixing requires at least %1 to use.</source>
-        <translation>난독화를 사용하기 위해선 적어도 %1이 필요합니다.</translation>
-    </message>
-    <message>
-        <source>Wallet is locked and user declined to unlock. Disabling CoinMixing.</source>
-        <translation>지갑이 잠겼으며 사용자가 잠금 해제를 거부했습니다. 난독화 중단.</translation>
-    </message>
-    <message>
-        <source>Found enough compatible inputs to anonymize %1</source>
-        <translation>%1 익명화를 진행하기 위해서는 충분한 값이 필요합니다</translation>
-    </message>
-    <message>
-        <source>Start CoinMixing</source>
-        <translation>난독화 시작</translation>
-    </message>
-    <message>
-        <source>Stop CoinMixing</source>
-        <translation>난독화 중지</translation>
-    </message>
-    <message>
-        <source>Mixed</source>
-        <translation>믹스됨</translation>
-    </message>
-    <message>
-        <source>Enabled</source>
-        <translation>활성화됨</translation>
-    </message>
-    <message>
-        <source>N/A</source>
-        <translation>N/A</translation>
     </message>
 </context>
 <context>
@@ -2141,7 +2027,7 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     </message>
     <message>
         <source>Error communicating with %1: %2</source>
-        <translation>%1 과 통신하는 중 오류 발생: %2</translation>
+        <translation>%1: %2 통신하는 중 오류 발생: </translation>
     </message>
     <message>
         <source>Payment request cannot be parsed!</source>
@@ -2176,6 +2062,463 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     </message>
 </context>
 <context>
+    <name>PrivacyDialog</name>
+    <message>
+        <source>BGX which were anonymized via Zerocin Protocol</source>
+        <translation>제로코인 프로토콜을 통해 익명화된 BGX</translation>
+    </message>
+    <message>
+        <source>Zerocoin BGX (zBGX)</source>
+        <translation>제로코인 BGX (zBGX)</translation>
+    </message>
+    <message>
+        <source>Zerocoin Actions:</source>
+        <translation>제로코인 관리:</translation>
+    </message>
+    <message>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the bitcoingenx network after a connection is established, but this process has not completed yet.</source>
+        <translation>표시된 정보가 오래되었을 수 있습니다. 연결이 완료되면 지갑이 bitcoingenx 네트워크와 자동으로 동기화될 예정이지만, 아직 해당 프로세스가 완료되지 않았습니다.</translation>
+    </message>
+    <message>
+        <source>Enter an amount of Phr to convert to zPhr</source>
+        <translation>zBGX로 변환할 BGX 수량을 입력하세요.</translation>
+    </message>
+    <message>
+        <source>Mint Zerocoin</source>
+        <translation>제로코인 생성</translation>
+    </message>
+    <message>
+        <source>0</source>
+        <translation>0</translation>
+    </message>
+    <message>
+        <source>zBGX</source>
+        <translation>zBGX</translation>
+    </message>
+    <message>
+        <source>Available for Minting:</source>
+        <translation>생성 가능한 수량 :</translation>
+    </message>
+    <message>
+        <source>0.000 000 00 BGX</source>
+        <translation>0.000 000 00 BGX</translation>
+    </message>
+    <message>
+        <source>Reset Zerocoin Wallet DB. Deletes transactions that did not make it into the blockchain.</source>
+        <translation>제로코인 지갑 DB 재설정. 블록 체인에 포함시키지 않은 트랜잭션을 삭제합니다.</translation>
+    </message>
+    <message>
+        <source>Reset</source>
+        <translation>초기화</translation>
+    </message>
+    <message>
+        <source>Coin Control...</source>
+        <translation>코인 컨트롤...</translation>
+    </message>
+    <message>
+        <source>Quantity:</source>
+        <translation>수량:</translation>
+    </message>
+    <message>
+        <source>Amount:</source>
+        <translation>금액:</translation>
+    </message>
+    <message>
+        <source>Rescan the complete blockchain for  Zerocoin mints and their meta-data.</source>
+        <translation>제로코인 생성과 메타데이타를 위해 블록체인을 다시 스캔합니다.</translation>
+    </message>
+    <message>
+        <source>ReScan</source>
+        <translation>다시 스캔</translation>
+    </message>
+    <message>
+        <source>Status and/or Mesages from the last Mint Action.</source>
+        <translation>마지막 발행 이후 상태나 메세지</translation>
+    </message>
+    <message>
+        <source>zPhr Control</source>
+        <translation>zBGX 설정</translation>
+    </message>
+    <message>
+        <source>zPhr Selected:</source>
+        <translation>선택한 zBGX : </translation>
+    </message>
+    <message>
+        <source>Quantity Selected:</source>
+        <translation>선택된 수량 :</translation>
+    </message>
+    <message>
+        <source>Spend Zerocoin. Without 'Pay To:' address creates payments to yourself.</source>
+        <translation>제로코인 전송 'Pay To :' 주소가 없으면 자신에게 지불합니다.</translation>
+    </message>
+    <message>
+        <source>Spend Zerocoin</source>
+        <translation>제로코인 보내기</translation>
+    </message>
+    <message>
+        <source>Available Balance:</source>
+        <translation>가능한 잔액:</translation>
+    </message>
+    <message>
+        <source>0 zBGX</source>
+        <translation>0 zBGX</translation>
+    </message>
+    <message>
+        <source>Security Level for Zerocoin Transactions. More is better, but needs more time and resources.</source>
+        <translation>제로코인 전송 시큐리티 레벨.  높을수록 좋지만, 시간과 많은 자원이 필요합니다.</translation>
+    </message>
+    <message>
+        <source>Security Level:</source>
+        <translation>시큐리티 레벨:</translation>
+    </message>
+    <message>
+        <source>Security Level 1 - 100 (default: 42)</source>
+        <translation>시큐리티 레벨 1 - 100 (기본값: 42)</translation>
+    </message>
+    <message>
+        <source>Pay &amp;To:</source>
+        <translation>지불 &amp;대상:</translation>
+    </message>
+    <message>
+        <source>The bitcoingenx address to send the payment to. Creates local payment to yourself when empty.</source>
+        <translation>BGX를 전송할 bitcoingenx 주소입니다. 비어있을 때 자신에게 지불할 주소를 생성합니다.</translation>
+    </message>
+    <message>
+        <source>Choose previously used address</source>
+        <translation>이전에 사용한 주소 선택</translation>
+    </message>
+    <message>
+        <source>Alt+A</source>
+        <translation>Alt+A</translation>
+    </message>
+    <message>
+        <source>Paste address from clipboard</source>
+        <translation>클립보드에서 주소 붙여 넣기</translation>
+    </message>
+    <message>
+        <source>Alt+P</source>
+        <translation>Alt+P</translation>
+    </message>
+    <message>
+        <source>&amp;Label:</source>
+        <translation>&amp;라벨:</translation>
+    </message>
+    <message>
+        <source>Enter a label for this address to add it to the list of used addresses</source>
+        <translation>이 주소의 라벨을 입력하여 사용된 주소 목록에 추가하십시오</translation>
+    </message>
+    <message>
+        <source>A&amp;mount:</source>
+        <translation>금&amp;액:</translation>
+    </message>
+    <message>
+        <source>Convert Change to Zerocoin (might cost additional fees)</source>
+        <translation>잔돈을 제로코인으로 변환 (추가 요금이 부과될 수 있음)</translation>
+    </message>
+    <message>
+        <source>If checked, the wallet tries to minimize the returning change instead of minimizing the number of spent denominations.</source>
+        <translation>이 옵션을 선택하면, 사용한 디노미네이션의 수를 최소화하는 대신 남는 잔돈을 최소화합니다.</translation>
+    </message>
+    <message>
+        <source>Minimize Change</source>
+        <translation>잔돈 최소화하기</translation>
+    </message>
+    <message>
+        <source>Information about the available Zerocoin funds.</source>
+        <translation>사용가능한 제로코인 정보</translation>
+    </message>
+    <message>
+        <source>Zerocoin Stats:</source>
+        <translation>제로코인 상태 :</translation>
+    </message>
+    <message>
+        <source>Available Funds</source>
+        <translation>사용가는한 펀드</translation>
+    </message>
+    <message>
+        <source>Available Zerocoin  Balance:</source>
+        <translation>사용가능한 제로코인 잔액:</translation>
+    </message>
+    <message>
+        <source>Denominations with value 1:</source>
+        <translation>디노미네이션 값 1:</translation>
+    </message>
+    <message>
+        <source>Denom. with value 1:</source>
+        <translation>Denom. 값 1:</translation>
+    </message>
+    <message>
+        <source>0 x</source>
+        <translation>0 x</translation>
+    </message>
+    <message>
+        <source>Denominations with value 5:</source>
+        <translation>디노미네이션 값 5:</translation>
+    </message>
+    <message>
+        <source>Denom. with value 5:</source>
+        <translation>Denom. 값 5:</translation>
+    </message>
+    <message>
+        <source>Denominations with value 10:</source>
+        <translation>디노미네이션  값 10:</translation>
+    </message>
+    <message>
+        <source>Denom. with value 10:</source>
+        <translation>Denom. 값 10:</translation>
+    </message>
+    <message>
+        <source>Denominations with value 50:</source>
+        <translation>디노미네이션 값 50:</translation>
+    </message>
+    <message>
+        <source>Denom. with value 50:</source>
+        <translation>Denom. 값 50:</translation>
+    </message>
+    <message>
+        <source>Denominations with value 100:</source>
+        <translation>디노미네이션 값 100:</translation>
+    </message>
+    <message>
+        <source>Denom. with value 100:</source>
+        <translation>Denom. 값 100:</translation>
+    </message>
+    <message>
+        <source>Denominations with value 500:</source>
+        <translation>디노미네이션 값 500:</translation>
+    </message>
+    <message>
+        <source>Denom. with value 500:</source>
+        <translation>Denom. 값 500:</translation>
+    </message>
+    <message>
+        <source>Denominations with value 1000:</source>
+        <translation>디노미네이션 값 1000:</translation>
+    </message>
+    <message>
+        <source>Denom. with value 1000:</source>
+        <translation>Denom. 값 1000:</translation>
+    </message>
+    <message>
+        <source>Denominations with value 5000:</source>
+        <translation>디노미네이션 값 5000:</translation>
+    </message>
+    <message>
+        <source>Denom. with value 5000:</source>
+        <translation>Denom. 값 5000:</translation>
+    </message>
+    <message>
+        <source>Note: This hidden objects are used for communication between the 'Coin Control' dialog and its parent objects. We don't want to change/reimplement the existing Coin Control, so this objects must be here, even when we don't use them. No, we don't like this approach, either.</source>
+        <translation>Note: This hidden objects are used for communication between the 'Coin Control' dialog and its parent objects. We don't want to change/reimplement the existing Coin Control, so this objects must be here, even when we don't use them. No, we don't like this approach, either.</translation>
+    </message>
+    <message>
+        <source>Priority:</source>
+        <translation>우선 순위:</translation>
+    </message>
+    <message>
+        <source>Fee:</source>
+        <translation>수수료:</translation>
+    </message>
+    <message>
+        <source>Dust:</source>
+        <translation>현금:</translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation>아니오</translation>
+    </message>
+    <message>
+        <source>Bytes:</source>
+        <translation>Bytes:</translation>
+    </message>
+    <message>
+        <source>Insufficient funds!</source>
+        <translation>자금이 충분하지 않습니다!</translation>
+    </message>
+    <message>
+        <source>Coins automatically selected</source>
+        <translation>코인 자동으로 선택됨</translation>
+    </message>
+    <message>
+        <source>medium</source>
+        <translation>중간</translation>
+    </message>
+    <message>
+        <source>Coin Control Features</source>
+        <translation>코인 제어 기능</translation>
+    </message>
+    <message>
+        <source>If this is activated, but the change address is empty or invalid, change will be sent to a newly generated address.</source>
+        <translation>이 옵션이 활성화되었지만, 변경 주소가 비어있거나 유효하지 않은 경우 변경사항은 새로 생성된 주소로 전송됩니다.</translation>
+    </message>
+    <message>
+        <source>Custom change address</source>
+        <translation>커스텀 주소 변경</translation>
+    </message>
+    <message>
+        <source>Amount After Fee:</source>
+        <translation>수수료 차감 금액:</translation>
+    </message>
+    <message>
+        <source>Change:</source>
+        <translation>변경:</translation>
+    </message>
+    <message>
+        <source>out of sync</source>
+        <translation>동기화되지 않음</translation>
+    </message>
+    <message>
+        <source>Mint Status: Okay</source>
+        <translation>생성 상태 : Okay</translation>
+    </message>
+    <message>
+        <source>Copy quantity</source>
+        <translation>수량 복사</translation>
+    </message>
+    <message>
+        <source>Copy amount</source>
+        <translation>금액 복사</translation>
+    </message>
+    <message>
+        <source>Zerocoin functionality is not enabled on the bitcoingenx network yet.</source>
+        <translation>제로 코인 기능 상태가 bitcoingenx 네트워크 상에서 이루어지지 않습니다.</translation>
+    </message>
+    <message>
+        <source>Error: Your wallet is locked. Please enter the wallet passphrase first.</source>
+        <translation>Error : 지갑이 잠겨있습니다. 먼저 지갑을 열어주세요.</translation>
+    </message>
+    <message>
+        <source>Message: Enter an amount &gt; 0.</source>
+        <translation>Message: 0 이상의 수량을 입력하세요.</translation>
+    </message>
+    <message>
+        <source>Minting </source>
+        <translation>생성중입니다.</translation>
+    </message>
+    <message>
+        <source>Successfully minted </source>
+        <translation>성공적으로 발행됨</translation>
+    </message>
+    <message>
+        <source> zBGX in </source>
+        <translation> zBGX in </translation>
+    </message>
+    <message>
+        <source> sec. Used denominations:
+</source>
+        <translation> 초. 사용된 디노미네이션:
+</translation>
+    </message>
+    <message>
+        <source>Starting ResetMintZerocoin: rescanning complete blockchain, this will need up to 30 minutes depending on your hardware. 
+Please be patient...</source>
+        <translation>제로코인 생성 초기화 진행중... : 전체 블록체인을 다시 검색합니다. 하드웨어에 따라 최대 30분이 걸릴수 있습니다.
+기다려주세요...</translation>
+    </message>
+    <message>
+        <source>Duration: </source>
+        <translation>경과시간:</translation>
+    </message>
+    <message>
+        <source> sec.
+</source>
+        <translation>초.
+</translation>
+    </message>
+    <message>
+        <source>Starting ResetSpentZerocoin: </source>
+        <translation>전송된 제로코인 리셋 시작중...</translation>
+    </message>
+    <message>
+        <source>No 'Pay To' address provided, creating local payment</source>
+        <translation>주소를 입력하지 않아, 신규 주소를 생성합니다.</translation>
+    </message>
+    <message>
+        <source>Invalid bitcoingenx Address</source>
+        <translation>잘못된 bitcoingenx 주소</translation>
+    </message>
+    <message>
+        <source>Invalid Send Amount</source>
+        <translation>잘못된 전송 수량</translation>
+    </message>
+    <message>
+        <source>Confirm additional Fees</source>
+        <translation>추가 수수료 확인</translation>
+    </message>
+    <message>
+        <source>Are you sure you want to send?&lt;br /&gt;&lt;br /&gt;</source>
+        <translation>정말로 보내시겠습니까?&lt;br /&gt;&lt;br /&gt;</translation>
+    </message>
+    <message>
+        <source> to address </source>
+        <translation>주소로</translation>
+    </message>
+    <message>
+        <source> to a newly generated (unused and therefor anonymous) local address &lt;br /&gt;</source>
+        <translation>새로 생성된 개인 지갑 주소(미사용된 익명의) &lt;br /&gt; 로</translation>
+    </message>
+    <message>
+        <source>with Security Level </source>
+        <translation>시큐리티 레벨</translation>
+    </message>
+    <message>
+        <source>Confirm send coins</source>
+        <translation>코인 전송 확인</translation>
+    </message>
+    <message>
+        <source>Spending Zerocoin.
+Computationally expensive, might need several minutes depending on the selected Security Level and your hardware. 
+Please be patient...</source>
+        <translation>제로코인 전송중입니다.
+시큐리티 레벨과 여러분의 하드웨어에 따라 수 분이 걸립니다.
+조금만 기다려주세요...</translation>
+    </message>
+    <message>
+        <source>Spend Zerocoin failed with status = </source>
+        <translation>제로코인 송금 실패 상태 =</translation>
+    </message>
+    <message>
+        <source>zPhr Spend #: </source>
+        <translation>zPhr 송금 #: </translation>
+    </message>
+    <message>
+        <source>denomination: </source>
+        <translation>디노미네이션: </translation>
+    </message>
+    <message>
+        <source>serial: </source>
+        <translation>시리얼:</translation>
+    </message>
+    <message>
+        <source>Spend is 1 of : </source>
+        <translation>Spend is 1 of : </translation>
+    </message>
+    <message>
+        <source>value out: </source>
+        <translation>출력 값:</translation>
+    </message>
+    <message>
+        <source>address: </source>
+        <translation>주소:</translation>
+    </message>
+    <message>
+        <source>zPhr Mint</source>
+        <translation>zBGX 생성</translation>
+    </message>
+    <message>
+        <source>Sending successful, return code: </source>
+        <translation>성공 완료, 리턴 코드 :</translation>
+    </message>
+    <message>
+        <source>txid: </source>
+        <translation>txid:</translation>
+    </message>
+    <message>
+        <source>fee: </source>
+        <translation>수수료:</translation>
+    </message>
+</context>
+<context>
     <name>QObject</name>
     <message>
         <source>Amount</source>
@@ -2204,6 +2547,10 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     <message>
         <source>NETWORK</source>
         <translation>네트워크</translation>
+    </message>
+    <message>
+        <source>BLOOM</source>
+        <translation>BLOOM</translation>
     </message>
     <message>
         <source>UNKNOWN</source>
@@ -2721,14 +3068,6 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>코인 제어 기능</translation>
     </message>
     <message>
-        <source>Inputs...</source>
-        <translation>입력...</translation>
-    </message>
-    <message>
-        <source>automatically selected</source>
-        <translation>자동 선택됨</translation>
-    </message>
-    <message>
         <source>Insufficient funds!</source>
         <translation>자금이 충분하지 않습니다!</translation>
     </message>
@@ -2813,10 +3152,6 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>최소화</translation>
     </message>
     <message>
-        <source>CoinMixing</source>
-        <translation>난독화</translation>
-    </message>
-    <message>
         <source>per kilobyte</source>
         <translation>킬로바이트당</translation>
     </message>
@@ -2839,6 +3174,14 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     <message>
         <source>Confirmation time:</source>
         <translation>승인 시간:</translation>
+    </message>
+    <message>
+        <source>Open Coin Control...</source>
+        <translation>코인 설정 열기...</translation>
+    </message>
+    <message>
+        <source>Coins automatically selected</source>
+        <translation>코인 자동으로 선택됨</translation>
     </message>
     <message>
         <source>If the custom fee is set to 1000 uBGXs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uBGXs in fee,&lt;br /&gt;while "at least" pays 1000 uBGXs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
@@ -2895,6 +3238,10 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     <message>
         <source>Add &amp;Recipient</source>
         <translation>&amp;받는 사람 추가</translation>
+    </message>
+    <message>
+        <source>Anonymized BGX</source>
+        <translation>익명화 BGX</translation>
     </message>
     <message>
         <source>SwiftTX</source>
@@ -2988,13 +3335,13 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <source>A fee %1 times higher than %2 per kB is considered an insanely high fee.</source>
         <translation>KB당 %1보다 %2배 많은 수수료는 너무 높은 수수료입니다.</translation>
     </message>
+    <message numerus="yes">
+        <source>Estimated to begin confirmation within %n block(s).</source>
+        <translation><numerusform>%n 블록이내에서 컨펌이 시작될것 같습니다.</numerusform></translation>
+    </message>
     <message>
         <source>The recipient address is not valid, please recheck.</source>
         <translation>수신자 주소가 유효하지 않습니다. 다시 확인해주세요.</translation>
-    </message>
-    <message>
-        <source>(coinmixing requires this amount to be rounded up to the nearest %1).</source>
-        <translation>(난독화로 이 금액을 가장 가까운 %1로 반올림 해야됩니다)</translation>
     </message>
     <message>
         <source> split into %1 outputs using the UTXO splitter.</source>
@@ -3030,7 +3377,11 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     </message>
     <message>
         <source>Error: The wallet was unlocked only to anonymize coins.</source>
-        <translation>오류: 지갑이 코인 익명 처리를 위해 잠금해제 되었습니다.</translation>
+        <translation>오류: 현재 지갑이 익명 처리를 위해 잠금해제 되어 있습니다. 익명화 및 스테이킹 전용을 해제하시고 다시 시도하세요.</translation>
+    </message>
+    <message>
+        <source>Error: The wallet was unlocked only to anonymize coins. Unlock canceled.</source>
+        <translation>에러 : 현재 지갑은 코인 익명화를 위해서만 잠금해제되었습니다. 잠금해제가 취소됩니다.</translation>
     </message>
     <message>
         <source>Pay only the minimum fee of %1</source>
@@ -3124,7 +3475,7 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     <name>ShutdownWindow</name>
     <message>
         <source>BitcoinGenX Core is shutting down...</source>
-        <translation>BitcoinGenX Core가 종료됩니다...</translation>
+        <translation>bitcoingenx Core가 종료됩니다...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -3306,6 +3657,10 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
 </context>
 <context>
     <name>TransactionDesc</name>
+    <message numerus="yes">
+        <source>Open for %n more block(s)</source>
+        <translation><numerusform>%n 이상의 블록 열기</numerusform></translation>
+    </message>
     <message>
         <source>Open until %1</source>
         <translation>%1까지 열기</translation>
@@ -3367,6 +3722,10 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <source>, has not been successfully broadcast yet</source>
         <translation>, 아직 성공적으로 브로드캐스트되지 않았습니다</translation>
     </message>
+    <message numerus="yes">
+        <source>, broadcast through %n node(s)</source>
+        <translation><numerusform>, %n 개 노드를 통해 브로드캐스트됩니다.</numerusform></translation>
+    </message>
     <message>
         <source>Date</source>
         <translation>날짜</translation>
@@ -3406,6 +3765,10 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     <message>
         <source>Credit</source>
         <translation>크레딧</translation>
+    </message>
+    <message numerus="yes">
+        <source>matures in %n more block(s)</source>
+        <translation><numerusform>%n 개 이상의 블록에서 생성됩니다.</numerusform></translation>
     </message>
     <message>
         <source>not accepted</source>
@@ -3505,6 +3868,10 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <source>Address</source>
         <translation>주소</translation>
     </message>
+    <message numerus="yes">
+        <source>Open for %n more block(s)</source>
+        <translation><numerusform>%n 이상의 블록 열기</numerusform></translation>
+    </message>
     <message>
         <source>Open until %1</source>
         <translation>%1까지 열기</translation>
@@ -3547,26 +3914,26 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     </message>
     <message>
         <source>Received from</source>
-        <translation>발신원</translation>
+        <translation>수신됨</translation>
     </message>
     <message>
-        <source>Received via CoinMixing</source>
+        <source>Received via Obfuscation</source>
         <translation>난독화를 통해 수신 됨</translation>
     </message>
     <message>
-        <source>CoinMixing Denominate</source>
+        <source>Obfuscation Denominate</source>
         <translation>난독화 표시</translation>
     </message>
     <message>
-        <source>CoinMixing Collateral Payment</source>
+        <source>Obfuscation Collateral Payment</source>
         <translation>난독화 보증 결제 </translation>
     </message>
     <message>
-        <source>CoinMixing Make Collateral Inputs</source>
+        <source>Obfuscation Make Collateral Inputs</source>
         <translation>난독화로 보증 입력</translation>
     </message>
     <message>
-        <source>CoinMixing Create Denominations</source>
+        <source>Obfuscation Create Denominations</source>
         <translation>난독화 표시 만들기</translation>
     </message>
     <message>
@@ -3594,8 +3961,32 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>난독화</translation>
     </message>
     <message>
+        <source>Converted Phr to zPhr</source>
+        <translation>zBGX로 변환된 BGX</translation>
+    </message>
+    <message>
+        <source>Spent zPhr</source>
+        <translation>전송된 zBGX</translation>
+    </message>
+    <message>
+        <source>Received Phr from zPhr</source>
+        <translation>zBGX로 전송받은 BGX</translation>
+    </message>
+    <message>
+        <source>Minted Change as zPhr from zPhr Spend</source>
+        <translation>zBGX 전송후 남은 잔돈 zBGX 생성됨</translation>
+    </message>
+    <message>
+        <source>Converted zPhr to Phr</source>
+        <translation>zPhr에서 Phr로 변환됨</translation>
+    </message>
+    <message>
         <source>watch-only</source>
         <translation>읽기 전용</translation>
+    </message>
+    <message>
+        <source>zPhr Accumulator</source>
+        <translation>zPhr 누산기</translation>
     </message>
     <message>
         <source>(n/a)</source>
@@ -3673,19 +4064,19 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>난독화</translation>
     </message>
     <message>
-        <source>CoinMixing Make Collateral Inputs</source>
+        <source>Obfuscation Make Collateral Inputs</source>
         <translation>난독화로 보증 입력</translation>
     </message>
     <message>
-        <source>CoinMixing Create Denominations</source>
+        <source>Obfuscation Create Denominations</source>
         <translation>난독화 표시 만들기</translation>
     </message>
     <message>
-        <source>CoinMixing Denominate</source>
+        <source>Obfuscation Denominate</source>
         <translation>난독화 표시</translation>
     </message>
     <message>
-        <source>CoinMixing Collateral Payment</source>
+        <source>Obfuscation Collateral Payment</source>
         <translation>난독화 보증 결제 </translation>
     </message>
     <message>
@@ -3703,6 +4094,26 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     <message>
         <source>Masternode Reward</source>
         <translation>마스터노드 보상 </translation>
+    </message>
+    <message>
+        <source>Received Phr from zPhr</source>
+        <translation>zBGX로 전송받은 BGX</translation>
+    </message>
+    <message>
+        <source>Zerocoin Mint</source>
+        <translation>제로코인 생성</translation>
+    </message>
+    <message>
+        <source>Zerocoin Spend</source>
+        <translation>제로코인 전송</translation>
+    </message>
+    <message>
+        <source>Zerocoin Spend, Change in zPhr</source>
+        <translation>제로코인 전송, 잔돈은 zBGX</translation>
+    </message>
+    <message>
+        <source>Zerocoin Spend to Self</source>
+        <translation>자신에게 제로코인 전송</translation>
     </message>
     <message>
         <source>Other</source>
@@ -3823,7 +4234,7 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     </message>
     <message>
         <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 BGX.</source>
-        <translation>RhenFAST는 아직 높은 값을 전송하는 것을 지원하지 않습니다. 트랜잭션은 현재 %1 BGX로 제한됩니다.</translation>
+        <translation>SwiftTX는 아직 높은 값을 전송하는 것을 지원하지 않습니다. 트랜잭션은 현재 %1 BGX로 제한됩니다.</translation>
     </message>
 </context>
 <context>
@@ -3866,6 +4277,33 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     </message>
 </context>
 <context>
+    <name>ZPhrControlDialog</name>
+    <message>
+        <source>Select zPhr to Spend</source>
+        <translation>전송할 zBGX 선택</translation>
+    </message>
+    <message>
+        <source>Quantity</source>
+        <translation>수량</translation>
+    </message>
+    <message>
+        <source>0</source>
+        <translation>0</translation>
+    </message>
+    <message>
+        <source>zPhr</source>
+        <translation>zPhr</translation>
+    </message>
+    <message>
+        <source>Select/Deselect All</source>
+        <translation>전체 선택 / 해제</translation>
+    </message>
+    <message>
+        <source>Is Spendable</source>
+        <translation>전송가능합니다.</translation>
+    </message>
+</context>
+<context>
     <name>bitcoingenx-core</name>
     <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
@@ -3892,8 +4330,12 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>JSON-RPC연결 수신을 위해 주어진 주소를 지정합니다. [host]: IPv6 포트 표기법 사용. 이 옵션은 여러번 지정할 수 있습니다. (기본값 : 모든 인터페이스에 지정)</translation>
     </message>
     <message>
+        <source>Calculated accumulator checkpoint is not what is recorded by block index</source>
+        <translation>계산된 누산기 체크포인트는 블록 인덱스에 의해 기록되는 것이 아닙니다.</translation>
+    </message>
+    <message>
         <source>Cannot obtain a lock on data directory %s. BitcoinGenX Core is probably already running.</source>
-        <translation>        &lt;translation&gt;잠겨진 데이터 디렉토리 %s 를 가져올 수 없습니다. BitcoinGenX Core는 이미 실행 중입니다.</translation>
+        <translation>        &lt;translation&gt;잠겨진 데이터 디렉토리 %s 를 가져올 수 없습니다. bitcoingenx Core는 이미 실행 중입니다.</translation>
     </message>
     <message>
         <source>Change automatic finalized budget voting behavior. mode=auto: Vote for only exact finalized budget match to my generated budget. (string, default: auto)</source>
@@ -3912,7 +4354,7 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>지갑의 모든 트랜잭션들을 삭제하고 오직 블록체인을 통한 트랜잭션 부분들만 복구합니다 -시작 시 다시 스캔</translation>
     </message>
     <message>
-        <source>Disable all bitcoingenx specific functionality (Masternodes, CoinMixing, SwiftTX, Budgeting) (0-1, default: %u)</source>
+        <source>Disable all bitcoingenx specific functionality (Masternodes, Obfuscation, SwiftTX, Budgeting) (0-1, default: %u)</source>
         <translation>bitcoingenx의 모든 특정 기능들을 비활성화합니다(마스터노드, 난독화, SwiftTX, Budgeting) (0-1, 기본값: %u)</translation>
     </message>
     <message>
@@ -3920,12 +4362,12 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>MIT 소프트웨어 라이센스에 따라 배포, 첨부 파일 COPYING 또는 &lt;http://www.opensource.org/licenses/mit-license.php&gt; 를 참조하십시오.</translation>
     </message>
     <message>
-        <source>Enable swifttx, show confirmations for locked transactions (bool, default: %s)</source>
-        <translation>swiftTX 활성화, 잠긴 트랜잭션들에 대한 확인 표시 (bool, 기본값: %s)</translation>
+        <source>Enable spork administration functionality with the appropriate private key.</source>
+        <translation>올바른 개인키로 spork 관리 기능을 사용 가능</translation>
     </message>
     <message>
-        <source>Enable use of automated coinmixing for funds stored in this wallet (0-1, default: %u)</source>
-        <translation>이 지갑에 저장된 금액에 대해 자동 난독화 사용을 활성화 합니다 (0-1, 기본값: %u)</translation>
+        <source>Enable swifttx, show confirmations for locked transactions (bool, default: %s)</source>
+        <translation>swiftTX 활성화, 잠긴 트랜잭션들에 대한 확인 표시 (bool, 기본값: %s)</translation>
     </message>
     <message>
         <source>Enter regression test mode, which uses a special chain in which blocks can be solved instantly.</source>
@@ -3968,10 +4410,6 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>미확인 표시된 출력들을 찾고 계속하기 위한 확인을 받기 전까지 기다립니다.</translation>
     </message>
     <message>
-        <source>How thorough the block verification of -checkblocks is (0-4, default: %u)</source>
-        <translation>-checkblocks의 블록 검증이 얼마나 철저한 정도 (0-4, 기본값: %u)</translation>
-    </message>
-    <message>
         <source>If paytxfee is not set, include enough fee so transactions begin confirmation on average within n blocks (default: %u)</source>
         <translation>paytxfee가 설정되어 있지 않는 경우 충분한 수수료를 넣어야만 평균이내 n블록들을 확인하고 트랜잭션를 시작합니다 (기본값: %u)</translation>
     </message>
@@ -3982,6 +4420,10 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
     <message>
         <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s' (must be at least the minrelay fee of %s to prevent stuck transactions)</source>
         <translation>-maxtxfee=&lt;amount&gt;에 대한 잘못된 금액: '%s' (트랜잭션 정지를 막을려면 적어도 %s의 minrelay 수수료가 있어야 합니다)</translation>
+    </message>
+    <message>
+        <source>Keep the specified amount available for spending at all times (default: 0)</source>
+        <translation>항상 송금할수 있도록 지정된 수량 유지 (기본값 : 0)</translation>
     </message>
     <message>
         <source>Log transaction priority and fee per kB when mining blocks (default: %u)</source>
@@ -4004,16 +4446,12 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>재연결로 인해 피어가 오작동을 유지하는 초 단위 시간 (기본값: %u)</translation>
     </message>
     <message>
-        <source>CoinMixing uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
+        <source>Obfuscation uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
         <translation>난독화는 정확한 금액을 사용하여 자금을 송금하기 때문에 더 많은 코인을 익명화해야 할 수도 있습니다.</translation>
     </message>
     <message>
         <source>Output debugging information (default: %u, supplying &lt;category&gt; is optional)</source>
         <translation>디버깅 정보 출력 (기본값: %u, &lt;category&gt; 공급은 선택입니다)</translation>
-    </message>
-    <message>
-        <source>Provide liquidity to CoinMixing by infrequently mixing coins on a continual basis (0-100, default: %u, 1=very frequent, high fees, 100=very infrequent, low fees)</source>
-        <translation>자주 사용하지 않는 코인을 믹싱하여 난독화에 유동성을 제공합니다 (0-100, 기본값: %u, 1=매우 잦음, 높은 수수료, 100=매운 드문, 낮은 수수료)</translation>
     </message>
     <message>
         <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect)</source>
@@ -4044,8 +4482,12 @@ https://www.transifex.com/bitcoingenx-project/bitcoingenx-project-translations</
         <translation>성공적으로 잠긴 트랜잭션에 대한 확인을 N으로 나타냅니다 (0-9999, 기본값: %u)</translation>
     </message>
     <message>
+        <source>Support filtering of blocks and transaction with bloom filters (default: %u)</source>
+        <translation>bloom필터를 사용한 블록 및 트랜잭션 필터링 지원 (기본값 : %u)</translation>
+    </message>
+    <message>
         <source>SwiftTX requires inputs with at least 6 confirmations, you might need to wait a few minutes and try again.</source>
-        <translation>RhenFAST는 최소 6회 확인이 필요한 입력으로 몇 분 후에 다시 시도해야 할 수 있습니다.</translation>
+        <translation>SwiftTX는 최소 6회 확인이 필요한 입력으로 몇 분 후에 다시 시도해야 할 수 있습니다.</translation>
     </message>
     <message>
         <source>This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit &lt;https://www.openssl.org/&gt; and cryptographic software written by Eric Young and UPnP software written by Thomas Bernard.</source>
@@ -4077,14 +4519,14 @@ rpcpassword=%s
     </message>
     <message>
         <source>Unable to bind to %s on this computer. BitcoinGenX Core is probably already running.</source>
-        <translation>이 컴퓨터를 %s 로 지정하는것은 불가능합니다. BitcoinGenX Core는 이미 실행 중입니다.</translation>
+        <translation>이 컴퓨터를 %s 로 지정하는것은 불가능합니다. bitcoingenx Core는 이미 실행 중입니다.</translation>
     </message>
     <message>
-        <source>Unable to locate enough CoinMixing denominated funds for this transaction.</source>
+        <source>Unable to locate enough Obfuscation denominated funds for this transaction.</source>
         <translation>이 트랜잭션를 위해 난독화 표기된 충분한 금액을 찾을 수 없습니다.</translation>
     </message>
     <message>
-        <source>Unable to locate enough CoinMixing non-denominated funds for this transaction that are not equal 10000 BGX.</source>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 BGX.</source>
         <translation>이 트랜잭션를 위해 난독화 표기가 안된 충분한 금액을 찾을 수 없습니다. 10000 BGX과 일치하지 않음.</translation>
     </message>
     <message>
@@ -4152,6 +4594,10 @@ rpcpassword=%s
         <translation>(메인넷 일경우 4488)</translation>
     </message>
     <message>
+        <source>Accept command line and JSON-RPC commands</source>
+        <translation> command line 과 JSON-RPC 적용</translation>
+    </message>
+    <message>
         <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
         <translation>외부에서의 접속을 허용 (1 -프록시 또는 -연결이 없을 경우 기본값)</translation>
     </message>
@@ -4184,8 +4630,16 @@ rpcpassword=%s
         <translation>손상된 wallet.dat으로 부터 개인 키 복구를 시도합니다.</translation>
     </message>
     <message>
+        <source>Automatically create Tor hidden service (default: %d)</source>
+        <translation>자동 Tor 히든 서버스 생성 (기본값: %d)</translation>
+    </message>
+    <message>
         <source>Block creation options:</source>
         <translation>블록 생성 옵션:</translation>
+    </message>
+    <message>
+        <source>Calculating missing accumulators...</source>
+        <translation>누락된 누산기 계산중...</translation>
     </message>
     <message>
         <source>Can't denominate: no compatible inputs left.</source>
@@ -4268,6 +4722,10 @@ rpcpassword=%s
         <translation>디버깅/테스팅 옵션:</translation>
     </message>
     <message>
+        <source>Disable OS notifications for incoming transactions (default: %u)</source>
+        <translation>거래시 수신 알림창 해제  (기본값: %u)</translation>
+    </message>
+    <message>
         <source>Disable safemode, override a real safe mode event (default: %u)</source>
         <translation>안전모드 비활성화, 실시간 안전모드 이벤트 중단 (기본값: %u)</translation>
     </message>
@@ -4286,6 +4744,10 @@ rpcpassword=%s
     <message>
         <source>Done loading</source>
         <translation>로딩 완료</translation>
+    </message>
+    <message>
+        <source>Enable automatic Zerocoin minting (0-1, default: %u)</source>
+        <translation>자동 제로코인 생성 (0-1, 기본값: %u)</translation>
     </message>
     <message>
         <source>Enable the client to act as a masternode (0-1, default: %u)</source>
@@ -4360,7 +4822,7 @@ rpcpassword=%s
         <translation>오류 : 지갑이 잠겼습니다, 트랜잭션을 생성할 수 없습니다!</translation>
     </message>
     <message>
-        <source>Error: You already have pending entries in the CoinMixing pool</source>
+        <source>Error: You already have pending entries in the Obfuscation pool</source>
         <translation>오류 : 이미 난독화 그룹에 보류중인 항목들이 있습니다.</translation>
     </message>
     <message>
@@ -4433,23 +4895,27 @@ rpcpassword=%s
     </message>
     <message>
         <source>Initialization sanity check failed. BitcoinGenX Core is shutting down.</source>
-        <translation>초기화 정확성 검사에 실패 했습니다. BitcoinGenX Core가 종료됩니다.</translation>
+        <translation>초기화 정확성 검사에 실패 했습니다. bitcoingenx Core가 종료됩니다.</translation>
     </message>
     <message>
         <source>Input is not valid.</source>
         <translation>입력이 올바르지 않습니다.</translation>
     </message>
     <message>
+        <source>Insufficient funds</source>
+        <translation>잔액이 충분하지 않음</translation>
+    </message>
+    <message>
         <source>Insufficient funds.</source>
         <translation>충분하지 않은 금액.</translation>
     </message>
     <message>
-        <source>Invalid -onion address: '%s'</source>
-        <translation>유효하지 않은 -onion 주소: '%s'</translation>
+        <source>Invalid -onion address or hostname: '%s'</source>
+        <translation>잘못된 -onion 주소거나 호스트네임 : '%s'</translation>
     </message>
     <message>
-        <source>Invalid -proxy address: '%s'</source>
-        <translation>유효하지 않은 -proxy 주소: '%s'</translation>
+        <source>Invalid -proxy address or hostname: '%s'</source>
+        <translation>잘못된 -proxy 주소거나 호스트네입 : '%s'</translation>
     </message>
     <message>
         <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s'</source>
@@ -4476,6 +4942,10 @@ rpcpassword=%s
         <translation>-reservebalance=&lt;amount&gt;에 대한 금액이 유효하지 않은 값</translation>
     </message>
     <message>
+        <source>Invalid amount</source>
+        <translation>잘못된 수량</translation>
+    </message>
+    <message>
         <source>Invalid masternodeprivkey. Please see documenation.</source>
         <translation>마스터노드 개인 키가 잘못되었습니다. 설명서를 참조하십시오.</translation>
     </message>
@@ -4496,24 +4966,100 @@ rpcpassword=%s
         <translation>유효하지 않은 스크립트가 발견되었습니다.</translation>
     </message>
     <message>
-        <source>Enable staking functionality (0-1, default: %u)</source>
-        <translation>스테이킹 기능 사용 (0-1, 기본값: %u)</translation>
+        <source>This is a pre-release test build - use at your own risk - do not use for staking or merchant applications!</source>
+        <translation>이것은 사전 릴리스 테스트 빌드입니다 - 사용상 책임은 귀하에게 있습니다. - staking이나 상업적인 용도로는 절대 사용하지 마십시오!</translation>
     </message>
     <message>
-        <source>Keep N BGX anonymized (default: %u)</source>
-        <translation>N BGX 익명으로 유지 (기본값: %u)</translation>
+        <source> mints deleted
+</source>
+        <translation>생성 삭제
+</translation>
+    </message>
+    <message>
+        <source> mints updated, </source>
+        <translation>생성 업데이드</translation>
+    </message>
+    <message>
+        <source> unconfirmed transactions removed
+</source>
+        <translation>미확인된 거래 삭제됨
+</translation>
+    </message>
+    <message>
+        <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
+        <translation>에러 : 거래가 거부되었습니다. 예를 들어 다른 사본 wallet.dat에서 코인을 사용했다면 2중 사용으로 인식될수 있습니다. 혹은, 일부가 이미 소비 된 경우에 이런 일이 발생할 수 있습니다.</translation>
+    </message>
+    <message>
+        <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
+        <translation>에러 :이 거래에는 전송량, 복잡성 또는 최근에 받은 자금의 사용등으로 인해 적어도 %s의 거래 수수료가 필요합니다!</translation>
+    </message>
+    <message>
+        <source>Error: Unsupported argument -checklevel found. Checklevel must be level 4.</source>
+        <translation>에러 : 지원하지않는 argument -checklevel 발견된.  Checklevel는 레벨 4이어야 합니다.</translation>
+    </message>
+    <message>
+        <source>Preferred Denomination for automatically minted Zerocoin  (1/5/10/50/100/500/1000/5000), 0 for no preference. default: %u)</source>
+        <translation>자동생성 제로코인 선호 디노미네이션 (1/5/10/50/100/500/1000/5000) 0사용안됨, 기본값 : %u)</translation>
+    </message>
+    <message>
+        <source>&lt;category&gt; can be:</source>
+        <translation>&lt;category&gt; 가능함 :</translation>
+    </message>
+    <message>
+        <source>Attempt to force blockchain corruption recovery</source>
+        <translation>블록체인 손상 복구 시도</translation>
+    </message>
+    <message>
+        <source>Display the stake modifier calculations in the debug.log file.</source>
+        <translation>debug.log에 stake 수정 계산 기록</translation>
+    </message>
+    <message>
+        <source>Display verbose coin stake messages in the debug.log file.</source>
+        <translation>debug.log 에 코인 stake 메시지를 자세히 기록</translation>
+    </message>
+    <message>
+        <source>Enable publish hash block in &lt;address&gt;</source>
+        <translation>&lt;address&gt; 에서 해시 블록 게시 가능</translation>
+    </message>
+    <message>
+        <source>Enable publish hash transaction (locked via SwiftTX) in &lt;address&gt;</source>
+        <translation>&lt;address&gt; 에서 해시 전송 게시 가능 (SwiftTX로 설정된)</translation>
+    </message>
+    <message>
+        <source>Enable publish hash transaction in &lt;address&gt;</source>
+        <translation>&lt;address&gt; 에서 해시 불록 게시 가능</translation>
+    </message>
+    <message>
+        <source>Enable publish raw block in &lt;address&gt;</source>
+        <translation>&lt;address&gt;에서 Raw 블록 게시 가능</translation>
+    </message>
+    <message>
+        <source>Enable publish raw transaction (locked via SwiftTX) in &lt;address&gt;</source>
+        <translation>&lt;address&gt;에서 Raw 트랜잭션 게시 지원 (SwiftTX를 통해 잠겨진)</translation>
+    </message>
+    <message>
+        <source>Enable publish raw transaction in &lt;address&gt;</source>
+        <translation>&lt;address&gt; 에서 Raw 트랜잭션 게시 지원</translation>
+    </message>
+    <message>
+        <source>Enable staking functionality (0-1, default: %u)</source>
+        <translation>스테이킹 기능 사용 (0-1, 기본값: %u)</translation>
     </message>
     <message>
         <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>
         <translation>메모리에서 연결 불가능한 트랜잭션을 &lt;n&gt;개까지 유지하십시오. (기본값: %u)</translation>
     </message>
     <message>
-        <source>Last CoinMixing was too recent.</source>
+        <source>Last Obfuscation was too recent.</source>
         <translation>최근에 마지막으로 난독화를 진행했습니다.</translation>
     </message>
     <message>
-        <source>Last successful CoinMixing action was too recent.</source>
+        <source>Last successful Obfuscation action was too recent.</source>
         <translation>최근에 마지막으로 성공한 난독화 작업이 있습니다.</translation>
+    </message>
+    <message>
+        <source>Less than 3 mints added, unable to create spend</source>
+        <translation>3 미만 추가, 송금 불가능함</translation>
     </message>
     <message>
         <source>Limit size of signature cache to &lt;n&gt; entries (default: %u)</source>
@@ -4550,6 +5096,10 @@ rpcpassword=%s
     <message>
         <source>Loading masternode payment cache...</source>
         <translation>마스터노드 결제 캐시를 불러오는 중...</translation>
+    </message>
+    <message>
+        <source>Loading sporks...</source>
+        <translation>sporks 로딩중...</translation>
     </message>
     <message>
         <source>Loading wallet... (%3.2f %%)</source>
@@ -4644,19 +5194,15 @@ rpcpassword=%s
         <translation>자동 지갑 백업 횟수 (기본값: 10)</translation>
     </message>
     <message>
-        <source>CoinMixing is idle.</source>
+        <source>Obfuscation is idle.</source>
         <translation>난독화는 유휴상태입니다.</translation>
     </message>
     <message>
-        <source>CoinMixing options:</source>
-        <translation>난독화 옵션:</translation>
-    </message>
-    <message>
-        <source>CoinMixing request complete:</source>
+        <source>Obfuscation request complete:</source>
         <translation>난독화 요청 완료:</translation>
     </message>
     <message>
-        <source>CoinMixing request incomplete:</source>
+        <source>Obfuscation request incomplete:</source>
         <translation>난독화 요청 미완료:</translation>
     </message>
     <message>
@@ -4674,6 +5220,10 @@ rpcpassword=%s
     <message>
         <source>Password for JSON-RPC connections</source>
         <translation>JSON-RPC 연결 비밀번호</translation>
+    </message>
+    <message>
+        <source>Percentage of automatically minted Zerocoin  (10-100, default: %u)</source>
+        <translation>자동 생성 제로코인 퍼센트 (10-100, 기본값: %u)</translation>
     </message>
     <message>
         <source>Prepend debug output with timestamp (default: %u)</source>
@@ -4726,6 +5276,14 @@ rpcpassword=%s
     <message>
         <source>Rescanning...</source>
         <translation>다시 스캔하는 중...</translation>
+    </message>
+    <message>
+        <source>ResetMintZerocoin finished: </source>
+        <translation>생성된 제로코인 초기화 완료:</translation>
+    </message>
+    <message>
+        <source>ResetSpentZerocoin finished: </source>
+        <translation>사용된 제로코인 초기화 완료:</translation>
     </message>
     <message>
         <source>Run a thread to flush wallet periodically (default: %u)</source>
@@ -4912,6 +5470,14 @@ rpcpassword=%s
         <translation>제대로 동작하지 않는 피어와 연결을 끊을 임계값 (기본값: %u)</translation>
     </message>
     <message>
+        <source>Tor control port password (default: empty)</source>
+        <translation>Tor 컨트롤 포트 암호 (기본값: 공백)</translation>
+    </message>
+    <message>
+        <source>Tor control port to use if onion listening enabled (default: %s)</source>
+        <translation>onion 활성화되었을 경우 사용할 Tor 코트롤 포트 (기본값: %s)</translation>
+    </message>
+    <message>
         <source>Transaction amount too small</source>
         <translation>트랜잭션 금액이 너무 적습니다</translation>
     </message>
@@ -4964,10 +5530,6 @@ rpcpassword=%s
         <translation>지갑을 최신 포맷으로 업그레이드합니다</translation>
     </message>
     <message>
-        <source>Use N separate masternodes to anonymize funds  (2-8, default: %u)</source>
-        <translation>N개의 각각의 마스터노드를 이용하여 자금 익명화 (2-8, 기본값: %u)</translation>
-    </message>
-    <message>
         <source>Use OpenSSL (https) for JSON-RPC connections</source>
         <translation>JSON-RPC 연결에 OpenSSL (https)를 사용합니다</translation>
     </message>
@@ -4988,7 +5550,7 @@ rpcpassword=%s
         <translation>JSON-RPC 연결 사용자 이름</translation>
     </message>
     <message>
-        <source>Value more than CoinMixing pool maximum allows.</source>
+        <source>Value more than Obfuscation pool maximum allows.</source>
         <translation>난독화 풀의 최대 허용 값보다 높습니다.</translation>
     </message>
     <message>
@@ -5058,6 +5620,14 @@ rpcpassword=%s
     <message>
         <source>ZeroMQ notification options:</source>
         <translation>ZeroMQ 알림 옵션:</translation>
+    </message>
+    <message>
+        <source>Zerocoin options:</source>
+        <translation>제로코인 옵션:</translation>
+    </message>
+    <message>
+        <source>failed to validate zerocoin</source>
+        <translation>제로코인 검증을 못했습니다.</translation>
     </message>
     <message>
         <source>on startup</source>

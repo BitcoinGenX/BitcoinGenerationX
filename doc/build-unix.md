@@ -188,7 +188,7 @@ Hardening enables the following features:
     On an Amd64 processor where a library was not compiled with -fPIC, this will cause an error
     such as: "relocation R_X86_64_32 against `......' can not be used when making a shared object;"
 
-    To test that you have built BGX executable, install scanelf, part of paxutils, and use:
+    To test that you have built PIE executable, install scanelf, part of paxutils, and use:
 
     	scanelf -e ./bitcoingenxd
 

@@ -43,7 +43,7 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Виберіть адресу для надсилання монет</translation>
+        <translation>Виберіть адресу надсилання монет</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
@@ -63,7 +63,7 @@
     </message>
     <message>
         <source>These are your bitcoingenx addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Це ваша bitcoingenx-адреса для надсилання платежів. Завжди перевіряйте суму та адресу одержувача перед відправленням монет.</translation>
+        <translation>Це ваші bitcoingenx-адреси для надсилання платежів. Завжди перевіряйте суму та адресу одержувача перед відправленням монет.</translation>
     </message>
     <message>
         <source>These are your bitcoingenx addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
@@ -238,7 +238,7 @@
     <name>MultiSendDialog</name>
     </context>
 <context>
-    <name>CoinMixingConfig</name>
+    <name>ObfuscationConfig</name>
     </context>
 <context>
     <name>OpenURIDialog</name>
@@ -254,6 +254,9 @@
     </context>
 <context>
     <name>PeerTableModel</name>
+    </context>
+<context>
+    <name>PrivacyDialog</name>
     </context>
 <context>
     <name>QObject</name>
@@ -362,6 +365,9 @@
         <source>Export the data in the current tab to a file</source>
         <translation>Експортуйтувати дані поточної вкладки у файл</translation>
     </message>
+    </context>
+<context>
+    <name>ZPhrControlDialog</name>
     </context>
 <context>
     <name>bitcoingenx-core</name>

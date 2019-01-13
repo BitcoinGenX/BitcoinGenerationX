@@ -239,8 +239,8 @@
         <translation>&amp;BIP 38 Criptato</translation>
     </message>
     <message>
-        <source>Enter a BitcoinGenX Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Inserisci un indirizzo BitcoinGenX che desideri crittografare utilizzando BIP 38. Inserisci una passphrase nella casella centrale. Premi Cripta per calcolare la chiave privata crittografata.</translation>
+        <source>Enter a bitcoingenx Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Inserisci un indirizzo bitcoingenx che desideri crittografare utilizzando BIP 38. Inserisci una passphrase nella casella centrale. Premi Cripta per calcolare la chiave privata crittografata.</translation>
     </message>
     <message>
         <source>Address:</source>
@@ -502,8 +502,8 @@
         <translation>&amp;Informazioni</translation>
     </message>
     <message>
-        <source>Show diagnostic information</source>
-        <translation>Visualizza informazioni di diagnostica</translation>
+        <source>Show diagbitcoingenxtic information</source>
+        <translation>Visualizza informazioni di diagbitcoingenxtica</translation>
     </message>
     <message>
         <source>&amp;Debug console</source>
@@ -839,13 +839,8 @@ MultiSend: %1</translation>
         <translation>Prego selezionare "Modalità lista" per utilizzare questa funzione</translation>
     </message>
     <message>
-        <source>n/a</source>
-        <translation>n/a</translation>
-    </message>
-    <message>
         <source>yes</source>
-        <translation>si
-</translation>
+        <translation>si</translation>
     </message>
     <message>
         <source>no</source>
@@ -955,7 +950,7 @@ MultiSend: %1</translation>
     </message>
     </context>
 <context>
-    <name>CoinMixingConfig</name>
+    <name>ObfuscationConfig</name>
     </context>
 <context>
     <name>OpenURIDialog</name>
@@ -965,16 +960,59 @@ MultiSend: %1</translation>
     </context>
 <context>
     <name>OverviewPage</name>
-    <message>
-        <source>n/a</source>
-        <translation>n/a</translation>
-    </message>
     </context>
 <context>
     <name>PaymentServer</name>
     </context>
 <context>
     <name>PeerTableModel</name>
+    </context>
+<context>
+    <name>PrivacyDialog</name>
+    <message>
+        <source>Quantity:</source>
+        <translation>Quantità:</translation>
+    </message>
+    <message>
+        <source>Amount:</source>
+        <translation>Totale:</translation>
+    </message>
+    <message>
+        <source>Choose previously used address</source>
+        <translation>Scegli l'indirizzo utilizzato in precedenza</translation>
+    </message>
+    <message>
+        <source>Alt+A</source>
+        <translation>Alt+A</translation>
+    </message>
+    <message>
+        <source>Paste address from clipboard</source>
+        <translation>Incolla l'indirizzo dagli appunti</translation>
+    </message>
+    <message>
+        <source>Alt+P</source>
+        <translation>Alt+P</translation>
+    </message>
+    <message>
+        <source>Priority:</source>
+        <translation>Priorità:</translation>
+    </message>
+    <message>
+        <source>Fee:</source>
+        <translation>Tassa:</translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation>no</translation>
+    </message>
+    <message>
+        <source>Change:</source>
+        <translation>Differenza:</translation>
+    </message>
+    <message>
+        <source>Copy amount</source>
+        <translation>Copia ammontare</translation>
+    </message>
     </context>
 <context>
     <name>QObject</name>
@@ -1271,6 +1309,9 @@ MultiSend: %1</translation>
         <source>Export the data in the current tab to a file</source>
         <translation>Esporta i dati della scheda corrente in un file</translation>
     </message>
+    </context>
+<context>
+    <name>ZPhrControlDialog</name>
     </context>
 <context>
     <name>bitcoingenx-core</name>

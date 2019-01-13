@@ -1800,7 +1800,7 @@ static const sph_u32 T0dn[] = {
 	C32e(0x46f6cb7b), C32e(0x1f4bfca8), C32e(0x61dad66d), C32e(0x4e583a2c)
 };
 
-static const sph_u32 Tbitcoingenx[] = {
+static const sph_u32 T1up[] = {
 	C32e(0xc6c632f4), C32e(0xf8f86f97), C32e(0xeeee5eb0), C32e(0xf6f67a8c),
 	C32e(0xffffe817), C32e(0xd6d60adc), C32e(0xdede16c8), C32e(0x91916dfc),
 	C32e(0x606090f0), C32e(0x02020705), C32e(0xcece2ee0), C32e(0x5656d187),
@@ -2218,7 +2218,7 @@ static const sph_u32 T3dn[] = {
 
 #define RSTT(d0, d1, a, b0, b1, b2, b3, b4, b5, b6, b7)   do { \
 		t[d0] = T0up[B32_0(a[b0])] \
-			^ Tbitcoingenx[B32_1(a[b1])] \
+			^ T1up[B32_1(a[b1])] \
 			^ T2up[B32_2(a[b2])] \
 			^ T3up[B32_3(a[b3])] \
 			^ T0dn[B32_0(a[b4])] \
@@ -2230,7 +2230,7 @@ static const sph_u32 T3dn[] = {
 			^ T2dn[B32_2(a[b2])] \
 			^ T3dn[B32_3(a[b3])] \
 			^ T0up[B32_0(a[b4])] \
-			^ Tbitcoingenx[B32_1(a[b5])] \
+			^ T1up[B32_1(a[b5])] \
 			^ T2up[B32_2(a[b6])] \
 			^ T3up[B32_3(a[b7])]; \
 	} while (0)
@@ -2365,14 +2365,14 @@ static const sph_u32 T3dn[] = {
 #define RBTT(d0, d1, a, b0, b1, b2, b3, b4, b5, b6, b7)   do { \
 		sph_u32 fu2 = T0up[B32_2(a[b2])]; \
 		sph_u32 fd2 = T0dn[B32_2(a[b2])]; \
-		sph_u32 fu3 = Tbitcoingenx[B32_3(a[b3])]; \
+		sph_u32 fu3 = T1up[B32_3(a[b3])]; \
 		sph_u32 fd3 = T1dn[B32_3(a[b3])]; \
 		sph_u32 fu6 = T0up[B32_2(a[b6])]; \
 		sph_u32 fd6 = T0dn[B32_2(a[b6])]; \
-		sph_u32 fu7 = Tbitcoingenx[B32_3(a[b7])]; \
+		sph_u32 fu7 = T1up[B32_3(a[b7])]; \
 		sph_u32 fd7 = T1dn[B32_3(a[b7])]; \
 		t[d0] = T0up[B32_0(a[b0])] \
-			^ Tbitcoingenx[B32_1(a[b1])] \
+			^ T1up[B32_1(a[b1])] \
 			^ R32u(fu2, fd2) \
 			^ R32u(fu3, fd3) \
 			^ T0dn[B32_0(a[b4])] \
@@ -2384,7 +2384,7 @@ static const sph_u32 T3dn[] = {
 			^ R32d(fu2, fd2) \
 			^ R32d(fu3, fd3) \
 			^ T0up[B32_0(a[b4])] \
-			^ Tbitcoingenx[B32_1(a[b5])] \
+			^ T1up[B32_1(a[b5])] \
 			^ R32u(fu6, fd6) \
 			^ R32u(fu7, fd7); \
 	} while (0)
@@ -2393,7 +2393,7 @@ static const sph_u32 T3dn[] = {
 
 #define RBTT(d0, d1, a, b0, b1, b2, b3, b4, b5, b6, b7)   do { \
 		t[d0] = T0up[B32_0(a[b0])] \
-			^ Tbitcoingenx[B32_1(a[b1])] \
+			^ T1up[B32_1(a[b1])] \
 			^ T2up[B32_2(a[b2])] \
 			^ T3up[B32_3(a[b3])] \
 			^ T0dn[B32_0(a[b4])] \
@@ -2405,7 +2405,7 @@ static const sph_u32 T3dn[] = {
 			^ T2dn[B32_2(a[b2])] \
 			^ T3dn[B32_3(a[b3])] \
 			^ T0up[B32_0(a[b4])] \
-			^ Tbitcoingenx[B32_1(a[b5])] \
+			^ T1up[B32_1(a[b5])] \
 			^ T2up[B32_2(a[b6])] \
 			^ T3up[B32_3(a[b7])]; \
 	} while (0)

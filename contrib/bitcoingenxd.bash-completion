@@ -126,7 +126,7 @@ _bitcoingenxd() {
 
             # Prevent space if an argument is desired
             if [[ $COMPREPLY == *= ]]; then
-                compopt -o nospace
+                compopt -o bitcoingenxpace
             fi
             return 0
             ;;

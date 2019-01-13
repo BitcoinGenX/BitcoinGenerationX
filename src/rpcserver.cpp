@@ -1,7 +1,8 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The bitcoingenx developers
+// Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2017 The bitcoingenx developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -133,6 +134,24 @@ vector<unsigned char> ParseHexV(const Value& v, string strName)
 vector<unsigned char> ParseHexO(const Object& o, string strKey)
 {
     return ParseHexV(find_value(o, strKey), strKey);
+}
+
+int ParseInt(const Object& o, string strKey)
+{
+    const Value& v = find_value(o, strKey);
+    if (v.type() != int_type)
+        throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, " + strKey + "is not an int");
+
+    return v.get_int();
+}
+
+bool ParseBool(const Object& o, string strKey)
+{
+    const Value& v = find_value(o, strKey);
+    if (v.type() != bool_type)
+        throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, " + strKey + "is not a bool");
+
+    return v.get_bool();
 }
 
 
@@ -328,7 +347,7 @@ static const CRPCCommand vRPCCommands[] =
         {"bitcoingenx", "spork", &spork, true, true, false},
         {"bitcoingenx", "getpoolinfo", &getpoolinfo, true, true, false},
 #ifdef ENABLE_WALLET
-        {"bitcoingenx", "coinmixing", &coinmixing, false, false, true}, /* not threadSafe because of SendMoney */
+        {"bitcoingenx", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
 
         /* Wallet */
         {"wallet", "addmultisigaddress", &addmultisigaddress, true, false, true},
@@ -378,6 +397,20 @@ static const CRPCCommand vRPCCommands[] =
         {"wallet", "walletlock", &walletlock, true, false, true},
         {"wallet", "walletpassphrasechange", &walletpassphrasechange, true, false, true},
         {"wallet", "walletpassphrase", &walletpassphrase, true, false, true},
+
+        {"zerocoin", "getzerocoinbalance", &getzerocoinbalance, false, false, true},
+        {"zerocoin", "listmintedzerocoins", &listmintedzerocoins, false, false, true},
+        {"zerocoin", "listspentzerocoins", &listspentzerocoins, false, false, true},
+        {"zerocoin", "listzerocoinamounts", &listzerocoinamounts, false, false, true},
+        {"zerocoin", "mintzerocoin", &mintzerocoin, false, false, true},
+        {"zerocoin", "spendzerocoin", &spendzerocoin, false, false, true},
+        {"zerocoin", "resetmintzerocoin", &resetmintzerocoin, false, false, true},
+        {"zerocoin", "resetspentzerocoin", &resetspentzerocoin, false, false, true},
+        {"zerocoin", "getarchivedzerocoin", &getarchivedzerocoin, false, false, true},
+        {"zerocoin", "importzerocoins", &importzerocoins, false, false, true},
+        {"zerocoin", "exportzerocoins", &exportzerocoins, false, false, true},
+        {"zerocoin", "reconsiderzerocoins", &reconsiderzerocoins, false, false, true}
+
 #endif // ENABLE_WALLET
 };
 
@@ -1060,7 +1093,7 @@ std::string HelpExampleRpc(string methodname, string args)
 {
     return "> curl --user myusername --data-binary '{\"jsonrpc\": \"1.0\", \"id\":\"curltest\", "
            "\"method\": \"" +
-           methodname + "\", \"params\": [" + args + "] }' -H 'content-type: text/plain;' http://127.0.0.1:51473/\n";
+           methodname + "\", \"params\": [" + args + "] }' -H 'content-type: text/plain;' http://127.0.0.1:6110/\n";
 }
 
 const CRPCTable tableRPC;

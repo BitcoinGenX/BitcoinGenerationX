@@ -239,8 +239,8 @@
         <translation>Encriptar com &amp;BIP 38</translation>
     </message>
     <message>
-        <source>Enter a BitcoinGenX Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Digite um endereço BitcoinGenX que você gostaria de criptografar usando BIP 38. Digite uma frase secreta na caixa do meio. Pressione criptografar para calcular a chave privada criptografada.</translation>
+        <source>Enter a bitcoingenx Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Digite um endereço bitcoingenx que você gostaria de criptografar usando BIP 38. Digite uma frase secreta na caixa do meio. Pressione criptografar para calcular a chave privada criptografada.</translation>
     </message>
     <message>
         <source>Address:</source>
@@ -434,7 +434,7 @@
     </message>
     </context>
 <context>
-    <name>CoinMixingConfig</name>
+    <name>ObfuscationConfig</name>
     </context>
 <context>
     <name>OpenURIDialog</name>
@@ -450,6 +450,41 @@
     </context>
 <context>
     <name>PeerTableModel</name>
+    </context>
+<context>
+    <name>PrivacyDialog</name>
+    <message>
+        <source>Amount:</source>
+        <translation>Quantidade:</translation>
+    </message>
+    <message>
+        <source>Choose previously used address</source>
+        <translation>Escolha o endereço usado anteriormente.</translation>
+    </message>
+    <message>
+        <source>Alt+A</source>
+        <translation>Alt+A</translation>
+    </message>
+    <message>
+        <source>Paste address from clipboard</source>
+        <translation>Cole o endereço da areá de trabalho. </translation>
+    </message>
+    <message>
+        <source>Alt+P</source>
+        <translation>Alt+P</translation>
+    </message>
+    <message>
+        <source>Priority:</source>
+        <translation>Prioridade:</translation>
+    </message>
+    <message>
+        <source>Fee:</source>
+        <translation>Taxa:</translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation>não</translation>
+    </message>
     </context>
 <context>
     <name>QObject</name>
@@ -868,13 +903,16 @@
     </message>
     </context>
 <context>
+    <name>ZPhrControlDialog</name>
+    </context>
+<context>
     <name>bitcoingenx-core</name>
     <message>
         <source>Delete all wallet transactions and only recover those parts of the blockchain through -rescan on startup</source>
         <translation>Deletar todas as transações da carteira e somente recuperar aquelas partes do blockchain através de -rescan na inicialização</translation>
     </message>
     <message>
-        <source>Disable all bitcoingenx specific functionality (Masternodes, CoinMixing, SwiftTX, Budgeting) (0-1, default: %u)</source>
+        <source>Disable all bitcoingenx specific functionality (Masternodes, Obfuscation, SwiftTX, Budgeting) (0-1, default: %u)</source>
         <translation>Desabilitar todas as funcionacilidades específicas da bitcoingenx (Masternodes, Ofuscação, SwiftTX, Budgeting) (0-1, default %u)</translation>
     </message>
     <message>
@@ -930,15 +968,11 @@
         <translation>Nenhum Masternode compatível encontrado.</translation>
     </message>
     <message>
-        <source>CoinMixing options:</source>
-        <translation>Opções de ofuscação:</translation>
-    </message>
-    <message>
-        <source>CoinMixing request complete:</source>
+        <source>Obfuscation request complete:</source>
         <translation>Requisição de ofuscação completa:</translation>
     </message>
     <message>
-        <source>CoinMixing request incomplete:</source>
+        <source>Obfuscation request incomplete:</source>
         <translation>Requisição de ofuscação incompleta:</translation>
     </message>
     <message>
@@ -1198,10 +1232,6 @@
         <translation>Atualizar a carteira para a ultimo formato</translation>
     </message>
     <message>
-        <source>Use N separate masternodes to anonymize funds  (2-8, default: %u)</source>
-        <translation>Use N masternodes separados para anonimizar fundos (2-8, padrão: %u)</translation>
-    </message>
-    <message>
         <source>Use OpenSSL (https) for JSON-RPC connections</source>
         <translation>Use o OpenSSL(https) para conexões JSON-RPC</translation>
     </message>
@@ -1222,7 +1252,7 @@
         <translation>Nome de usuário para conexões JSON-RPC</translation>
     </message>
     <message>
-        <source>Value more than CoinMixing pool maximum allows.</source>
+        <source>Value more than Obfuscation pool maximum allows.</source>
         <translation>Valor maior do que o máximo permitido pela pool.</translation>
     </message>
     <message>

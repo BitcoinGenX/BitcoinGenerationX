@@ -88,7 +88,7 @@ public:
         }
     }
 
-    // Get number of locked pages for diagnostics
+    // Get number of locked pages for diagbitcoingenxtics
     int GetLockedPageCount()
     {
         boost::mutex::scoped_lock lock(mutex);

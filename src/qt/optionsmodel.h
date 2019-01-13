@@ -43,8 +43,9 @@ public:
         ThreadsScriptVerif,  // int
         DatabaseCache,       // int
         SpendZeroConfChange, // bool
-        CoinMixingRounds,   // int
-        AnonymizeBitcoinGenXAmount, //int
+        ZeromintPercentage,  // int
+        ZeromintPrefDenom,   // int
+        AnonymizebitcoingenxAmount, //int
         ShowMasternodesTab,  // bool
         Listen,              // bool
         OptionIDRowCount,
@@ -89,8 +90,9 @@ private:
 
 signals:
     void displayUnitChanged(int unit);
-    void coinmixingRoundsChanged(int);
-    void anonymizeBitcoinGenXAmountChanged(int);
+    void zeromintPercentageChanged(int);
+    void preferredDenomChanged(int);
+    void anonymizebitcoingenxAmountChanged(int);
     void coinControlFeaturesChanged(bool);
 };
 

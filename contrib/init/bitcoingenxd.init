@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#  bitcoingenxd The BitcoinGenX Core server.
+#  bitcoingenxd The bitcoingenx core server.
 #
 #
 # chkconfig: 345 80 20

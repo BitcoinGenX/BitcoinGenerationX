@@ -76,8 +76,8 @@ HEADERS += src/activemasternode.h \
            src/compressor.h \
            src/core_io.h \
            src/crypter.h \
-           src/coinmixing-relay.h \
-           src/coinmixing.h \
+           src/obfuscation-relay.h \
+           src/obfuscation.h \
            src/bitcoingenx-config.h \
            src/db.h \
            src/eccryptoverify.h \
@@ -175,7 +175,7 @@ HEADERS += src/activemasternode.h \
            src/qt/coincontroldialog.h \
            src/qt/coincontroltreewidget.h \
            src/qt/csvmodelwriter.h \
-           src/qt/coinmixingconfig.h \
+           src/qt/obfuscationconfig.h \
            src/qt/editaddressdialog.h \
            src/qt/guiconstants.h \
            src/qt/guiutil.h \
@@ -341,7 +341,7 @@ HEADERS += src/activemasternode.h \
 FORMS += src/qt/forms/addressbookpage.ui \
          src/qt/forms/askpassphrasedialog.ui \
          src/qt/forms/coincontroldialog.ui \
-         src/qt/forms/coinmixingconfig.ui \
+         src/qt/forms/obfuscationconfig.ui \
          src/qt/forms/editaddressdialog.ui \
          src/qt/forms/helpmessagedialog.ui \
          src/qt/forms/intro.ui \
@@ -372,8 +372,8 @@ SOURCES += src/activemasternode.cpp \
            src/core_read.cpp \
            src/core_write.cpp \
            src/crypter.cpp \
-           src/coinmixing-relay.cpp \
-           src/coinmixing.cpp \
+           src/obfuscation-relay.cpp \
+           src/obfuscation.cpp \
            src/bitcoingenx-cli.cpp \
            src/bitcoingenx-tx.cpp \
            src/bitcoingenx.cpp \
@@ -470,7 +470,7 @@ SOURCES += src/activemasternode.cpp \
            src/qt/coincontroldialog.cpp \
            src/qt/coincontroltreewidget.cpp \
            src/qt/csvmodelwriter.cpp \
-           src/qt/coinmixingconfig.cpp \
+           src/qt/obfuscationconfig.cpp \
            src/qt/bitcoingenx.cpp \
            src/qt/bitcoingenxstrings.cpp \
            src/qt/editaddressdialog.cpp \

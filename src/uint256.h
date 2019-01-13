@@ -1,7 +1,8 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The bitcoingenx developers
+// Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2017 The bitcoingenx developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -277,7 +278,7 @@ public:
     {
         return pn[2 * n] | (uint64_t)pn[2 * n + 1] << 32;
     }
-    
+
     uint32_t Get32(int n = 0) const
     {
         return pn[2 * n];

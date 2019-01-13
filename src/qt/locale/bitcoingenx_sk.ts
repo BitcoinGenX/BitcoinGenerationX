@@ -133,7 +133,7 @@
     </message>
     <message>
         <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</source>
-        <translation>Slúži na zakázanie obyčajného odoslania peňazí, v prípade, že bol OS účet kompromitovaný. Neposkytuje žiadnu skutočnú bezpečnosť.</translation>
+        <translation>Slúži na zakázanie obyčajného odoslania peňazí, v prípade, že bol OS účet kompromitovaný. Neposkytuje žiadnu skutočnú bezpečbitcoingenxť.</translation>
     </message>
     <message>
         <source>For anonymization and staking only</source>
@@ -193,7 +193,7 @@
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
-        <translation>DÔLEŽITÉ: Všetky predchádzajúce zálohy súboru peňaženky, by mali byť nahradené novo vytvoreným šifrovaným súborom peňaženky. Z bezpečnostných dôvodov sa predchádzajúce zálohy súboru nezašifrovanej peňaženky stanú nepotrebné, akonáhle začnete používať novú zašifrovanú peňaženku.</translation>
+        <translation>DÔLEŽITÉ: Všetky predchádzajúce zálohy súboru peňaženky, by mali byť nahradené novo vytvoreným šifrovaným súborom peňaženky. Z bezpečbitcoingenxtných dôvodov sa predchádzajúce zálohy súboru nezašifrovanej peňaženky stanú nepotrebné, akonáhle začnete používať novú zašifrovanú peňaženku.</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -239,8 +239,8 @@
         <translation>BIP 38 Šifrovanie</translation>
     </message>
     <message>
-        <source>Enter a BitcoinGenX Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Zadajte adresu BitcoinGenX, ktorú chcete zašifrovať pomocou BIP 38. Zadajte prístupovú frázu do stredného poľa. Stlačte šifrovanie na výpočet šifrovaného privátneho kľúča.</translation>
+        <source>Enter a bitcoingenx Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Zadajte adresu bitcoingenx, ktorú chcete zašifrovať pomocou BIP 38. Zadajte prístupovú frázu do stredného poľa. Stlačte šifrovanie na výpočet šifrovaného privátneho kľúča.</translation>
     </message>
     <message>
         <source>Address:</source>
@@ -443,7 +443,7 @@
     </message>
     <message>
         <source>&amp;Options...</source>
-        <translation>Možnosti...</translation>
+        <translation>Možbitcoingenxti...</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -502,8 +502,8 @@
         <translation>Informácie</translation>
     </message>
     <message>
-        <source>Show diagnostic information</source>
-        <translation>Zobraziť diagnostické informácie</translation>
+        <source>Show diagbitcoingenxtic information</source>
+        <translation>Zobraziť diagbitcoingenxtické informácie</translation>
     </message>
     <message>
         <source>&amp;Debug console</source>
@@ -535,7 +535,7 @@
     </message>
     <message>
         <source>Show wallet repair options</source>
-        <translation>Zobraziť možnosti opravy peňaženky</translation>
+        <translation>Zobraziť možbitcoingenxti opravy peňaženky</translation>
     </message>
     <message>
         <source>Open configuration file</source>
@@ -571,7 +571,7 @@
     </message>
     <message>
         <source>&amp;Command-line options</source>
-        <translation>Možnosti príkazového riadku</translation>
+        <translation>Možbitcoingenxti príkazového riadku</translation>
     </message>
     <message>
         <source>Synchronizing additional data: %p%</source>
@@ -627,7 +627,7 @@
     </message>
     <message>
         <source>Modify configuration options for bitcoingenx</source>
-        <translation>Zmeňte možnosti konfigurácie pre bitcoingenx</translation>
+        <translation>Zmeňte možbitcoingenxti konfigurácie pre bitcoingenx</translation>
     </message>
     <message>
         <source>Sign messages with your bitcoingenx addresses to prove you own them</source>
@@ -679,7 +679,7 @@
     </message>
     <message>
         <source>Show the BitcoinGenX Core help message to get a list with possible bitcoingenx command-line options</source>
-        <translation>Zobraziť pomocnú správu programu BitcoinGenX Core a získajte zoznam možností príkazového riadka bitcoingenx</translation>
+        <translation>Zobraziť pomocnú správu programu BitcoinGenX Core a získajte zoznam možbitcoingenxtí príkazového riadka bitcoingenx</translation>
     </message>
     <message>
         <source>BitcoinGenX Core client</source>
@@ -820,10 +820,6 @@ MultiSend: %1</translation>
 <context>
     <name>ClientModel</name>
     <message>
-        <source>Total: %1 (OBF compatible: %2 / Enabled: %3)</source>
-        <translation>Sumár: %1 (OBF kompatibilné: %2 / Zapnuté: %3)</translation>
-    </message>
-    <message>
         <source>Network Alert</source>
         <translation>Upozornenie siete </translation>
     </message>
@@ -946,7 +942,7 @@ MultiSend: %1</translation>
     </message>
     </context>
 <context>
-    <name>CoinMixingConfig</name>
+    <name>ObfuscationConfig</name>
     </context>
 <context>
     <name>OpenURIDialog</name>
@@ -962,6 +958,53 @@ MultiSend: %1</translation>
     </context>
 <context>
     <name>PeerTableModel</name>
+    </context>
+<context>
+    <name>PrivacyDialog</name>
+    <message>
+        <source>Quantity:</source>
+        <translation>Množstvo:</translation>
+    </message>
+    <message>
+        <source>Amount:</source>
+        <translation>Suma:</translation>
+    </message>
+    <message>
+        <source>Choose previously used address</source>
+        <translation>Vyberte predtým použitú adresu</translation>
+    </message>
+    <message>
+        <source>Alt+A</source>
+        <translation>Alt+A</translation>
+    </message>
+    <message>
+        <source>Paste address from clipboard</source>
+        <translation>Vložte adresu zo schránky</translation>
+    </message>
+    <message>
+        <source>Alt+P</source>
+        <translation>Alt+P</translation>
+    </message>
+    <message>
+        <source>Priority:</source>
+        <translation>Priorita:</translation>
+    </message>
+    <message>
+        <source>Fee:</source>
+        <translation>Poplatok:</translation>
+    </message>
+    <message>
+        <source>Bytes:</source>
+        <translation>Bytov:</translation>
+    </message>
+    <message>
+        <source>Change:</source>
+        <translation>Zmena:</translation>
+    </message>
+    <message>
+        <source>Copy amount</source>
+        <translation>Skopírovať sumu</translation>
+    </message>
     </context>
 <context>
     <name>QObject</name>
@@ -1258,6 +1301,9 @@ MultiSend: %1</translation>
         <source>Export the data in the current tab to a file</source>
         <translation>Exportovať údaje na aktuálnej karte do súboru</translation>
     </message>
+    </context>
+<context>
+    <name>ZPhrControlDialog</name>
     </context>
 <context>
     <name>bitcoingenx-core</name>

@@ -1,13 +1,13 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The bitcoingenx developers
+// Copyright (c) 2015-2017 The PIVX developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "transactionrecord.h"
 
 #include "base58.h"
-#include "coinmixing.h"
+#include "obfuscation.h"
 #include "swifttx.h"
 #include "timedata.h"
 #include "wallet.h"
@@ -33,7 +33,7 @@ bool TransactionRecord::showTransaction(const CWalletTx& wtx)
 QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet* wallet, const CWalletTx& wtx)
 {
     QList<TransactionRecord> parts;
-    int64_t nTime = wtx.GetTxTime();
+    int64_t nTime = wtx.GetComputedTxTime();
     CAmount nCredit = wtx.GetCredit(ISMINE_ALL);
     CAmount nDebit = wtx.GetDebit(ISMINE_ALL);
     CAmount nNet = nCredit - nDebit;
@@ -69,6 +69,66 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet* 
             sub.credit = nNet;
         }
         parts.append(sub);
+    } else if (wtx.IsZerocoinSpend()) {
+        // a zerocoin spend that was created by this wallet
+        libzerocoin::CoinSpend zcspend = TxInToZerocoinSpend(wtx.vin[0]);
+        bool fSpendFromMe = wallet->IsMyZerocoinSpend(zcspend.getCoinSerialNumber());
+
+        //zerocoin spend outputs
+        bool fFeeAssigned = false;
+        for (const CTxOut txout : wtx.vout) {
+            // change that was reminted as zerocoins
+            if (txout.IsZerocoinMint()) {
+                // do not display record if this isn't from our wallet
+                if (!fSpendFromMe)
+                    continue;
+
+                TransactionRecord sub(hash, nTime);
+                sub.type = TransactionRecord::ZerocoinSpend_Change_zbitcoingenx;
+                sub.address = mapValue["zerocoinmint"];
+                sub.debit = -txout.nValue;
+                if (!fFeeAssigned) {
+                    sub.debit -= (wtx.GetZerocoinSpent() - wtx.GetValueOut());
+                    fFeeAssigned = true;
+                }
+                sub.idx = parts.size();
+                parts.append(sub);
+                continue;
+            }
+
+            string strAddress = "";
+            CTxDestination address;
+            if (ExtractDestination(txout.scriptPubKey, address))
+                strAddress = CBitcoinAddress(address).ToString();
+
+            // a zerocoinspend that was sent to an address held by this wallet
+            isminetype mine = wallet->IsMine(txout);
+            if (mine) {
+                TransactionRecord sub(hash, nTime);
+                sub.type = (fSpendFromMe ? TransactionRecord::ZerocoinSpend_FromMe : TransactionRecord::RecvFromZerocoinSpend);
+                sub.debit = txout.nValue;
+                sub.address = mapValue["recvzerocoinspend"];
+                if (strAddress != "")
+                    sub.address = strAddress;
+                sub.idx = parts.size();
+                parts.append(sub);
+                continue;
+            }
+
+            // spend is not from us, so do not display the spend side of the record
+            if (!fSpendFromMe)
+                continue;
+
+            // zerocoin spend that was sent to someone else
+            TransactionRecord sub(hash, nTime);
+            sub.debit = -txout.nValue;
+            sub.type = TransactionRecord::ZerocoinSpend;
+            sub.address = mapValue["zerocoinspend"];
+            if (strAddress != "")
+                sub.address = strAddress;
+            sub.idx = parts.size();
+            parts.append(sub);
+        }
     } else if (nNet > 0 || wtx.IsCoinBase()) {
         //
         // Credit
@@ -127,7 +187,7 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet* 
         }
 
         if (fAllFromMeDenom && fAllToMeDenom && nFromMe * nToMe) {
-            parts.append(TransactionRecord(hash, nTime, TransactionRecord::CoinMixingDenominate, "", -nDebit, nCredit));
+            parts.append(TransactionRecord(hash, nTime, TransactionRecord::ObfuscationDenominate, "", -nDebit, nCredit));
             parts.last().involvesWatchAddress = false; // maybe pass to TransactionRecord as constructor argument
         } else if (fAllFromMe && fAllToMe) {
             // Payment to self
@@ -154,9 +214,9 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet* 
                     const CTxOut& txout = wtx.vout[nOut];
                     sub.idx = parts.size();
 
-                    if (wallet->IsCollateralAmount(txout.nValue)) sub.type = TransactionRecord::CoinMixingMakeCollaterals;
-                    if (wallet->IsDenominatedAmount(txout.nValue)) sub.type = TransactionRecord::CoinMixingCreateDenominations;
-                    if (nDebit - wtx.GetValueOut() == COINMIXING_COLLATERAL) sub.type = TransactionRecord::CoinMixingCollateralPayment;
+                    if (wallet->IsCollateralAmount(txout.nValue)) sub.type = TransactionRecord::ObfuscationMakeCollaterals;
+                    if (wallet->IsDenominatedAmount(txout.nValue)) sub.type = TransactionRecord::ObfuscationCreateDenominations;
+                    if (nDebit - wtx.GetValueOut() == OBFUSCATION_COLLATERAL) sub.type = TransactionRecord::ObfuscationCollateralPayment;
                 }
             }
 
@@ -189,6 +249,9 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet* 
                     // Sent to bitcoingenx Address
                     sub.type = TransactionRecord::SendToAddress;
                     sub.address = CBitcoinAddress(address).ToString();
+                } else if (txout.IsZerocoinMint()){
+                    sub.type = TransactionRecord::ZerocoinMint;
+                    sub.address = mapValue["zerocoinmint"];
                 } else {
                     // Sent to IP, or other non-address transaction like OP_EVAL
                     sub.type = TransactionRecord::SendToOther;

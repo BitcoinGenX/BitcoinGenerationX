@@ -89,7 +89,7 @@ use old versions of Upstart and do not supply the start-stop-daemon uitility.
 Copy bitcoingenxd.init to /etc/init.d/bitcoingenxd. Test by running "service bitcoingenxd start".
 
 Using this script, you can adjust the path and flags to the bitcoingenxd program by
-setting the bitcoingenxD and FLAGS environment variables in the file
+setting the BGXD and FLAGS environment variables in the file
 /etc/sysconfig/bitcoingenxd. You can also use the DAEMONOPTS environment variable here.
 
 5. Auto-respawn

@@ -1,3 +1,7 @@
+// Copyright (c) 2014-2016 The Dash developers
+// Copyright (c) 2015-2017 The PIVX developers
+// Distributed under the MIT/X11 software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "activemasternode.h"
 #include "addrman.h"
@@ -8,7 +12,7 @@
 #include "spork.h"
 
 //
-// Bootup the Masternode, look for a 10000 bitcoingenx input and register on the network
+// Bootup the Masternode, look for a 1000 BGX input and register on the network
 //
 void CActiveMasternode::ManageStatus()
 {
@@ -227,7 +231,7 @@ bool CActiveMasternode::SendMasternodePing(std::string& errorMessage)
         return true;
     } else {
         // Seems like we are trying to send a ping while the Masternode is not registered in the network
-        errorMessage = "CoinMixing Masternode List doesn't include our Masternode, shutting down Masternode pinging service! " + vin.ToString();
+        errorMessage = "Obfuscation Masternode List doesn't include our Masternode, shutting down Masternode pinging service! " + vin.ToString();
         status = ACTIVE_MASTERNODE_NOT_CAPABLE;
         notCapableReason = errorMessage;
         return false;
@@ -468,9 +472,7 @@ vector<COutput> CActiveMasternode::SelectCoinsMasternode()
 
     // Filter
     BOOST_FOREACH (const COutput& out, vCoins) {
-	
-       if (out.tx->vout[out.i].nValue == MASTER_NODE_AMOUNT * COIN) { //exactly
-
+        if (out.tx->vout[out.i].nValue == 1000 * COIN) { //exactly
             filteredCoins.push_back(out);
         }
     }

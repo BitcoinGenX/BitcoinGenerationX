@@ -34,7 +34,7 @@ PROJECT_NAME           = bitcoingenx
 # This could be handy for archiving the generated documentation or
 # if some version control system is used.
 
-PROJECT_NUMBER         = 2.2.99
+PROJECT_NUMBER         = 2.3.99
 
 # Using the PROJECT_BRIEF tag one can provide an optional one line description
 # for a project that appears at the top of each page and should give viewer
@@ -285,7 +285,7 @@ DISTRIBUTE_GROUP_DOC   = NO
 # the same type (for instance a group of public functions) to be put as a
 # subgroup of that type (e.g. under the Public Functions section). Set it to
 # NO to prevent subgrouping. Alternatively, this can be done per class using
-# the \nosubgrouping command.
+# the \bitcoingenxubgrouping command.
 
 SUBGROUPING            = YES
 

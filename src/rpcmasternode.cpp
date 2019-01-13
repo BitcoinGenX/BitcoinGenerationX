@@ -1,6 +1,5 @@
-// Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
-// Copyright (c) 2015-2017 The bitcoingenx developers
+// Copyright (c) 2015-2017 The PIVX developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -52,11 +51,13 @@ void SendMoney(const CTxDestination& address, CAmount nValue, CWalletTx& wtxNew,
         throw JSONRPCError(RPC_WALLET_ERROR, "Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.");
 }
 
-Value coinmixing(const Array& params, bool fHelp)
+Value obfuscation(const Array& params, bool fHelp)
 {
+    throw runtime_error("Obfuscation is not supported any more. User Zerocoin\n");
+    
     if (fHelp || params.size() == 0)
         throw runtime_error(
-            "coinmixing <bitcoingenxaddress> <amount>\n"
+            "obfuscation <bitcoingenxaddress> <amount>\n"
             "bitcoingenxaddress, reset, or auto (AutoDenominate)"
             "<amount> is a real and will be rounded to the next 0.1" +
             HelpRequiringPassphrase());
@@ -73,12 +74,12 @@ Value coinmixing(const Array& params, bool fHelp)
 
     if (params[0].get_str() == "reset") {
         obfuScationPool.Reset();
-        return "successfully reset coinmixing";
+        return "successfully reset obfuscation";
     }
 
     if (params.size() != 2)
         throw runtime_error(
-            "coinmixing <bitcoingenxaddress> <amount>\n"
+            "obfuscation <bitcoingenxaddress> <amount>\n"
             "bitcoingenxaddress, denominate, or auto (AutoDenominate)"
             "<amount> is a real and will be rounded to the next 0.1" +
             HelpRequiringPassphrase());
@@ -289,8 +290,14 @@ Value listmasternodes(const Array& params, bool fHelp)
                 CBitcoinAddress(mn->pubKeyCollateralAddress.GetID()).ToString().find(strFilter) == string::npos) continue;
 
             std::string strStatus = mn->Status();
+            std::string strHost;
+            int port;
+            SplitHostPort(mn->addr.ToString(), port, strHost);
+            CNetAddr node = CNetAddr(strHost, false);
+            std::string strNetwork = GetNetworkName(node.GetNetwork());
 
             obj.push_back(Pair("rank", (strStatus == "ENABLED" ? s.first : 0)));
+            obj.push_back(Pair("network", strNetwork));
             obj.push_back(Pair("txhash", strTxHash));
             obj.push_back(Pair("outidx", (uint64_t)oIdx));
             obj.push_back(Pair("status", strStatus));
@@ -318,7 +325,7 @@ Value masternodeconnect(const Array& params, bool fHelp)
             "1. \"address\"     (string, required) IP or net address to connect to\n"
 
             "\nExamples:\n" +
-            HelpExampleCli("masternodeconnect", "\"192.168.0.6:51472\"") + HelpExampleRpc("masternodeconnect", "\"192.168.0.6:51472\""));
+            HelpExampleCli("masternodeconnect", "\"192.168.0.6:4488\"") + HelpExampleRpc("masternodeconnect", "\"192.168.0.6:4488\""));
 
     std::string strAddress = params[0].get_str();
 
@@ -344,7 +351,7 @@ Value getmasternodecount (const Array& params, bool fHelp)
             "{\n"
             "  \"total\": n,        (numeric) Total masternodes\n"
             "  \"stable\": n,       (numeric) Stable count\n"
-            "  \"obfcompat\": n,    (numeric) CoinMixing Compatible\n"
+            "  \"obfcompat\": n,    (numeric) Obfuscation Compatible\n"
             "  \"enabled\": n,      (numeric) Enabled masternodes\n"
             "  \"inqueue\": n       (numeric) Masternodes in queue\n"
             "}\n"
@@ -353,15 +360,21 @@ Value getmasternodecount (const Array& params, bool fHelp)
 
     Object obj;
     int nCount = 0;
+    int ipv4 = 0, ipv6 = 0, onion = 0;
 
     if (chainActive.Tip())
         mnodeman.GetNextMasternodeInQueueForPayment(chainActive.Tip()->nHeight, true, nCount);
+
+    mnodeman.CountNetworks(ActiveProtocol(), ipv4, ipv6, onion);
 
     obj.push_back(Pair("total", mnodeman.size()));
     obj.push_back(Pair("stable", mnodeman.stable_size()));
     obj.push_back(Pair("obfcompat", mnodeman.CountEnabled(ActiveProtocol())));
     obj.push_back(Pair("enabled", mnodeman.CountEnabled()));
     obj.push_back(Pair("inqueue", nCount));
+    obj.push_back(Pair("ipv4", ipv4));
+    obj.push_back(Pair("ipv6", ipv6));
+    obj.push_back(Pair("onion", onion));
 
     return obj;
 }
@@ -466,7 +479,7 @@ Value startmasternode (const Array& params, bool fHelp)
             "  ]\n"
             "}\n"
             "\nExamples:\n" +
-            HelpExampleCli("masternodestart", "\"alias\" \"my_mn\"") + HelpExampleRpc("masternodestart", "\"alias\" \"my_mn\""));
+            HelpExampleCli("startmasternode", "\"alias\" \"0\" \"my_mn\"") + HelpExampleRpc("startmasternode", "\"alias\" \"0\" \"my_mn\""));
 
     bool fLock = (params[1].get_str() == "true" ? true : false);
 

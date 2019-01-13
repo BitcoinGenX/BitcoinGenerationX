@@ -1,6 +1,6 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The bitcoingenx developers
+// Copyright (c) 2015-2017 The PIVX developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -72,14 +72,17 @@ void OptionsModel::Init()
         settings.setValue("fCoinControlFeatures", false);
     fCoinControlFeatures = settings.value("fCoinControlFeatures", false).toBool();
 
-    if (!settings.contains("nCoinMixingRounds"))
-        settings.setValue("nCoinMixingRounds", 2);
+    if (!settings.contains("nPreferredDenom"))
+        settings.setValue("nPreferredDenom", 0);
+    nPreferredDenom = settings.value("nPreferredDenom", "0").toLongLong();
+    if (!settings.contains("nZeromintPercentage"))
+        settings.setValue("nZeromintPercentage", 10);
+    nZeromintPercentage = settings.value("nZeromintPercentage").toLongLong();
 
-    if (!settings.contains("nAnonymizeBitcoinGenXAmount"))
-        settings.setValue("nAnonymizeBitcoinGenXAmount", 1000);
+    if (!settings.contains("nAnonymizebitcoingenxAmount"))
+        settings.setValue("nAnonymizebitcoingenxAmount", 1000);
 
-    nCoinMixingRounds = settings.value("nCoinMixingRounds").toLongLong();
-    nAnonymizeBitcoinGenXAmount = settings.value("nAnonymizeBitcoinGenXAmount").toLongLong();
+    nAnonymizebitcoingenxAmount = settings.value("nAnonymizebitcoingenxAmount").toLongLong();
 
     if (!settings.contains("fShowMasternodesTab"))
         settings.setValue("fShowMasternodesTab", masternodeConfig.getCount());
@@ -106,7 +109,7 @@ void OptionsModel::Init()
 // Wallet
 #ifdef ENABLE_WALLET
     if (!settings.contains("bSpendZeroConfChange"))
-        settings.setValue("bSpendZeroConfChange", true);
+        settings.setValue("bSpendZeroConfChange", false);
     if (!SoftSetBoolArg("-spendzeroconfchange", settings.value("bSpendZeroConfChange").toBool()))
         addOverriddenOption("-spendzeroconfchange");
 #endif
@@ -144,10 +147,12 @@ void OptionsModel::Init()
     if (!SoftSetArg("-lang", settings.value("language").toString().toStdString()))
         addOverriddenOption("-lang");
 
-    if (settings.contains("nCoinMixingRounds"))
-        SoftSetArg("-coinmixingrounds", settings.value("nCoinMixingRounds").toString().toStdString());
-    if (settings.contains("nAnonymizeBitcoinGenXAmount"))
-        SoftSetArg("-anonymizebitcoingenxamount", settings.value("nAnonymizeBitcoinGenXAmount").toString().toStdString());
+    if (settings.contains("nZeromintPercentage"))
+        SoftSetArg("-zeromintpercentage", settings.value("nZeromintPercentage").toString().toStdString());
+    if (settings.contains("nPreferredDenom"))
+        SoftSetArg("-preferredDenom", settings.value("nPreferredDenom").toString().toStdString());
+    if (settings.contains("nAnonymizebitcoingenxAmount"))
+        SoftSetArg("-anonymizebitcoingenxamount", settings.value("nAnonymizebitcoingenxAmount").toString().toStdString());
 
     language = settings.value("language").toString();
 }
@@ -225,10 +230,12 @@ QVariant OptionsModel::data(const QModelIndex& index, int role) const
             return settings.value("nDatabaseCache");
         case ThreadsScriptVerif:
             return settings.value("nThreadsScriptVerif");
-        case CoinMixingRounds:
-            return QVariant(nCoinMixingRounds);
-        case AnonymizeBitcoinGenXAmount:
-            return QVariant(nAnonymizeBitcoinGenXAmount);
+        case ZeromintPercentage:
+            return QVariant(nZeromintPercentage);
+        case ZeromintPrefDenom:
+            return QVariant(nPreferredDenom);
+        case AnonymizebitcoingenxAmount:
+            return QVariant(nAnonymizebitcoingenxAmount);
         case Listen:
             return settings.value("fListen");
         default:
@@ -332,15 +339,21 @@ bool OptionsModel::setData(const QModelIndex& index, const QVariant& value, int 
                 setRestartRequired(true);
             }
             break;
-        case CoinMixingRounds:
-            nCoinMixingRounds = value.toInt();
-            settings.setValue("nCoinMixingRounds", nCoinMixingRounds);
-            emit coinmixingRoundsChanged(nCoinMixingRounds);
+        case ZeromintPercentage:
+            nZeromintPercentage = value.toInt();
+            settings.setValue("nZeromintPercentage", nZeromintPercentage);
+            emit zeromintPercentageChanged(nZeromintPercentage);
             break;
-        case AnonymizeBitcoinGenXAmount:
-            nAnonymizeBitcoinGenXAmount = value.toInt();
-            settings.setValue("nAnonymizeBitcoinGenXAmount", nAnonymizeBitcoinGenXAmount);
-            emit anonymizeBitcoinGenXAmountChanged(nAnonymizeBitcoinGenXAmount);
+        case ZeromintPrefDenom:
+            nPreferredDenom = value.toInt();
+            settings.setValue("nPreferredDenom", nPreferredDenom);
+            emit preferredDenomChanged(nPreferredDenom);
+            break;
+
+        case AnonymizebitcoingenxAmount:
+            nAnonymizebitcoingenxAmount = value.toInt();
+            settings.setValue("nAnonymizebitcoingenxAmount", nAnonymizebitcoingenxAmount);
+            emit anonymizebitcoingenxAmountChanged(nAnonymizebitcoingenxAmount);
             break;
         case CoinControlFeatures:
             fCoinControlFeatures = value.toBool();
@@ -393,8 +406,8 @@ bool OptionsModel::getProxySettings(QNetworkProxy& proxy) const
     proxyType curProxy;
     if (GetProxy(NET_IPV4, curProxy)) {
         proxy.setType(QNetworkProxy::Socks5Proxy);
-        proxy.setHostName(QString::fromStdString(curProxy.ToStringIP()));
-        proxy.setPort(curProxy.GetPort());
+        proxy.setHostName(QString::fromStdString(curProxy.proxy.ToStringIP()));
+        proxy.setPort(curProxy.proxy.GetPort());
 
         return true;
     } else

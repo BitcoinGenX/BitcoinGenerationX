@@ -193,7 +193,7 @@
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
-        <translation>DŮLEŽITÉ: Každá předešlá zaloha, kterou jste provedli, by měla být nahrazena nově vygenerovanou, šifrovavou zálohou soboru Vaší peněženky. Z bezpečnostních důvodů budou všechny předešlé zálohy nezašifrované peněženky nepoužitelné, jakmile začnete používat nově zašifrovanou peněženku.</translation>
+        <translation>DŮLEŽITÉ: Každá předešlá zaloha, kterou jste provedli, by měla být nahrazena nově vygenerovanou, šifrovavou zálohou soboru Vaší peněženky. Z bezpečbitcoingenxtních důvodů budou všechny předešlé zálohy nezašifrované peněženky nepoužitelné, jakmile začnete používat nově zašifrovanou peněženku.</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -239,7 +239,7 @@
         <translation>&amp;BIP 38 Šifrovat</translation>
     </message>
     <message>
-        <source>Enter a BitcoinGenX Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <source>Enter a bitcoingenx Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
         <translation>Zadejte bitcoingenx adresu, kterou si přejete zašifrovat pomocí BIP38. Frázové heslo zadejte do prostředního boxu. Stiskněte šifrovat pro výpočet šifrovaného privátního klíče.</translation>
     </message>
     <message>
@@ -443,7 +443,7 @@
     </message>
     <message>
         <source>&amp;Options...</source>
-        <translation>&amp;Možnosti...</translation>
+        <translation>&amp;Možbitcoingenxti...</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -502,8 +502,8 @@
         <translation>&amp;Informace</translation>
     </message>
     <message>
-        <source>Show diagnostic information</source>
-        <translation>Zobrazit diagnostická data</translation>
+        <source>Show diagbitcoingenxtic information</source>
+        <translation>Zobrazit diagbitcoingenxtická data</translation>
     </message>
     <message>
         <source>&amp;Debug console</source>
@@ -535,7 +535,7 @@
     </message>
     <message>
         <source>Show wallet repair options</source>
-        <translation>Zobrazit možnosti opravy peněženky</translation>
+        <translation>Zobrazit možbitcoingenxti opravy peněženky</translation>
     </message>
     <message>
         <source>Open configuration file</source>
@@ -571,7 +571,7 @@
     </message>
     <message>
         <source>&amp;Command-line options</source>
-        <translation>Možnosti příkazové řádky</translation>
+        <translation>Možbitcoingenxti příkazové řádky</translation>
     </message>
     <message>
         <source>Synchronizing additional data: %p%</source>
@@ -627,7 +627,7 @@
     </message>
     <message>
         <source>Modify configuration options for bitcoingenx</source>
-        <translation>Upravit možnosti konfigurace pro bitcoingenx</translation>
+        <translation>Upravit možbitcoingenxti konfigurace pro bitcoingenx</translation>
     </message>
     <message>
         <source>Sign messages with your bitcoingenx addresses to prove you own them</source>
@@ -963,10 +963,6 @@ MultiSend: %1</translation>
         <translation>středně vysoký</translation>
     </message>
     <message>
-        <source>n/a</source>
-        <translation>n/a</translation>
-    </message>
-    <message>
         <source>medium</source>
         <translation>střední</translation>
     </message>
@@ -1125,7 +1121,7 @@ MultiSend: %1</translation>
     </message>
     <message>
         <source>Command-line options</source>
-        <translation>Možnosti příkazové řádky</translation>
+        <translation>Možbitcoingenxti příkazové řádky</translation>
     </message>
     <message>
         <source>Usage:</source>
@@ -1133,7 +1129,7 @@ MultiSend: %1</translation>
     </message>
     <message>
         <source>command-line options</source>
-        <translation>možnosti příkazové řádky</translation>
+        <translation>možbitcoingenxti příkazové řádky</translation>
     </message>
     <message>
         <source>Set language, for example "de_DE" (default: system locale)</source>
@@ -1420,9 +1416,9 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
     </message>
 </context>
 <context>
-    <name>CoinMixingConfig</name>
+    <name>ObfuscationConfig</name>
     <message>
-        <source>Configure CoinMixing</source>
+        <source>Configure Obfuscation</source>
         <translation>Konfigurace obfuskace</translation>
     </message>
     <message>
@@ -1451,7 +1447,7 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
     </message>
     <message>
         <source>This option is the quickest and will cost about ~0.025 BGX to anonymize 10000 BGX</source>
-        <translation>Tato možnost je nejrychleší a bude stát zhruba ~0.025 BGX pro anonymizaci 10000 BGX</translation>
+        <translation>Tato možbitcoingenxt je nejrychleší a bude stát zhruba ~0.025 BGX pro anonymizaci 10000 BGX</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
@@ -1462,7 +1458,7 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
         <translation>0.1 BGX za 10000 BGX anonymizujete.</translation>
     </message>
     <message>
-        <source>CoinMixing Configuration</source>
+        <source>Obfuscation Configuration</source>
         <translation>Konfigurace obufuskace</translation>
     </message>
     </context>
@@ -1489,7 +1485,7 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
     <name>OptionsDialog</name>
     <message>
         <source>Options</source>
-        <translation>Možnosti</translation>
+        <translation>Možbitcoingenxti</translation>
     </message>
     <message>
         <source>&amp;Main</source>
@@ -1530,10 +1526,6 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
     <message>
         <source>&amp;Start bitcoingenx on system login</source>
         <translation>&amp;Spusti bitcoingenx při přihlášení do systému</translation>
-    </message>
-    <message>
-        <source>Amount of bitcoingenx to keep anonymized</source>
-        <translation>Počet bitcoingenx pro anonymní držení</translation>
     </message>
     <message>
         <source>Show Masternodes Tab</source>
@@ -1615,10 +1607,6 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
         <translation>Zpracovávané:</translation>
     </message>
     <message>
-        <source>Balances</source>
-        <translation>Balance</translation>
-    </message>
-    <message>
         <source>Total:</source>
         <translation>Celkem:</translation>
     </message>
@@ -1630,75 +1618,7 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
         <source>Spendable:</source>
         <translation>Disponibilní:</translation>
     </message>
-    <message>
-        <source>Status:</source>
-        <translation>Stav:</translation>
-    </message>
-    <message>
-        <source>CoinMixing Balance:</source>
-        <translation>Obfuskační Balance:</translation>
-    </message>
-    <message>
-        <source>0 BGX / 0 Rounds</source>
-        <translation>0 BGX / 0 Kol</translation>
-    </message>
-    <message>
-        <source>Enabled/Disabled</source>
-        <translation>Zapnuté/Vypnuté</translation>
-    </message>
-    <message>
-        <source>CoinMixing</source>
-        <translation>Obfuskace</translation>
-    </message>
-    <message>
-        <source>n/a</source>
-        <translation>n/a</translation>
-    </message>
-    <message>
-        <source>Start/Stop Mixing</source>
-        <translation>Spustit/Zastavit Míchání</translation>
-    </message>
-    <message>
-        <source>Reset</source>
-        <translation>Reset</translation>
-    </message>
-    <message>
-        <source>Disabled</source>
-        <translation>Vypnuto</translation>
-    </message>
-    <message>
-        <source>No inputs detected</source>
-        <translation>Nedetekovány žádné vstupy</translation>
-    </message>
-    <message>
-        <source>Overall progress</source>
-        <translation>Celkový postup</translation>
-    </message>
-    <message>
-        <source>Anonymized</source>
-        <translation>Anonymizováno</translation>
-    </message>
-    <message>
-        <source>CoinMixing was successfully reset.</source>
-        <translation>Obfuskace byla úspěšně resetována</translation>
-    </message>
-    <message>
-        <source>Start CoinMixing</source>
-        <translation>Spustit Obfuskaci</translation>
-    </message>
-    <message>
-        <source>Stop CoinMixing</source>
-        <translation>Zastavit Obfuskaci</translation>
-    </message>
-    <message>
-        <source>Enabled</source>
-        <translation>Zapnuto</translation>
-    </message>
-    <message>
-        <source>N/A</source>
-        <translation>N/A</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>PaymentServer</name>
     <message>
@@ -1717,6 +1637,85 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
         <translation>Čas pingnutí</translation>
     </message>
 </context>
+<context>
+    <name>PrivacyDialog</name>
+    <message>
+        <source>0</source>
+        <translation>0</translation>
+    </message>
+    <message>
+        <source>Reset</source>
+        <translation>Reset</translation>
+    </message>
+    <message>
+        <source>Quantity:</source>
+        <translation>Množství:</translation>
+    </message>
+    <message>
+        <source>Amount:</source>
+        <translation>Hodnota:</translation>
+    </message>
+    <message>
+        <source>Choose previously used address</source>
+        <translation>Vyberte již dříve použitou adresu</translation>
+    </message>
+    <message>
+        <source>Alt+A</source>
+        <translation>Alt+A</translation>
+    </message>
+    <message>
+        <source>Paste address from clipboard</source>
+        <translation>Vložit adresu z mezipamětí</translation>
+    </message>
+    <message>
+        <source>Alt+P</source>
+        <translation>Alt+P</translation>
+    </message>
+    <message>
+        <source>&amp;Label:</source>
+        <translation>&amp;Popis</translation>
+    </message>
+    <message>
+        <source>A&amp;mount:</source>
+        <translation>H&amp;odnota:</translation>
+    </message>
+    <message>
+        <source>Priority:</source>
+        <translation>Priorita:</translation>
+    </message>
+    <message>
+        <source>Fee:</source>
+        <translation>Poplatek:</translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation>ne</translation>
+    </message>
+    <message>
+        <source>Bytes:</source>
+        <translation>Byty:</translation>
+    </message>
+    <message>
+        <source>Insufficient funds!</source>
+        <translation>Nedostatek prostředků!</translation>
+    </message>
+    <message>
+        <source>medium</source>
+        <translation>střední</translation>
+    </message>
+    <message>
+        <source>Change:</source>
+        <translation>Změna:</translation>
+    </message>
+    <message>
+        <source>Copy quantity</source>
+        <translation>Kopíroat množstí</translation>
+    </message>
+    <message>
+        <source>Copy amount</source>
+        <translation>Kopírovat hodnotu</translation>
+    </message>
+    </context>
 <context>
     <name>QObject</name>
     <message>
@@ -2018,14 +2017,6 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
 <context>
     <name>SendCoinsDialog</name>
     <message>
-        <source>Inputs...</source>
-        <translation>Vstupy...</translation>
-    </message>
-    <message>
-        <source>automatically selected</source>
-        <translation>automaticky vybráno</translation>
-    </message>
-    <message>
         <source>Insufficient funds!</source>
         <translation>Nedostatek prostředků!</translation>
     </message>
@@ -2080,10 +2071,6 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
     <message>
         <source>Minimize</source>
         <translation>Minimalizovat</translation>
-    </message>
-    <message>
-        <source>CoinMixing</source>
-        <translation>Obfuskace</translation>
     </message>
     <message>
         <source>per kilobyte</source>
@@ -2382,6 +2369,13 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
     </message>
     </context>
 <context>
+    <name>ZPhrControlDialog</name>
+    <message>
+        <source>0</source>
+        <translation>0</translation>
+    </message>
+    </context>
+<context>
     <name>bitcoingenx-core</name>
     <message>
         <source>Error</source>
@@ -2393,7 +2387,7 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
     </message>
     <message>
         <source>SwiftTX options:</source>
-        <translation>SwiftTx možnosti:</translation>
+        <translation>SwiftTx možbitcoingenxti:</translation>
     </message>
     <message>
         <source>Synchronization failed</source>
@@ -2485,7 +2479,7 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
     </message>
     <message>
         <source>Wallet options:</source>
-        <translation>Možnosti peněženky:</translation>
+        <translation>Možbitcoingenxti peněženky:</translation>
     </message>
     <message>
         <source>Wallet window title</source>
