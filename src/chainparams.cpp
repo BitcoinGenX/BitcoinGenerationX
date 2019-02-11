@@ -62,13 +62,21 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
 	(3000, uint256("b4d7e37625a63a7ca652802b8ba4e602907962359305f01f5bd73cf3e424788a"))
 	(5000, uint256("ffe8a7f9553c9643f13c8a9a9aed0247c0d184935a79bf95e3c0b9fbbe401df8"))
 	(10000, uint256("e4561ad36e8a1619f9ad421c5b2098be65bc33adbed5c2f31987096250da2a1a"))
-	(13000, uint256("4a54b06ce4ab082c43017317a61a1063522573c63a6e4bf38729134e4ce1312b"));
+	(13000, uint256("4a54b06ce4ab082c43017317a61a1063522573c63a6e4bf38729134e4ce1312b"))
+	(17000, uint256("1134b8c63efb8de642f2bbcb1e00d7e790ace1ca614312f4eaa6f90d3ee2f156"))
+	(19000, uint256("7869f4671cf16fe4518cbcb35755a82a32005260b10a8934d7bd0984372e0fe3"))
+	(25000, uint256("bbbc3a82278255fdc327905a9fea75bf2babf61b4486991bc0a49f9f8966fddd"))
+	(30000, uint256("a8db0ddce85884de718f238ff4f53e258cc2f438034718efe971e428f97b5b32"))
+	(35000, uint256("145f5c96a4d6c3b9cd5ce36879d9ebc12bf358df26fb2bfbbf5961a722ca99ed"))
+	(45000, uint256("c5d1f212ba705d6447e0acb420c9ce687aecc430929af1f1a617e8edba9a14d5"))
+	(55000, uint256("6713280b91425db52fb6895c454125010e2690c90a3b3abd313198828bd0fc3e"))
+	(58000, uint256("c9445899dccf5d1f19284371963341f3afa1d5bb0ec0f8530b19c5cebaebeda8"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1514407942, // * UNIX timestamp of last checkpoint block
     1,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
-    2        // * estimated number of transactions per day after checkpoint
+    250        // * estimated number of transactions per day after checkpoint
 };
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
@@ -170,7 +178,11 @@ public:
         assert(genesis.hashMerkleRoot == uint256("0xbeffe3db66e898f57d38b80854e949c750c13801288fdf858fac76305b23380f"));
 
         // DNS Seeding
-      vSeeds.push_back(CDNSSeedData("209.250.241.176", "209.250.241.176"));
+      
+	  vSeeds.push_back(CDNSSeedData("45.32.237.44", "45.32.237.44"));
+	  vSeeds.push_back(CDNSSeedData("103.1.185.37", "103.1.185.37"));
+	  vSeeds.push_back(CDNSSeedData("207.246.64.220", "207.246.64.220"));
+	  vSeeds.push_back(CDNSSeedData("209.250.241.176", "209.250.241.176"));
       vSeeds.push_back(CDNSSeedData("209.250.243.131", "209.250.243.131"));
       vSeeds.push_back(CDNSSeedData("45.77.239.108", "45.77.239.108"));
       vSeeds.push_back(CDNSSeedData("45.32.235.211", "45.32.235.211"));
@@ -183,7 +195,7 @@ public:
 	  vSeeds.push_back(CDNSSeedData("45.32.202.20", "45.32.202.20"));
 	  vSeeds.push_back(CDNSSeedData("140.82.34.15", "140.82.34.15"));
 	  vSeeds.push_back(CDNSSeedData("95.179.166.176", "95.179.166.176"));
-	  vSeeds.push_back(CDNSSeedData("217.69.2.239", "217.69.2.239")); //explorer
+	  //vSeeds.push_back(CDNSSeedData("217.69.2.239", "217.69.2.239")); //explorer
 
         // BitcoinGenX addresses start with 'B'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 26);
