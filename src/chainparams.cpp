@@ -178,23 +178,27 @@ public:
         assert(genesis.hashMerkleRoot == uint256("0xbeffe3db66e898f57d38b80854e949c750c13801288fdf858fac76305b23380f"));
 
         // DNS Seeding
-      
-	  vSeeds.push_back(CDNSSeedData("45.32.237.44", "45.32.237.44"));
-	  vSeeds.push_back(CDNSSeedData("103.1.185.37", "103.1.185.37"));
-	  vSeeds.push_back(CDNSSeedData("207.246.64.220", "207.246.64.220"));
-	  vSeeds.push_back(CDNSSeedData("209.250.241.176", "209.250.241.176"));
-      vSeeds.push_back(CDNSSeedData("209.250.243.131", "209.250.243.131"));
-      vSeeds.push_back(CDNSSeedData("45.77.239.108", "45.77.239.108"));
-      vSeeds.push_back(CDNSSeedData("45.32.235.211", "45.32.235.211"));
-      vSeeds.push_back(CDNSSeedData("107.191.44.102", "107.191.44.102"));
+          vSeeds.push_back(CDNSSeedData("209.250.241.176", "209.250.241.176")); 
+          vSeeds.push_back(CDNSSeedData("209.250.243.131", "209.250.243.131"));
+          vSeeds.push_back(CDNSSeedData("45.77.239.108", "45.77.239.108"));
+          vSeeds.push_back(CDNSSeedData("45.32.235.211", "45.32.235.211"));
+          vSeeds.push_back(CDNSSeedData("107.191.44.102", "107.191.44.102"));
 	  vSeeds.push_back(CDNSSeedData("108.61.188.67", "108.61.188.67"));
 	  vSeeds.push_back(CDNSSeedData("144.202.0.206", "144.202.0.206"));
+	  vSeeds.push_back(CDNSSeedData("45.32.237.44", "45.32.237.44"));
+	  vSeeds.push_back(CDNSSeedData("103.1.185.37", "103.1.185.37"));
+	  vSeeds.push_back(CDNSSeedData("207.246.64.220", "207.246.64.220"));	  
 	  vSeeds.push_back(CDNSSeedData("95.179.135.114", "95.179.135.114"));
 	  vSeeds.push_back(CDNSSeedData("209.250.224.122", "209.250.224.122"));
 	  vSeeds.push_back(CDNSSeedData("140.82.55.39", "140.82.55.39"));
 	  vSeeds.push_back(CDNSSeedData("45.32.202.20", "45.32.202.20"));
 	  vSeeds.push_back(CDNSSeedData("140.82.34.15", "140.82.34.15"));
 	  vSeeds.push_back(CDNSSeedData("95.179.166.176", "95.179.166.176"));
+	  vSeeds.push_back(CDNSSeedData("155.138.207.17", "155.138.207.17"));
+	  vSeeds.push_back(CDNSSeedData("155.138.163.92", "155.138.163.92"));
+	  vSeeds.push_back(CDNSSeedData("178.62.68.177", "178.62.68.177"));
+	  vSeeds.push_back(CDNSSeedData("136.61.3.89", "136.61.3.89"));
+	  vSeeds.push_back(CDNSSeedData("83.220.220.161", "83.220.220.161"));
 	  //vSeeds.push_back(CDNSSeedData("217.69.2.239", "217.69.2.239")); //explorer
 
         // BitcoinGenX addresses start with 'B'
