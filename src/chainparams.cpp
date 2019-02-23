@@ -199,6 +199,8 @@ public:
 	  vSeeds.push_back(CDNSSeedData("178.62.68.177", "178.62.68.177"));
 	  vSeeds.push_back(CDNSSeedData("136.61.3.89", "136.61.3.89"));
 	  vSeeds.push_back(CDNSSeedData("83.220.220.161", "83.220.220.161"));
+	  vSeeds.push_back(CDNSSeedData("45.32.232.178", "45.32.232.178"));
+	  vSeeds.push_back(CDNSSeedData("185.92.221.29", "185.92.221.29"));
 	  //vSeeds.push_back(CDNSSeedData("217.69.2.239", "217.69.2.239")); //explorer
 
         // BitcoinGenX addresses start with 'B'
